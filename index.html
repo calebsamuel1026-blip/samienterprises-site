@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="sami-events.js" defer></script>
 <title>Sami Enterprises</title>
 <meta name="description" content="Fixed-price website repairs for small home-service businesses. Free written site check first.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,6 +235,54 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
 .rv-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}.rv-cols div{background:#F1F3F8;border-radius:10px;padding:10px 6px;text-align:center}
 .rv-cols em{display:block;font-style:normal;font-size:11px;color:#5E616E}.rv-cols b{display:block;font:500 22px/1.2 var(--sans)}
 .rv-late{margin-top:12px;font-size:12px;color:#A15C00;background:#FFF4E0;border-radius:8px;padding:8px 10px}
+
+/* v5: guarantee, timeline, stats, about, booking */
+.hero .gline{position:relative;margin-top:16px;font:600 15px/20px var(--sans);color:#17306B}
+.sec{padding-top:180px}
+.sec .sub{margin-top:12px}
+.gt{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.gt>div{border-radius:20px;padding:24px;background:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35)}
+.gt b{display:flex;align-items:center;gap:10px;font:500 20px/26px var(--sans);letter-spacing:-.3px;color:#263043}
+.gt b::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:#1C38EA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-4.8' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.gt p{font:400 16px/24px var(--sans);color:var(--mute2);margin-top:10px}
+.tl{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:left}
+.tl>div{position:relative;border-radius:20px;padding:22px;background:#fff;box-shadow:0 12px 32px -20px rgba(40,50,90,.45),inset 0 0 0 1px #E6EAF2}
+.tl em{display:inline-block;font-style:normal;font:600 12px/16px var(--sans);letter-spacing:1px;text-transform:uppercase;color:#1C38EA;background:#EEF2FF;border-radius:999px;padding:4px 10px}
+.tl b{display:block;font:500 19px/25px var(--sans);letter-spacing:-.3px;margin-top:14px}
+.tl p{font:400 15px/22px var(--sans);color:var(--mute2);margin-top:8px}
+.st{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.st>div{border-radius:20px;padding:26px 24px;background:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%)}
+.st strong{display:block;font:400 48px/52px var(--sans);letter-spacing:-1px}
+.st p{font:400 16px/23px var(--sans);color:var(--ink2);margin-top:10px}
+.st a{display:inline-flex;align-items:center;min-height:40px;margin-top:6px;font:400 13px/18px var(--sans);color:var(--mute2);text-decoration:underline;text-underline-offset:2px}
+.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:40px;align-items:stretch}
+.ab .who{border-radius:24px;padding:32px;color:#fff;background:radial-gradient(120.74% 124.92% at 7.26% 100%,#497EE9 0%,#749CFF 100%)}
+.ab .who p{font:400 19px/29px var(--sans)}
+.ab .who b{display:block;margin-top:18px;font:500 16px/22px var(--sans);opacity:.9}
+.ab .ct{border-radius:24px;padding:32px;background:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35);font:400 16px/25px var(--sans);color:var(--ink2)}
+.ab .ct h3{font:500 20px/26px var(--sans);margin-bottom:10px;color:#263043}
+.ab .ct a{display:inline-flex;align-items:center;min-height:40px;color:#1C38EA;text-decoration:underline;text-underline-offset:2px}
+.bk{margin-top:40px;border-radius:28px;padding:40px;background:#fff;box-shadow:0 30px 80px -40px rgba(40,70,140,.45),inset 0 0 0 1px #E6EAF2;text-align:left;position:relative}
+.bk form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.bk label{display:grid;gap:6px;font:500 14px/20px var(--sans);color:var(--ink2)}
+.bk .full{grid-column:1/-1}
+.bk input,.bk select,.bk textarea{font:400 16px/24px var(--sans);border:1px solid #DCE0E8;border-radius:10px;padding:10px 12px;width:100%;background:#FAFBFD;color:#000;min-height:46px}
+.bk input:focus,.bk select:focus,.bk textarea:focus{outline:2px solid #1C38EA;outline-offset:0;border-color:#1C38EA}
+.bk .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--mute2)}
+.bk .chk input{width:20px;height:20px;min-height:0;margin-top:2px;flex:none}
+.bk .btn-blue{justify-content:center;width:100%;height:50px}
+.bk .tz{font:400 13px/18px var(--sans);color:var(--mute)}
+.bk .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bk .gnote{margin-top:14px;font:500 14px/20px var(--sans);color:#1F7A3D}
+#bookMsg{grid-column:1/-1;font:500 15px/22px var(--sans)}
+#bookMsg.ok{color:#1F7A3D;font-size:18px;line-height:27px}#bookMsg.err{color:#B3261E}
+@media (max-width:900px){
+  .sec{padding-top:110px}
+  .gt,.tl,.st{grid-template-columns:1fr;gap:14px;margin-top:28px}
+  .ab{grid-template-columns:1fr;gap:16px}.ab .who,.ab .ct{padding:24px}.ab .who p{font-size:17px;line-height:26px}
+  .bk{padding:22px;border-radius:22px}.bk form{grid-template-columns:1fr}
+  .st strong{font-size:40px;line-height:44px}
+}
 </style>
 </head>
 <body>
@@ -242,7 +291,7 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
   <div class="c">
     <a class="logo" href="#top" aria-label="Sami Enterprises home"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sami Enterprises</a>
     <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-    <nav class="nav" id="mainnav" aria-label="Main"><a href="#how">How it works</a><a href="#price">Pricing</a><a href="#faq">FAQ</a></nav>
+    <nav class="nav" id="mainnav" aria-label="Main"><a href="#how">How it works</a><a href="#price">Pricing</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></nav>
   </div>
 </header>
 
@@ -256,9 +305,10 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
       <path d="M0 190 C200 160 380 175 560 165 C760 155 900 180 1100 168 C1260 160 1360 172 1440 166 L1440 220 L0 220Z" fill="url(#m2)"/>
     </svg>
     <div class="c">
-      <h1>Complete estimate<br>requests land here</h1>
-      <p class="lede">Homeowners send you address, photos, budget, and timeline. Everything arrives in one tracker. Designed for roof contractors.</p>
-      <a class="btn-blue" href="mailto:cruzsystemsco@gmail.com?subject=15-minute%20call"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H2z M5 14h6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>Book a 15-minute call</a>
+      <h1>Answer every storm request<br>with a real plan</h1>
+      <p class="lede">Homeowners send photos, address, roof age, budget and timeline. You get an instant alert, they get instant next steps, and nothing sits unanswered.</p>
+      <a class="btn-blue" href="#book"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H2z M5 14h6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>Book my 15-minute call</a>
+      <p class="gline">You pay nothing until it&#x27;s live on your site and approved.</p>
     </div>
     <div class="panel" role="img" aria-label="Example: a roof estimate request form on a contractor's site, with what the office receives (made-up company).">
       <div class="menubar"></div>
@@ -267,6 +317,16 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
       
     </div>
     <p class="panel-cap">Example roof estimate request form. Made-up company and test data.</p>
+  </section>
+
+  <section class="sec c center" id="guarantee">
+    <h2 class="h2 grad">You take no risk on the build</h2>
+    <p class="sub">You pay nothing until it&#x27;s live on your site and you&#x27;ve approved a test request. If it isn&#x27;t live within 7 days of site access, your first month is free.</p>
+    <div class="gt">
+      <div><b>Pay after it works</b><p>Nothing is billed until the form is live on your site and you have approved a test request.</p></div>
+      <div><b>Live in 7 days</b><p>If it isn&#x27;t live within 7 days of site access, we do not bill your first month.</p></div>
+      <div><b>Done for you</b><p>We build it on your site. Your crew learns nothing new. Your one contact is Caleb.</p></div>
+    </div>
   </section>
 
   <section class="how c" id="how">
@@ -305,15 +365,35 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
     </div>
   </section>
 
+  <section class="sec c center" id="timeline">
+    <h2 class="h2 grad">Live in 7 days</h2>
+    <p class="sub">Here is what happens from the first call to your first live request.</p>
+    <div class="tl">
+      <div><em>Day 0</em><b>15-minute call</b><p>Caleb shows it working and looks at your site.</p></div>
+      <div><em>Day 1</em><b>You give site access</b><p>You give us temporary login or staging access. Your 7 days start.</p></div>
+      <div><em>Days 2-6</em><b>We build it, you test it</b><p>We build the form and tracker, then send you a test request to try from your phone.</p></div>
+      <div><em>Day 7</em><b>Live, you approve</b><p>It goes live on your site once you approve the test request. Billing starts then.</p></div>
+    </div>
+  </section>
+<section class="sec c center" id="stats"><h2 class="h2 grad">Why the first reply wins</h2><p class="sub">After a storm, requests pile up and the roofer who answers first with a real plan usually gets the inspection.</p><div class="st"><div><strong>7x</strong><p>Web leads contacted within an hour were nearly 7 times as likely to be qualified as leads contacted an hour later.</p><a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" rel="noopener" target="_blank">Harvard Business Review, 2011 (1.25M leads, all industries)</a></div><div><strong>23%</strong><p>of the 2,241 US companies audited in the same study never answered a web inquiry at all.</p><a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" rel="noopener" target="_blank">Harvard Business Review, 2011</a></div><div><strong>Jun 1 to Nov 30</strong><p>Atlantic hurricane season, with activity peaking around September 10.</p><a href="https://www.nhc.noaa.gov/climo/" rel="noopener" target="_blank">NOAA National Hurricane Center</a></div></div></section>
+
   <section class="stats c" id="price">
     <div class="split">
-      <div class="sp"><img src="est-form-mobile.jpg" width="260" height="506" alt="Demo estimate request form on a phone; made-up company, test data."></div>
+      <div class="sp"><img src="est-form-mobile-roof.jpg" width="260" height="567" alt="Demo roof estimate request form on a phone; made-up company, test data."></div>
       <div>
-        <h2 class="h2 grad">Transparent pricing</h2>
-        <div class="row"><div class="n">$249<small>/mo</small></div><div><h3>Estimate Request System</h3><p>We build the form and tracker on your site. You get setup, ongoing fixes, field changes, wording updates, and monthly request counts.</p></div></div>
-        <div class="row"><div class="n">No setup fee<small></small></div><div><h3>Build included</h3><p>You pay only the monthly fee. No extra setup charges. Work starts after you give us site access. Takes 3 to 5 business days.</p></div></div>
-        <div class="row"><div class="n">12-month minimum<small></small></div><div><h3>Full year plan</h3><p>Your plan runs 12 months, $2,988 total before any discount. Nothing goes live on your site until you approve a test request. After 12 months you can cancel anytime.</p></div></div>
+        <h2 class="h2 grad">One price, no setup fee</h2>
+        <div class="row"><div class="n">$249<small>/mo</small></div><div><h3>Estimate Request System</h3><p>We build the form and tracker on your site and keep it working. Field changes, wording updates and fixes are included. No setup fee.</p></div></div>
+        <div class="row"><div class="n">$0<small>until live</small></div><div><h3>You pay after it works</h3><p>Nothing is billed until it&#x27;s live on your site and you&#x27;ve approved a test request. Miss the 7 days and we do not bill your first month.</p></div></div>
+        <div class="row"><div class="n">12<small>months</small></div><div><h3>$2,988 over 12 months</h3><p>That is before this week&#x27;s discount on months 1-3, which applies if you book by Friday. Cancel anytime after 12 months. The form and tracker stay on your site.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec c" id="about">
+    <h2 class="h2 grad">Who runs this</h2>
+    <div class="ab">
+      <div class="who"><p>I&#x27;m Caleb Cruz. Sami Enterprises LLC is a new company and you would be one of my first roofing clients. I built this because a request that arrives as &quot;call me&quot; costs a truck roll. You deal with me directly, from the first call to go-live.</p><b>Caleb Cruz, Sami Enterprises LLC</b></div>
+      <div class="ct"><h3>Reach me directly</h3><p>cruzsystemsco@gmail.com | Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="margin-top:12px"><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">Try the working example form</a></p></div>
     </div>
   </section>
 
@@ -321,20 +401,46 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
     <h2>Your questions</h2>
     <details><summary>Does this work with my site platform?</summary><p>Most likely. We work with WordPress, Wix, Squarespace, GoDaddy, and hand-coded sites. If your site can&#x27;t be set up, we&#x27;ll tell you during the initial talk. No charge to find out.</p></details>
         <details><summary>How do you get access to my site?</summary><p>You give us temporary login or staging access. We build the form and tracker where only your team sees it. After we&#x27;re done and you approve it, we remove our access. If something needs a fix, we handle it from within the tracker.</p></details>
-        <details><summary>How long does this take?</summary><p>Build takes 3 to 5 business days after you give us site access. During that time you can watch it come together. Homeowner requests arrive live as soon as it goes up.</p></details>
+        <details><summary>How long does this take?</summary><p>7 days from site access, or we do not bill your first month. You can watch it come together, and requests arrive as soon as you approve the test.</p></details>
         <details><summary>How is this different from instant-quote tools like Roofle or Roofr?</summary><p>Those give the homeowner a price from satellite images. This collects roof photos, budget and timeline so your estimator shows up prepared. A satellite can&#x27;t see storm damage or a leak; a photo can. You can run both side by side.</p></details>
         <details><summary>Does it work for repair calls, or only replacements?</summary><p>Both. Homeowners pick repair, replacement or storm damage, and the repair path stays short. Photos let your team see the problem before anyone drives out.</p></details>
         <details><summary>Who is this not a fit for?</summary><p>If your site gets very few requests, this won&#x27;t help much. It organizes the requests you already get; it doesn&#x27;t create new ones. We&#x27;ll tell you on the call if that&#x27;s you.</p></details>
         <details><summary>Will this guarantee more jobs or leads?</summary><p>No. We set up a system so customers can send you a complete estimate request. But we can&#x27;t guarantee new leads, jobs, or revenue. That depends on your market, your pricing, and how people find you.</p></details>
-        <details><summary>What if I cancel or need to end my service?</summary><p>The 12-month minimum runs from your first payment. If you cancel before month 12, you&#x27;ll owe the remainder. After 12 months you can cancel anytime. The form and tracker stay on your site.</p></details>
-        <details><summary>How does payment work?</summary><p>First month of $249 is paid before we start the build. Then $249 each month after. We bill the same day each month. Pay by card or bank transfer. Cancel anytime after the 12-month term.</p></details>
+        <details><summary>What if I cancel or need to end my service?</summary><p>The plan runs 12 months from your first payment, and ending early means owing the remainder. After 12 months you can cancel anytime, and the form and tracker stay on your site.</p></details>
+        <details><summary>How does payment work?</summary><p>You pay nothing until it&#x27;s live on your site and you&#x27;ve approved a test request. Then $249 a month, billed on the same day each month by card or bank transfer.</p></details>
+  </section>
+
+  <section class="sec c center" id="book">
+    <h2 class="h2 grad">Book your 15-minute call</h2>
+    <p class="sub">Caleb shows it working on an example and looks at your site. You leave knowing if it fits.</p>
+    <div class="bk">
+      <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Caleb will email you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and Caleb will book you in."
+        data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
+        data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and Caleb will confirm a time.">
+        <p class="hp"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Company<input name="company" autocomplete="organization" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        <label class="full">Your website<input name="website" inputmode="url" placeholder="yourroofingcompany.com"></label>
+        <label>Best day<select name="pref_day"><option value="">Any day</option></select></label>
+        <label>Best time<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
+        <p class="tz full" id="bookTz"></p>
+        <label class="full">Biggest headache right now<select name="headache"><option value="">Choose one</option><option>Requests arrive without details</option><option>Too slow to reply after storms</option><option>Driving out to jobs we can&#x27;t win</option><option>Something else</option></select></label>
+        <label class="full">Anything else<textarea name="notes" rows="2"></textarea></label>
+        <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
+        <button class="btn-blue full" type="submit">Book my call</button>
+        <div id="bookMsg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="gnote">You pay nothing until it&#x27;s live on your site and approved.</p>
+    </div>
   </section>
 </main>
 
 <div class="tail">
   <div class="c">
     <div class="band">
-      <div><h3>Ready to streamline estimate requests?<span>Book a quick call to see how it works for your business.</span></h3><a class="btn-dark" href="mailto:cruzsystemsco@gmail.com?subject=15-minute%20call">Book a 15-minute call</a></div>
+      <div><h3>Atlantic hurricane season runs through November 30.<span>Book by Friday and this week&#x27;s discount applies to months 1-3.</span></h3><a class="btn-dark" href="#book">Book my 15-minute call</a></div>
       <div class="keys" aria-hidden="true">
         <div class="key a"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="#A4B0CA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="key b"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="none" stroke="#A4B0CA" stroke-width="1.6"/></svg></div>
@@ -342,8 +448,8 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
     </div>
     <footer class="ft">
       <div class="ft-g">
-        <div><a class="logo" href="#top" style="color:#000;width:auto">Sami Enterprises</a><p style="color:#5E616E;margin-top:8px;max-width:340px">Sami Enterprises. One operator, AI-assisted development, every change tested by hand.</p></div>
-        <div><h4>Service</h4><a href="#how">How it works</a><a href="#price">Pricing</a><a href="mailto:cruzsystemsco@gmail.com?subject=15-minute%20call">Book a call</a><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">See the demo</a></div>
+        <div><a class="logo" href="#top" style="color:#000;width:auto">Sami Enterprises</a><p style="color:#5E616E;margin-top:8px;max-width:340px">Sami Enterprises LLC, Portland, OR. Built and supported by Caleb Cruz.</p></div>
+        <div><h4>Service</h4><a href="#how">How it works</a><a href="#price">Pricing</a><a href="#book">Book a call</a><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">See the demo</a></div>
         <div><h4>Help</h4><a href="#faq">FAQ</a></div>
       </div>
       <div class="copy"><span>© 2026 Sami Enterprises</span><span>No ranking or lead-number guarantees. Prices in US dollars.</span></div>
@@ -358,6 +464,7 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
   nv.addEventListener('click',function(e){ if(e.target.tagName==='A'){ nv.classList.remove('open'); bg.setAttribute('aria-expanded','false'); } });
 })();
 </script>
+<script src="sami-book.js" defer></script>
 
 </body>
 </html>
