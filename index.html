@@ -283,6 +283,24 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
   .bk{padding:22px;border-radius:22px}.bk form{grid-template-columns:1fr}
   .st strong{font-size:40px;line-height:44px}
 }
+
+/* v6: text-thread mockups */
+.sms{display:flex;flex-direction:column;gap:8px;text-align:left}
+.sms .in{align-self:flex-start;max-width:88%;background:#E9EBF0;color:#16181D;border-radius:16px 16px 16px 5px;padding:9px 12px;font:400 14px/19px var(--sans)}
+.sms .out{align-self:flex-end;max-width:88%;background:#1C38EA;color:#fff;border-radius:16px 16px 5px 16px;padding:9px 12px;font:400 14px/19px var(--sans)}
+.sms .sys{align-self:center;font:500 12px/16px var(--sans);color:#C0392B}
+.sms .tm{font:400 11px/14px var(--sans);color:#8C929D}
+.card.blue .sms .sys{color:#fff;opacity:.9}.card.blue .sms .tm{color:rgba(255,255,255,.8)}
+.rep{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:28px}
+.rep div{background:#fff;border-radius:14px;padding:18px;box-shadow:0 8px 24px -14px rgba(40,50,90,.35);text-align:left}
+.rep b{display:block;font:400 44px/48px var(--sans);letter-spacing:-1px}.rep span{display:block;font:400 14px/19px var(--sans);color:var(--mute2);margin-top:6px}
+.rep h4{grid-column:1/-1;margin:0;font:500 17px/22px var(--sans);text-align:left;color:#263043}
+.rep p{grid-column:1/-1;margin:0;font:400 12.5px/17px var(--sans);color:var(--mute2);text-align:left}
+.tc .bin{align-self:flex-start;max-width:90%;background:#E9EBF0;color:#16181D;border-radius:14px 14px 14px 5px;padding:9px 12px;font:400 14px/19px var(--sans)}
+.tc .bout{align-self:flex-end;max-width:90%;background:#1C38EA;color:#fff;border-radius:14px 14px 5px 14px;padding:9px 12px;font:400 14px/19px var(--sans);margin-top:8px}
+.tc .in.sms{display:flex;flex-direction:column}
+.big-n{font:400 56px/60px var(--sans);letter-spacing:-1.5px;color:#16181D}
+@media (max-width:900px){.rep{grid-template-columns:1fr;padding:16px}}
 </style>
 </head>
 <body>
@@ -305,27 +323,26 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
       <path d="M0 190 C200 160 380 175 560 165 C760 155 900 180 1100 168 C1260 160 1360 172 1440 166 L1440 220 L0 220Z" fill="url(#m2)"/>
     </svg>
     <div class="c">
-      <h1>Answer every storm request<br>with a real plan</h1>
-      <p class="lede">Homeowners send photos, address, roof age, budget and timeline. You get an instant alert, they get instant next steps, and nothing sits unanswered.</p>
+      <h1>Missed calls become<br>texts to your cell</h1>
+      <p class="lede">When you can&#x27;t pick up, the caller gets a text from your business within seconds instead of voicemail. Their reply goes straight to your cell.</p>
       <a class="btn-blue" href="#book"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H2z M5 14h6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>Book my 15-minute call</a>
-      <p class="gline">You pay nothing until it&#x27;s live on your site and approved.</p>
+      <p class="gline">You pay nothing until it&#x27;s live.</p>
     </div>
-    <div class="panel" role="img" aria-label="Example: a roof estimate request form on a contractor's site, with what the office receives (made-up company).">
+    <div class="panel" role="img" aria-label="Example: a missed call becomes a text conversation with the homeowner (made-up company).">
       <div class="menubar"></div>
-      <div class="win"><div class="chrome"><i></i><i></i><i></i><span>your-roofing-site.com/estimate</span></div><img src="est-roof-form.jpg" width="760" height="789" alt="Example roof estimate request form (made-up company): project type, ZIP, roof age, budget, start date, roof photos"></div>
-      <div class="overlay" aria-hidden="true"><b>What your office gets</b><ul><li>Homeowner address and project type</li><li>Budget range and timeline</li><li>Photos of the roof</li><li>Daily reminder for open requests</li></ul></div>
+      <div class="win"><div class="chrome"><i></i><i></i><i></i><span>Missed call → text back</span></div><img src="missed-call-card.png" width="760" height="443" alt="Example: a missed call to a roofer gets an automatic text back and the homeowner replies (made-up company and conversation)."></div>
       
     </div>
-    <p class="panel-cap">Example roof estimate request form. Made-up company and test data.</p>
+    <p class="panel-cap">Example text-back message. Made-up company.</p>
   </section>
 
   <section class="sec c center" id="guarantee">
-    <h2 class="h2 grad">You take no risk on the build</h2>
-    <p class="sub">You pay nothing until it&#x27;s live on your site and you&#x27;ve approved a test request. If it isn&#x27;t live within 7 days of site access, your first month is free.</p>
+    <h2 class="h2 grad">You take no risk on the setup</h2>
+    <p class="sub">You pay nothing until it&#x27;s live. If it isn&#x27;t live within 7 days, your first month is free.</p>
     <div class="gt">
-      <div><b>Pay after it works</b><p>Nothing is billed until the form is live on your site and you have approved a test request.</p></div>
-      <div><b>Live in 7 days</b><p>If it isn&#x27;t live within 7 days of site access, we do not bill your first month.</p></div>
-      <div><b>Done for you</b><p>We build it on your site. Your crew learns nothing new. Your one contact is Caleb.</p></div>
+      <div><b>Pay after it works</b><p>Nothing is billed until the text-back is live and you have made a test call.</p></div>
+      <div><b>Live in 7 days</b><p>If it isn&#x27;t live within 7 days, we do not bill your first month.</p></div>
+      <div><b>Done for you</b><p>Your line stays as it is. We do the setup, and you keep your number and phone. Your one contact is Caleb.</p></div>
     </div>
   </section>
 
@@ -333,58 +350,54 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
     <h2 class="h2 grad">How it works</h2>
     <div class="two">
       <div class="card blue">
-        <h3>Homeowner <span class="pill">sends</span> a complete request</h3>
-        <p>They visit a form on your site. Upload roof photos and enter address, project type. Add budget range and timeline. Takes a few minutes. Works on any phone.</p>
-        <div class="vis scan" aria-hidden="true"><div class="url"><span>Request a roof estimate</span><em>Replacement</em></div><div class="rv-th"><img src="thumb1.jpg" alt=""><img src="thumb2.jpg" alt=""><img src="thumb3.jpg" alt=""></div><ol><li><span>ZIP · Roof age</span><span>33907 · 15–20 yrs</span></li><li><span>Budget · Start</span><span>$15k–$25k · 1–3 mo</span></li></ol></div>
+        <h3>The caller <span class="pill">gets</span> a text</h3>
+        <p>You can&#x27;t pick up, so your line forwards to a number we set up. The caller hears a short message and gets a text from your business within seconds: &quot;Sorry we missed your call. What&#x27;s going on with your roof?&quot;</p>
+        <div class="vis sms" aria-hidden="true"><span class="sys">Call to Ridgeline Roofing · no answer · 2:13 PM</span><div class="in">Hi, this is Ridgeline Roofing. Sorry we missed your call. What's going on with your roof? Reply STOP to opt out.</div><span class="tm">2:13 PM · 4 seconds later</span><div class="out">Shingles came off in last night's storm and there's a leak upstairs.</div></div>
       </div>
       <div class="card pale">
-        <h3>Your office <span class="pill">gets</span> it all at once</h3>
-        <p>You get an instant alert with all details and photos. Everything lands in the tracker. Nothing is lost. Every request stays organized until you close it.</p>
-        <div class="dark" aria-hidden="true"><div class="row"><span>Office alert · New estimate request</span><span class="tag">New</span></div><div class="rv-alert"><span>Project <b>Replacement</b></span><span>Budget <b>$15k–$25k</b></span><span>Start <b>1–3 months</b></span></div><div class="rv-q">"Shingles lifting after the last storm."</div><div class="rv-th"><img src="thumb1.jpg" alt=""><img src="thumb2.jpg" alt=""><img src="thumb3.jpg" alt=""></div></div>
+        <h3>You <span class="pill">get</span> the reply on your cell</h3>
+        <p>The homeowner&#x27;s reply goes straight to your phone. You answer by replying to that text, and it goes out from your business number.</p>
+        <div class="dark" aria-hidden="true"><div class="row"><span>On your cell · from your business line</span><span class="tag">New</span></div><div class="rv-q">Missed call from (813) 555-0142 · Tampa, FL. We texted them back.</div><div class="rv-q">Roof lead (813) 555-0142: Shingles came off in last night's storm and there's a leak upstairs.</div><div class="rv-q" style="color:#9EC1FF">You: We can come by today at 4. Does that work?</div></div>
       </div>
     </div>
   </section>
 
   <section class="feat c center">
-    <h2 class="h2 grad">The tracker</h2>
-    <p class="sub">All requests in one place. You see status, can add notes, and get a daily reminder for requests still waiting.</p>
-    <div class="frame"><img src="est-tracker.jpg" width="672" height="304" alt="Demo request tracker with columns New, Contacted, Site visit, Estimate sent, Won and Lost; test data." loading="lazy"></div>
+    <h2 class="h2 grad">Your monthly report</h2>
+    <p class="sub">You get an alert for every missed call, and once a month a count of the calls that would have gone to voicemail.</p>
+    <div class="frame" style="height:auto"><div class="rep" aria-label="Example monthly report with made-up numbers"><h4>Ridgeline Roofing (example) · October</h4><div><b>41</b><span>calls that would have gone to voicemail</span></div><div><b>33</b><span>callers texted back within seconds</span></div><div><b>19</b><span>homeowners who texted back</span></div><p>Example with made-up numbers. Your report shows your own counts.</p></div></div>
   </section>
 
   <section class="feat c center">
     <h2 class="h2 grad">What the system does</h2>
-    <p class="sub">Three things that make estimate requests work better.</p>
+    <p class="sub">Three things that keep a missed call from becoming a lost job.</p>
     <div class="three">
-      <div class="tc"><div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Roof photos</span><span class="rv-pill">3 attached</span></div><div class="rv-big"><img src="thumb1.jpg" alt=""><img src="thumb2.jpg" alt=""><img src="thumb3.jpg" alt=""></div></div></div><p><b>Photos arrive with the request.</b> Homeowners upload roof photos from their phone. They show up in the tracker instantly. No separate email chain.</p></div>
-      <div class="tc"><div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>To homeowner</span><span class="rv-pill">sent just now</span></div><div class="rv-mail"><b>We got your roof estimate request</b><span>We'll reach you by phone within 1 business day.</span><span>1. We review your photos and budget</span><span>2. We book an inspection if it fits</span><span>3. You get a written estimate</span></div></div></div><p><b>Instant confirmation to homeowner.</b> They see next steps right away. You define what it says.</p></div>
-      <div class="tc"><div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Tracker</span><span class="rv-pill warn">1 waiting</span></div><div class="rv-cols"><div><em>New</em><b>2</b></div><div><em>Contacted</em><b>1</b></div><div><em>Inspection</em><b>1</b></div><div><em>Estimate sent</em><b>1</b></div></div><div class="rv-late">Storm damage · M. Chen · waiting 1 business day</div></div></div><p><b>Tracker plus daily reminder.</b> Every open request shows in your office tracker. You get one email each morning listing requests that need attention.</p></div>
-    </div>
-    <div class="compat">
-      <p class="lab">WordPress, Wix, Squarespace, GoDaddy, hand-coded sites</p>
-      <ul><li><i></i>WordPress</li><li><i></i>Wix</li><li><i></i>Squarespace</li><li><i></i>GoDaddy</li><li><i></i>Hand-coded HTML</li></ul>
+      <div class="tc"><div class="box"><div class="in sms" aria-hidden="true"><div class="m-head"><span>To the caller</span><span class="rv-pill">4 sec after</span></div><div class="bin" style="margin-top:10px">Sorry we missed your call. What's going on with your roof?</div></div></div><p><b>A text within seconds.</b> Each caller is texted once, so there&#x27;s no spam. Anonymous callers are ignored.</p></div>
+      <div class="tc"><div class="box"><div class="in sms" aria-hidden="true"><div class="m-head"><span>On your cell</span><span class="rv-pill">reply to answer</span></div><div class="bin" style="margin-top:10px">Roof lead (813) 555-0142: leak upstairs after the storm</div><div class="bout">Can we come by at 4?</div></div></div><p><b>Replies go to your cell.</b> You answer from your own phone by replying to the text. You keep your number and there is nothing to install.</p></div>
+      <div class="tc"><div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>This month</span><span class="rv-pill">example</span></div><div class="big-n" style="margin-top:14px">41</div><div style="font:400 14px/19px var(--sans);color:#5E616E;margin-top:6px">calls that would have gone to voicemail</div></div></div><p><b>A monthly count of calls caught.</b> You see how many calls would have gone to voicemail, plus an alert for every missed call.</p></div>
     </div>
   </section>
 
   <section class="sec c center" id="timeline">
     <h2 class="h2 grad">Live in 7 days</h2>
-    <p class="sub">Here is what happens from the first call to your first live request.</p>
+    <p class="sub">Here is what happens from the first call to your first text-back.</p>
     <div class="tl">
-      <div><em>Day 0</em><b>15-minute call</b><p>Caleb shows it working and looks at your site.</p></div>
-      <div><em>Day 1</em><b>You give site access</b><p>You give us temporary login or staging access. Your 7 days start.</p></div>
-      <div><em>Days 2-6</em><b>We build it, you test it</b><p>We build the form and tracker, then send you a test request to try from your phone.</p></div>
-      <div><em>Day 7</em><b>Live, you approve</b><p>It goes live on your site once you approve the test request. Billing starts then.</p></div>
+      <div><em>Day 0</em><b>15-minute call</b><p>Caleb shows it working and answers your questions.</p></div>
+      <div><em>Day 1</em><b>We set up your number</b><p>We set up the number your line will forward to. Your 7 days start.</p></div>
+      <div><em>Days 2-6</em><b>Carrier approval and your test call</b><p>You call your own line and see the text arrive once the carriers approve the texting.</p></div>
+      <div><em>Day 7</em><b>Live</b><p>Your missed calls now text back within seconds. Billing starts then.</p></div>
     </div>
   </section>
-<section class="sec c center" id="stats"><h2 class="h2 grad">Why the first reply wins</h2><p class="sub">After a storm, requests pile up and the roofer who answers first with a real plan usually gets the inspection.</p><div class="st"><div><strong>7x</strong><p>Web leads contacted within an hour were nearly 7 times as likely to be qualified as leads contacted an hour later.</p><a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" rel="noopener" target="_blank">Harvard Business Review, 2011 (1.25M leads, all industries)</a></div><div><strong>23%</strong><p>of the 2,241 US companies audited in the same study never answered a web inquiry at all.</p><a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" rel="noopener" target="_blank">Harvard Business Review, 2011</a></div><div><strong>Jun 1 to Nov 30</strong><p>Atlantic hurricane season, with activity peaking around September 10.</p><a href="https://www.nhc.noaa.gov/climo/" rel="noopener" target="_blank">NOAA National Hurricane Center</a></div></div></section>
+
 
   <section class="stats c" id="price">
     <div class="split">
       <div class="sp"><img src="est-form-mobile-roof.jpg" width="260" height="567" alt="Demo roof estimate request form on a phone; made-up company, test data."></div>
       <div>
         <h2 class="h2 grad">One price, no setup fee</h2>
-        <div class="row"><div class="n">$249<small>/mo</small></div><div><h3>Estimate Request System</h3><p>We build the form and tracker on your site and keep it working. Field changes, wording updates and fixes are included. No setup fee.</p></div></div>
-        <div class="row"><div class="n">$0<small>until live</small></div><div><h3>You pay after it works</h3><p>Nothing is billed until it&#x27;s live on your site and you&#x27;ve approved a test request. Miss the 7 days and we do not bill your first month.</p></div></div>
-        <div class="row"><div class="n">12<small>months</small></div><div><h3>$2,988 over 12 months</h3><p>That is before this week&#x27;s discount on months 1-3, which applies if you book by Friday. Cancel anytime after 12 months. The form and tracker stay on your site.</p></div></div>
+        <div class="row"><div class="n">$249<small>/mo</small></div><div><h3>Missed-Call Text-Back</h3><p>Your setup, texts and upkeep are handled for you. The estimate request form on your website is included. No setup fee.</p></div></div>
+        <div class="row"><div class="n">$0<small>until live</small></div><div><h3>You pay after it works</h3><p>You pay nothing until it&#x27;s live. If it isn&#x27;t live within 7 days, your first month is free.</p></div></div>
+        <div class="row"><div class="n">12<small>months</small></div><div><h3>$2,988 over 12 months</h3><p>That is before this week&#x27;s discount on months 1-3, which applies if you book by Friday. Cancel anytime after 12 months.</p></div></div>
       </div>
     </div>
   </section>
@@ -392,27 +405,28 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
   <section class="sec c" id="about">
     <h2 class="h2 grad">Who runs this</h2>
     <div class="ab">
-      <div class="who"><p>I&#x27;m Caleb Cruz. Sami Enterprises LLC is a new company and you would be one of my first roofing clients. I built this because a request that arrives as &quot;call me&quot; costs a truck roll. You deal with me directly, from the first call to go-live.</p><b>Caleb Cruz, Sami Enterprises LLC</b></div>
+      <div class="who"><p>I&#x27;m Caleb Cruz. Sami Enterprises LLC is a new company and you would be one of my first roofing clients. I built this because a call that goes to voicemail is often a job that goes to the next roofer. You deal with me directly, from the first call to go-live.</p><b>Caleb Cruz, Sami Enterprises LLC</b></div>
       <div class="ct"><h3>Reach me directly</h3><p>cruzsystemsco@gmail.com | Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="margin-top:12px"><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">Try the working example form</a></p></div>
     </div>
   </section>
 
   <section class="faq c" id="faq">
     <h2>Your questions</h2>
-    <details><summary>Does this work with my site platform?</summary><p>Most likely. We work with WordPress, Wix, Squarespace, GoDaddy, and hand-coded sites. If your site can&#x27;t be set up, we&#x27;ll tell you during the initial talk. No charge to find out.</p></details>
-        <details><summary>How do you get access to my site?</summary><p>You give us temporary login or staging access. We build the form and tracker where only your team sees it. After we&#x27;re done and you approve it, we remove our access. If something needs a fix, we handle it from within the tracker.</p></details>
-        <details><summary>How long does this take?</summary><p>7 days from site access, or we do not bill your first month. You can watch it come together, and requests arrive as soon as you approve the test.</p></details>
-        <details><summary>How is this different from instant-quote tools like Roofle or Roofr?</summary><p>Those give the homeowner a price from satellite images. This collects roof photos, budget and timeline so your estimator shows up prepared. A satellite can&#x27;t see storm damage or a leak; a photo can. You can run both side by side.</p></details>
-        <details><summary>Does it work for repair calls, or only replacements?</summary><p>Both. Homeowners pick repair, replacement or storm damage, and the repair path stays short. Photos let your team see the problem before anyone drives out.</p></details>
-        <details><summary>Who is this not a fit for?</summary><p>If your site gets very few requests, this won&#x27;t help much. It organizes the requests you already get; it doesn&#x27;t create new ones. We&#x27;ll tell you on the call if that&#x27;s you.</p></details>
-        <details><summary>Will this guarantee more jobs or leads?</summary><p>No. We set up a system so customers can send you a complete estimate request. But we can&#x27;t guarantee new leads, jobs, or revenue. That depends on your market, your pricing, and how people find you.</p></details>
-        <details><summary>What if I cancel or need to end my service?</summary><p>The plan runs 12 months from your first payment, and ending early means owing the remainder. After 12 months you can cancel anytime, and the form and tracker stay on your site.</p></details>
-        <details><summary>How does payment work?</summary><p>You pay nothing until it&#x27;s live on your site and you&#x27;ve approved a test request. Then $249 a month, billed on the same day each month by card or bank transfer.</p></details>
+    <details><summary>Do I have to change my phone number?</summary><p>No. You keep your current number and phone. Your line forwards calls you can&#x27;t pick up to a number we set up. There is nothing to install.</p></details>
+        <details><summary>How do you set it up?</summary><p>We do the setup after a 15-minute call, plus a few steps in your carrier&#x27;s forwarding settings that we walk you through. You then make a test call from your own phone before it goes live.</p></details>
+        <details><summary>What if I already have an answering service?</summary><p>It works alongside it. The text-back covers calls your service or receptionist doesn&#x27;t catch, like after hours and storm days. Callers still reach a person when someone is available.</p></details>
+        <details><summary>Is texting callers allowed?</summary><p>They called you first. The first text includes Reply STOP, and we honor it instantly. Each caller is texted once, and anonymous callers are ignored.</p></details>
+        <details><summary>What does it cost to run?</summary><p>The texting costs are included in the $249 a month. There are no per-message charges to you.</p></details>
+        <details><summary>Also included: the estimate form</summary><p>The estimate request form with photo upload on your website is part of the plan at no extra cost.</p></details>
+        <details><summary>Who is this not a fit for?</summary><p>If you rarely miss calls, this won&#x27;t help much. It answers the calls you already miss; it doesn&#x27;t create new ones. We&#x27;ll tell you on the call if that&#x27;s you.</p></details>
+        <details><summary>Will this guarantee more jobs?</summary><p>No. We make sure a caller you missed hears back within seconds. We can&#x27;t guarantee leads, jobs, or revenue. That depends on your market, your pricing, and how people find you.</p></details>
+        <details><summary>What if I cancel or need to end my service?</summary><p>The plan runs 12 months from your first payment, and ending early means owing the remainder. After 12 months you can cancel anytime.</p></details>
+        <details><summary>How does payment work?</summary><p>You pay nothing until it&#x27;s live. Then $249 a month, billed on the same day each month by card or bank transfer.</p></details>
   </section>
 
   <section class="sec c center" id="book">
     <h2 class="h2 grad">Book your 15-minute call</h2>
-    <p class="sub">Caleb shows it working on an example and looks at your site. You leave knowing if it fits.</p>
+    <p class="sub">Caleb shows it working on an example. You leave knowing if it fits.</p>
     <div class="bk">
       <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Caleb will email you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and Caleb will book you in."
         data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
@@ -426,13 +440,13 @@ dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
         <label>Best day<select name="pref_day"><option value="">Any day</option></select></label>
         <label>Best time<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
         <p class="tz full" id="bookTz"></p>
-        <label class="full">Biggest headache right now<select name="headache"><option value="">Choose one</option><option>Requests arrive without details</option><option>Too slow to reply after storms</option><option>Driving out to jobs we can&#x27;t win</option><option>Something else</option></select></label>
+        <label class="full">Biggest headache right now<select name="headache"><option value="">Choose one</option><option>Missed calls go to voicemail</option><option>Can&#x27;t answer on the roof</option><option>Slow to reply after storms</option><option>Something else</option></select></label>
         <label class="full">Anything else<textarea name="notes" rows="2"></textarea></label>
         <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
         <button class="btn-blue full" type="submit">Book my call</button>
         <div id="bookMsg" role="status" aria-live="polite"></div>
       </form>
-      <p class="gnote">You pay nothing until it&#x27;s live on your site and approved.</p>
+      <p class="gnote">You pay nothing until it&#x27;s live.</p>
     </div>
   </section>
 </main>
