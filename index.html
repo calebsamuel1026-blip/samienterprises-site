@@ -4,478 +4,523 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="sami-events.js" defer></script>
-<title>Sami Enterprises</title>
-<meta name="description" content="Fixed-price website repairs for small home-service businesses. Free written site check first.">
+<title>Sami Enterprises | We find where your roofing business loses money</title>
+<meta name="description" content="We find where your roofing business leaks money and fix it. Calls, follow-up, estimates, website. Plans start at $249 a month. You pay nothing until it&#x27;s live.">
+<meta name="theme-color" content="#0E4BA8">
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@300;400;500;600&display=swap">
-<!-- Layout follows design/REFERENCE-MAP-cluely.md (primary reference supplied by Caleb: cluely.com home). Own code, copy and imagery. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@400;500;600&display=swap"></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%230E4BA8'/%3E%3Cpath d='M6 10.3l2.6 2.6L14.2 7.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="phone-thread.webp" type="image/webp">
+<!-- v7 layout follows design/REFERENCE-MAP-textback.md (primary structural reference: textbackapp.com, structure only).
+     Order and proof rules: design/LANDING-PLAYBOOK.md. Own code, copy (design/copy-v7-site.json) and imagery. -->
 <style>
 :root{
-  --ink:#000; --ink2:#2E3038; --mute:#8C929D; --mute2:#5E616E; --rule:#E4E4E7; --lav:#DDE2EE; --lav2:#BBC5DD;
+  --ink:#16181D; --ink2:#2E3038; --mute2:#5E616E; --rule:#E2E5EC; --lav:#EEF1F8; --lav2:#DDE2EE; --lav3:#BBC5DD;
+  --blue:#1C38EA; --sky0:#0E4BA8; --sky1:#1A5FC2; --sky2:#2C74D4; --navy:#0D2560; --navy2:#0A1D4D;
   --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"EB Garamond",Georgia,"Times New Roman",serif;
-  color-scheme:light;
+  --gut:80px; --hd:64px; color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--ink);font:16px/24px var(--sans);-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid #1C38EA;outline-offset:3px;border-radius:4px}
-.c{max-width:1248px;margin-inline:auto;padding-inline:16px}
-h1,h2,h3,p{margin:0}
-.grad{display:inline-block;background:linear-gradient(to right,#19191D 0,#626275 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.h2{font:500 56px/70px var(--sans);letter-spacing:-1.28px}
-.sub{font:400 18px/29.25px var(--sans);color:var(--mute)}
-.btn-blue{display:inline-flex;align-items:center;gap:8px;height:44px;padding:10px 20px;border-radius:12px;border:0;cursor:pointer;color:#fff;font:500 16px/24px var(--sans);letter-spacing:-.13px;
-  background:radial-gradient(101.79% 101.79% at 65.61% 81.79%,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%),radial-gradient(114.65% 114.65% at 9.73% 17.27%,#1E82E0 0,#1C38EA 100%);
-  box-shadow:20px 20px 24px 0 rgba(148,172,243,.4),inset -3px -3px 4px 0 rgba(191,229,251,.4),inset 4px 4px 4px 0 rgba(19,26,228,.1);transition:transform .15s ease,filter .15s ease}
-.btn-blue:hover{filter:brightness(1.06);transform:translateY(-1px)}
-.btn-dark{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:6px;border:0;cursor:pointer;color:#fff;font:600 16px/16px var(--sans);background:linear-gradient(#3A3B40,#16171A);
-  box-shadow:inset -1px -1px 4px 0 rgba(0,0,0,.65),5px 7px 7px 0 rgba(119,133,164,.43),inset -.5px -.5px 1px 0 rgba(255,255,255,.35),1px 1px 3px 0 rgba(0,0,0,.2);transition:transform .15s ease}
-.btn-dark:hover{transform:translateY(-1px)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font:16px/26px var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.dk :focus-visible{outline-color:#fff}
+.c{max-width:calc(1280px + 2 * var(--gut));margin-inline:auto;padding-inline:var(--gut)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:#fff;color:var(--ink);font-weight:600}
+.skip:focus{left:8px}
+section[id],main{scroll-margin-top:var(--hd)}
 
-/* header */
-.hd{position:absolute;inset:0 0 auto 0;height:54px;z-index:20}
-.hd .c{height:100%;display:flex;align-items:center;gap:0}
-.logo{display:flex;align-items:center;gap:6px;min-height:44px;color:#fff;font:600 20px/1 var(--sans);letter-spacing:-.6px;width:184px}
-.nav{display:flex;gap:4px}
-.nav a{color:#fff;font:500 14px/20px var(--sans);padding:8px 12px;border-radius:8px}
-.nav a:hover{background:rgba(255,255,255,.14)}
-.burger{display:none;margin-left:auto;width:40px;height:40px;place-items:center;background:none;border:0;cursor:pointer;color:#fff}
+/* type */
+.eyebrow{font:600 14px/20px var(--sans);letter-spacing:.7px;text-transform:uppercase;color:var(--blue)}
+.h2{margin-top:10px;font:500 40px/46px var(--sans);letter-spacing:-1px;color:var(--ink);max-width:720px;text-wrap:balance}
+.lead{margin-top:14px;font:400 18px/28px var(--sans);color:var(--mute2);max-width:640px}
+.sec{padding-block:96px}
+.sec.lav{background:var(--lav)}
 
-/* hero */
-.hero{position:relative;overflow:hidden;padding-top:128px;text-align:center;color:#fff;
-  background:linear-gradient(180deg,#1E7FE6 0%,#3E97EE 22%,#7CBDF3 40%,#BFDDF7 55%,#EAF3FC 66%,#fff 80%)}
-.hero .sun{position:absolute;left:73%;top:300px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#fff 0 38%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 72%);pointer-events:none}
-.hero svg.mtn{position:absolute;left:0;right:0;top:330px;width:100%;height:220px;pointer-events:none}
-.hero h1{position:relative;font:500 80px/76.8px var(--serif);letter-spacing:-1px;max-width:600px;margin:0 auto;text-wrap:balance}
-.hero .lede{position:relative;font:500 19px/26.6px var(--sans);letter-spacing:-.38px;max-width:560px;margin:40px auto 0}
-.hero .btn-blue{position:relative;margin-top:30px}
-.panel{position:relative;width:1152px;max-width:calc(100% - 32px);height:678px;margin:72px auto 0;border-radius:13px;overflow:hidden;
-  background:radial-gradient(120% 90% at 50% 110%,#FFD7A8 0%,rgba(255,215,168,0) 60%),linear-gradient(160deg,#FFB36B 0%,#FF8E5E 35%,#F6A57A 60%,#8FB6F0 100%);
-  box-shadow:0 30px 80px -30px rgba(40,70,140,.45)}
-.panel .menubar{height:24px;background:rgba(255,255,255,.28);backdrop-filter:blur(6px)}
-.win{position:absolute;left:50%;top:70px;transform:translateX(-50%);width:760px;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 24px 60px -20px rgba(0,0,0,.45)}
-.win .chrome{height:38px;background:#F1F2F4;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #E3E5E8}
-.win .chrome i{width:11px;height:11px;border-radius:50%;background:#FF5F57}.win .chrome i+i{background:#FEBC2E}.win .chrome i+i+i{background:#28C840}
-.win .chrome span{margin-left:14px;flex:1;height:24px;border-radius:6px;background:#fff;font:400 12px/24px var(--sans);color:#5E616E;text-align:left;padding-left:30px;position:relative}
-.win .chrome span::before{content:"";position:absolute;left:12px;top:7px;width:8px;height:9px;border:1.5px solid #5E616E;border-radius:2px;border-top-width:3px}
-.win img{width:760px;height:auto}
-.overlay{position:absolute;right:120px;top:250px;width:290px;border-radius:14px;padding:16px 18px;text-align:left;color:#fff;
-  background:linear-gradient(rgba(24,23,28,.78),rgba(24,23,28,.9));box-shadow:0 20px 50px -18px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.12);backdrop-filter:blur(10px)}
-.overlay b{display:block;font:500 15px/20px var(--sans);margin-bottom:10px}
-.overlay li{list-style:none;display:flex;gap:9px;align-items:center;font:400 13px/18px var(--sans);color:#D8DBE2;padding:6px 0;border-top:1px solid rgba(255,255,255,.08)}
-.overlay ul{margin:0;padding:0}
-.overlay li::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;background:#2F6BF0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-4.8' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/16px no-repeat}
-.dock{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:10px;padding:8px 12px;border-radius:18px;background:rgba(255,255,255,.3);backdrop-filter:blur(8px)}
-.dock i{width:34px;height:34px;border-radius:9px;background:linear-gradient(#fff,#E9ECF2)}.dock i:nth-child(2){background:linear-gradient(#5AA2FF,#2E6BF0)}.dock i:nth-child(3){background:linear-gradient(#FFD36B,#F0A92A)}
-.panel-cap{font:400 13px/18px var(--sans);color:var(--mute);margin-top:14px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:12px;border:0;cursor:pointer;color:#fff;
+  font:600 16px/22px var(--sans);letter-spacing:-.1px;text-decoration:none;text-align:center;
+  background:radial-gradient(101.79% 101.79% at 65.61% 81.79%,rgba(255,255,255,.35) 0,rgba(255,255,255,0) 100%),radial-gradient(114.65% 114.65% at 9.73% 17.27%,#1E6FE0 0,#1C38EA 100%);
+  box-shadow:0 12px 24px -10px rgba(28,56,234,.55),inset -3px -3px 4px 0 rgba(191,229,251,.3);transition:transform .15s ease,filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.w{background:#fff;color:var(--blue);box-shadow:0 12px 30px -12px rgba(0,0,0,.45)}
+.btn.sm{min-height:44px;padding:10px 16px;font-size:15px}
+.arrow{font-weight:400}
 
-section{scroll-margin-top:24px}
-/* two cards */
-.how{padding-top:220px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;align-items:stretch}
-.card{border-radius:32px;min-height:587px;padding:40px;display:flex;flex-direction:column;overflow:hidden;position:relative}
-.card.blue{color:#fff;background:radial-gradient(167.08% 140.48% at 79.5% 0%,rgba(255,255,255,.06) 0%,rgba(255,255,255,0) 100%),radial-gradient(120.74% 124.92% at 7.26% 100%,#497EE9 0%,#749CFF 100%);
-  box-shadow:inset 1.9px 1.77px 8.17px 0 rgba(255,255,255,.13),inset 1px .94px 4.09px 0 rgba(255,255,255,.13)}
-.card.pale{background:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35)}
-.card h3{font:500 28px/35px var(--sans);letter-spacing:-.5px}
-.card.pale h3{color:#263043}
-.pill{display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;margin:0 2px;line-height:30px}
-.card.blue .pill{background:rgba(255,255,255,.2);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
-.card.pale .pill{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.card p{font:400 18px/27px var(--sans);margin-top:14px;max-width:470px}
-.card.pale p{color:var(--mute)}
-.vis{margin-top:auto;border-radius:16px;padding:18px}
-.card.blue .vis{background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
-.scan .url{display:flex;align-items:center;gap:10px;height:40px;border-radius:10px;background:rgba(255,255,255,.95);color:#2E3038;padding:0 14px;font:500 14px/1 var(--sans)}
-.scan .url em{margin-left:auto;font-style:normal;color:#1C38EA;font-size:12px}
-.scan ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
-.scan li{display:flex;justify-content:space-between;font:400 14px/20px var(--sans);color:#fff;padding:9px 12px;border-radius:9px;background:rgba(10,30,90,.18)}
-.scan li span:last-child{font-weight:600}
-.dark{background:linear-gradient(rgba(24,23,28,.86),rgba(24,23,28,.95));border-radius:16px;color:#fff;padding:18px;margin-top:auto;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
-.dark .row{display:flex;justify-content:space-between;align-items:center;font:400 13px/18px var(--sans);color:#C9CCD6}
-.dark .tag{background:#1C38EA;color:#fff;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:500}
-.dark .preview{margin:12px 0;border-radius:10px;overflow:hidden;height:150px;background:#fff}
-.dark .preview img{width:100%;height:auto}
-.dark .acts{display:flex;gap:8px}
-.dark .acts span{flex:1;text-align:center;border-radius:8px;padding:8px 0;font:500 13px/18px var(--sans);background:rgba(255,255,255,.08)}
-.dark .acts span:first-child{background:#fff;color:#111}
+/* header (TextBack: sticky solid bar, CTA right) */
+.hd{position:sticky;top:0;z-index:30;height:var(--hd);background:var(--sky0);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.hd .c{height:100%;display:flex;align-items:center;gap:12px}
+.logo{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:600 20px/1 var(--sans);letter-spacing:-.5px;text-decoration:none;color:#fff}
+.nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;color:#fff;text-decoration:none;font:500 15px/20px var(--sans)}
+.nav a:hover{background:rgba(255,255,255,.12)}
+.nav .navbook{display:none}
+.hd .btn{margin-left:8px}
+.burger{display:none;width:44px;height:44px;place-items:center;background:none;border:0;border-radius:10px;cursor:pointer;color:#fff}
 
-/* centered feature */
-.center{text-align:center}
-.feat{padding-top:240px}
-.feat .sub{margin-top:12px}
-.frame{width:896px;max-width:100%;height:542px;margin:44px auto 0;border-radius:24px;overflow:hidden;position:relative;
-  background:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%)}
-.frame img{position:absolute;left:50%;top:112px;transform:translateX(-50%);width:672px;border-radius:10px 10px 0 0;box-shadow:0 10px 40px -10px rgba(40,50,90,.35)}
+/* hero: end result first (S1) */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(180deg,var(--sky0) 0%,var(--sky1) 55%,var(--sky2) 100%)}
+.hero .sun{position:absolute;right:6%;top:40px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55) 0 18%,rgba(255,255,255,.18) 40%,rgba(255,255,255,0) 70%);pointer-events:none}
+.hero svg.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;pointer-events:none}
+.hero-g{position:relative;display:grid;grid-template-columns:minmax(0,620px) 1fr;gap:48px;align-items:center;padding-block:88px 150px}
+.hero .eyebrow{color:#CFE0FF}
+.hero h1{margin-top:16px;font:500 64px/66px var(--serif);letter-spacing:-1px;text-wrap:balance}
+.hero .hsub{margin-top:22px;font:500 20px/30px var(--sans);letter-spacing:-.2px;color:#F2F6FF;max-width:540px}
+.hero .btn{margin-top:32px}
+.risk{margin-top:14px;font:600 16px/24px var(--sans);color:#fff}
+.founder{margin-top:6px;font:400 15px/22px var(--sans);color:#E3ECFF}
+.phone{position:relative;justify-self:center;text-align:center}
+.phone img{width:287px;filter:drop-shadow(0 30px 40px rgba(5,20,60,.45))}
+.tag{display:inline-block;margin-top:16px;padding:4px 12px;border-radius:999px;background:var(--navy);color:#fff;font:500 14px/20px var(--sans)}
 
-/* three cards */
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:44px;text-align:left}
-.tc .box{height:366px;border-radius:24px;padding:22px;background:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%);display:flex;align-items:flex-start}
-.tc .in{width:100%;height:248px;border-radius:14px;background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.95));box-shadow:0 8px 24px -12px rgba(40,50,90,.3);padding:18px;overflow:hidden}
-.tc p{font:400 20px/27.5px var(--sans);color:var(--mute2);margin-top:18px;max-width:380px}
-.tc p b{font-weight:500;color:var(--ink2)}
-.m-head{display:flex;justify-content:space-between;align-items:center;font:600 15px/1 var(--sans);color:#16201D;padding-bottom:12px;border-bottom:1px solid #ECEEF2}
-.m-call{background:#1C38EA;color:#fff;border-radius:8px;padding:9px 13px;font:600 13px/1 var(--sans)}
-.m-line{height:10px;border-radius:5px;background:#E6E9F0;margin-top:12px}.m-line.s{width:62%}
-.tap{display:flex;align-items:center;gap:10px;margin-top:22px;padding:12px;border-radius:12px;background:#EEF3FF;color:#1C38EA;font:500 14px/18px var(--sans)}
-.fld{height:32px;border-radius:7px;border:1px solid #DCE0E8;background:#fff;margin-bottom:8px;font:400 12px/30px var(--sans);color:#8C929D;padding-left:10px}
-.send{height:34px;border-radius:7px;background:#1C38EA;color:#fff;font:500 13px/34px var(--sans);text-align:center}
-.inbox{display:flex;gap:8px;align-items:center;margin-top:12px;font:400 12px/16px var(--sans);color:#2E3038;background:#fff;border-radius:8px;padding:8px 10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.inbox i{width:8px;height:8px;border-radius:50%;background:#28C840;flex:none}
-.bar{display:flex;align-items:center;gap:8px;height:34px;border-radius:999px;background:#F1F2F4;padding:0 12px;font:400 13px/1 var(--sans);color:#2E3038;margin-bottom:10px}
-.bar .warn{color:#C0392B;font-weight:600}
-.bar svg{flex:none}
-.arrow{text-align:center;color:#8C929D;font-size:18px;margin:4px 0 10px}
-.compat{margin-top:56px}
-.compat .lab{font:600 12px/16px var(--sans);letter-spacing:1.8px;text-transform:uppercase;color:var(--mute)}
-.compat ul{list-style:none;margin:18px 0 0;padding:0;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-.compat li{display:flex;align-items:center;gap:10px;font:400 14px/20px var(--sans);color:var(--ink2)}
-.compat li i{width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#749CFF,#1C38EA)}
+/* calculator (S2) */
+.calc-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px;align-items:start}
+.fld+.fld{margin-top:28px}
+.fld .top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.fld label{font:500 16px/22px var(--sans);color:var(--ink2)}
+.fld input[type=number]{width:120px;min-height:44px;padding:8px 10px;border:1px solid var(--lav3);border-radius:10px;background:#fff;font:600 17px/24px var(--sans);color:var(--ink);text-align:right}
+.fld .help{margin-top:2px;font:400 14px/20px var(--sans);color:var(--mute2)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:6px 0 0;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--blue) var(--p,10%),#C9D1E6 var(--p,10%))}
+input[type=range]::-moz-range-track{height:8px;border-radius:999px;background:#C9D1E6}
+input[type=range]::-moz-range-progress{height:8px;border-radius:999px;background:var(--blue)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--blue);box-shadow:0 2px 6px rgba(20,30,80,.25)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.res-card{border-radius:24px;padding:32px;background:#fff;box-shadow:0 30px 60px -36px rgba(20,40,110,.45),inset 0 0 0 1px #E1E6F2}
+.res-big{font:500 52px/58px var(--sans);letter-spacing:-1.5px;color:var(--blue);font-variant-numeric:tabular-nums}
+.res-big .pre{display:block;font:500 16px/22px var(--sans);letter-spacing:0;color:var(--ink2)}
+.res-suf{margin-top:6px;font:500 18px/26px var(--sans);color:var(--ink2)}
+.res-jobs{margin-top:8px;font:400 16px/24px var(--sans);color:var(--mute2)}
+.res-price{margin-top:18px;padding-top:18px;border-top:1px solid var(--rule);font:500 17px/26px var(--sans);color:var(--ink)}
+.disclaim{margin-top:12px;font:400 14px/21px var(--sans);color:var(--mute2)}
+.res-card .btn{margin-top:22px;width:100%}
+.nojs{margin-top:12px;font:400 15px/22px var(--sans);color:var(--ink2)}
 
-/* split stats */
-.stats{padding-top:260px}
-.split{display:grid;grid-template-columns:464px 1fr;gap:72px;padding-inline:32px;align-items:start}
-.sp{height:594px;border-radius:24px;background:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%);display:grid;place-items:center;overflow:hidden}
-.sp img{width:260px;border-radius:22px;box-shadow:0 0 0 7px #0E0F12,0 24px 50px -16px rgba(20,30,70,.45)}
-.stats .h2{font-size:48px;line-height:60px}
-.row{display:grid;grid-template-columns:220px 1fr;padding:28px 0;border-bottom:1px solid var(--rule)}
-.row:last-child{border-bottom:0}
-.row .n{font:400 48px/48px var(--sans);padding-top:12px}
-.row .n{white-space:nowrap}.row .n small{font-size:16px;margin-left:4px;color:var(--mute2)}
-.row h3{font:300 36px/40px var(--sans)}
-.row p{font:400 16px/24px var(--sans);color:var(--mute);margin-top:10px;max-width:420px}
+/* how (S3) - TextBack numbered steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+.steps li{display:flex;gap:16px}
+.num{flex:none;font:500 36px/36px var(--sans);letter-spacing:-1px;color:#6478D0}
+.steps h3,.why h3,.checks h3{font:600 19px/26px var(--sans);letter-spacing:-.3px;color:var(--ink)}
+.steps p,.why p,.checks p{margin-top:6px;font:400 16px/25px var(--sans);color:var(--mute2)}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:44px;padding-top:28px;border-top:1px solid var(--rule)}
+.facts p{display:flex;align-items:center;gap:10px;font:500 16px/24px var(--sans);color:var(--ink2)}
+.facts svg{flex:none}
 
-/* faq */
-.faq{padding-top:240px}
-.faq h2{font:500 40px/50px var(--sans);letter-spacing:-1.6px;margin-bottom:28px}
+/* offer / price (S4) */
+.offer-g{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:56px;margin-top:40px;align-items:start}
+.pcard{border-radius:24px;padding:36px;background:#fff;box-shadow:0 30px 60px -36px rgba(20,40,110,.45),inset 0 0 0 1px #E1E6F2}
+.price{display:flex;align-items:baseline;gap:6px}
+.price b{font:500 64px/64px var(--sans);letter-spacing:-2px;color:var(--ink)}
+.price span{font:500 18px/24px var(--sans);color:var(--mute2)}
+.disc{margin-top:14px;padding:10px 14px;border-radius:12px;background:#EAF0FF;color:#1530C0;font:600 16px/23px var(--sans)}
+.pts{margin-top:22px;display:grid;gap:12px}
+.pts li,.checks li{display:flex;gap:12px;align-items:flex-start}
+.pts li{font:400 17px/25px var(--sans);color:var(--ink2)}
+.pts svg,.checks svg{flex:none;margin-top:3px}
+.pcard .btn{margin-top:28px;width:100%}
+.pnote{margin-top:12px;font:400 15px/22px var(--sans);color:var(--mute2);text-align:center}
+
+/* why (S5) */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.ic{display:grid;place-items:center;width:44px;height:44px;margin-bottom:16px;border-radius:12px;background:#EAF0FF;color:var(--blue)}
+.why-b{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;margin-top:56px;align-items:stretch}
+.who{border-radius:24px;padding:32px;color:#fff;background:radial-gradient(120.74% 124.92% at 7.26% 100%,#2F62D6 0%,#4A76E0 100%)}
+.who p{font:400 19px/29px var(--sans)}
+.who b{display:block;margin-top:18px;font:600 16px/22px var(--sans)}
+.tl{border-radius:24px;padding:32px;background:var(--lav);box-shadow:inset 0 0 0 1px var(--lav2)}
+.tl h3{font:600 17px/24px var(--sans);color:var(--ink)}
+.tl ol{margin-top:18px;display:grid;gap:0;counter-reset:t}
+.tl li{position:relative;display:flex;gap:14px;align-items:center;padding:10px 0 10px 26px}
+.tl li::before{content:"";position:absolute;left:4px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--blue)}
+.tl li::after{content:"";position:absolute;left:8px;top:50%;height:100%;width:2px;background:#C5CFEA}
+.tl li:last-child::after{display:none}
+.day{flex:none;min-width:84px;font:600 14px/20px var(--sans);letter-spacing:.3px;text-transform:uppercase;color:var(--blue)}
+.tt{font:500 16px/22px var(--sans);color:var(--ink2)}
+
+/* faq (S6) */
+.faq{margin-top:36px;max-width:760px}
 .faq details{border-bottom:1px solid var(--rule)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:69px;padding:12px 0;cursor:pointer;font:400 16px/24px var(--sans)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:14px 0;cursor:pointer;font:600 17px/25px var(--sans);color:var(--ink)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:9px;height:9px;border-right:1.5px solid #5E616E;border-bottom:1.5px solid #5E616E;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s ease}
+.faq summary::after{content:"";flex:none;width:9px;height:9px;border-right:2px solid var(--mute2);border-bottom:2px solid var(--mute2);transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s ease}
 .faq details[open] summary::after{transform:rotate(-135deg)}
-.faq details p{padding:0 40px 22px 0;color:var(--mute2);max-width:760px}
+.faq details p{padding:0 40px 22px 0;color:var(--mute2);font:400 16px/26px var(--sans)}
 
-/* band + footer */
-.tail{margin-top:180px;background:linear-gradient(#fff 0,#E9EDF5 22%,#DDE2EE 60%,#DDE2EE 100%);padding-top:180px}
-.band{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:300px}
-.band h3{font:500 28px/35px var(--sans);letter-spacing:-1.12px}
-.band h3 span{display:block;background:linear-gradient(to right,#5B7BB8,#9FAECB);-webkit-background-clip:text;background-clip:text;color:transparent}
-.band .btn-dark{margin-top:24px}
-.keys{position:relative;height:300px}
-.key{position:absolute;width:118px;height:118px;border-radius:26px;display:grid;place-items:center;
-  background:linear-gradient(145deg,#FFFFFF,#E3E8F2);box-shadow:18px 22px 40px -10px rgba(119,133,164,.55),-8px -8px 20px rgba(255,255,255,.9),inset 2px 2px 3px #fff,inset -3px -3px 6px rgba(160,172,200,.35)}
-.key.a{right:90px;top:40px;transform:rotate(12deg)}.key.b{right:320px;top:160px;transform:rotate(-10deg);width:106px;height:106px}
-.ft{padding:44px 0 36px;margin-top:40px;border-top:1px solid rgba(0,0,0,.06)}
-.ft-g{display:grid;grid-template-columns:481px 1fr 1fr;gap:24px}
-.ft h4{font:500 16px/24px var(--sans);letter-spacing:-.4px;margin:0 0 12px}
-.ft a{display:flex;align-items:center;min-height:40px;font:400 16px/22px var(--sans);letter-spacing:-.4px;color:var(--ink2)}
-.ft a:hover{color:#1C38EA}
-.ft .copy{font:400 12px/16px var(--sans);color:var(--mute2);margin-top:40px;padding-top:20px;border-top:1px solid rgba(0,0,0,.06);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* check strip / proof (S7) */
+.checks,.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.checks li{padding:24px;border-radius:20px;background:var(--lav);box-shadow:inset 0 0 0 1px var(--lav2);flex-direction:column}
+.proof .pq{padding:24px;border-radius:20px;background:var(--lav)}
+.pq blockquote{margin:0;font:400 17px/26px var(--sans);color:var(--ink)}
+.pq-n{font:500 32px/38px var(--sans);color:var(--ink)}
+.pq-who{margin-top:12px;font:400 14px/21px var(--sans);color:var(--mute2)}
+.pq-who a{display:inline-flex;align-items:center;min-height:44px;color:var(--blue)}
 
-/* modal form */
-dialog{border:0;padding:0;border-radius:20px;width:min(560px,calc(100% - 24px));box-shadow:0 40px 100px -30px rgba(20,30,70,.5)}
-dialog::backdrop{background:rgba(20,24,40,.45);backdrop-filter:blur(3px)}
-.fm{padding:32px;display:grid;gap:14px}
-.fm h3{font:500 28px/35px var(--sans);letter-spacing:-.5px}
-.fm .intro{color:var(--mute2);font-size:15px;line-height:22px}
-.fm .two2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fm label{display:grid;gap:6px;font:500 14px/20px var(--sans);color:var(--ink2)}
-.fm input,.fm textarea{font:400 16px/24px var(--sans);border:1px solid #DCE0E8;border-radius:10px;padding:10px 12px;width:100%;background:#FAFBFD;color:#000}
-.fm input:focus,.fm textarea:focus{outline:2px solid #1C38EA;outline-offset:0;border-color:#1C38EA}
-.fm .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--mute2)}
-.fm .chk input{width:18px;height:18px;margin-top:2px;flex:none}
-.fm .btn-blue{justify-content:center;width:100%}
-.x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:#F1F2F4;cursor:pointer;font:400 22px/1 var(--sans);color:#2E3038}
+/* book (S8) - TextBack closing band */
+.book{padding-block:96px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+.book .head{text-align:center;max-width:760px;margin-inline:auto}
+.book .eyebrow{color:#B9CCFF}
+.book .h2{color:#fff;margin-inline:auto}
+.book .lead{color:#D5DFF7;margin-inline:auto}
+.bk{max-width:760px;margin:40px auto 0;border-radius:24px;padding:36px;background:#fff;color:var(--ink);box-shadow:0 40px 80px -40px rgba(0,0,0,.6);position:relative}
+.bk form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.bk form[hidden]{display:none}
+.bk label{display:grid;gap:6px;font:500 15px/20px var(--sans);color:var(--ink2)}
+.bk .full{grid-column:1/-1}
+.bk input,.bk select,.bk textarea{font:400 16px/24px var(--sans);border:1px solid #C9D0DE;border-radius:10px;padding:11px 12px;width:100%;background:#FAFBFD;color:#000;min-height:48px}
+.bk input:focus-visible,.bk select:focus-visible,.bk textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.bk [aria-invalid=true]{border-color:#B3261E;background:#FFF6F5}
+.bk .chk{display:flex;gap:6px;align-items:center;font-weight:400;color:var(--ink2)}
+.bk .chk input{-webkit-appearance:none;appearance:none;flex:none;width:44px;height:44px;min-height:0;margin:-8px 0 -8px -10px;padding:0;border:0;border-radius:10px;cursor:pointer;
+  background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='1' y='1' width='22' height='22' rx='5' fill='white' stroke='%235E616E' stroke-width='2'/%3E%3C/svg%3E") center/24px no-repeat}
+.bk .chk input:checked{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='0' y='0' width='24' height='24' rx='6' fill='%231C38EA'/%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-7.5' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.bk .chk input[aria-invalid=true]{background-color:#FFE9E7}
+.bk .btn{width:100%;min-height:52px}
+.bk .tz{font:400 14px/20px var(--sans);color:var(--mute2)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-#formMsg{font:500 14px/20px var(--sans);min-height:20px}
-#formMsg.ok{color:#1F7A3D} #formMsg.err{color:#B3261E}
+#bookMsg{margin-top:16px;font:500 16px/24px var(--sans)}
+#bookForm[hidden]+#bookMsg{margin-top:0}
+#bookMsg:empty{display:none}
+#bookMsg.ok{color:#1F7A3D;font-size:18px;line-height:27px}#bookMsg.err{color:#B3261E}
+.bproof{max-width:760px;margin:24px auto 0;text-align:center;font:400 15px/23px var(--sans);color:#D5DFF7}
+.bproof b{display:block;font:600 16px/24px var(--sans);color:#fff;margin-bottom:4px}
 
-/* responsive */
-@media (max-width:1100px){.split{grid-template-columns:1fr 1fr;gap:40px;padding-inline:0}.overlay{right:24px}}
+/* footer (S9) */
+.ft{background:var(--navy2);color:#C9D3EE;padding:40px 0 48px;border-top:1px solid rgba(255,255,255,.1);font:400 15px/23px var(--sans)}
+.ft-g{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+.ft .logo{font-size:18px}
+.ft p+p{margin-top:8px}
+.ft nav{display:flex;flex-wrap:wrap;gap:0 8px}
+.ft nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:#fff;text-decoration:none}
+.ft nav a:hover{text-decoration:underline}
+.ft .cp{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:14px}
+
+/* mobile sticky CTA bar */
+.sbar{display:none}
+
+@media (max-width:1199px){:root{--gut:40px}}
+@media (max-width:1100px){.why,.checks,.proof{grid-template-columns:1fr 1fr}.steps{gap:28px}}
 @media (max-width:900px){
-  .hd{height:40px}.logo{font-size:18px;width:auto}.nav{display:none}.nav.open{display:flex;flex-direction:column;position:absolute;top:44px;left:12px;right:12px;padding:8px;border-radius:14px;background:rgba(20,40,90,.92);backdrop-filter:blur(10px)}.nav.open a{padding:12px;font-size:16px}.burger{display:grid}
-  .hero{padding-top:80px}.hero h1{font-size:56px;line-height:53.76px;max-width:360px}
-  .hero .lede{font-size:16px;line-height:22px;margin-top:20px;max-width:360px}
-  .hero .sun,.hero svg.mtn{display:none}
-  .panel{height:auto;margin-top:44px;padding:34px 12px 60px;border-radius:13px}
-  .win{position:relative;left:auto;top:auto;transform:none;width:100%}
-  .win img{width:100%}
-  .overlay{position:relative;right:auto;top:auto;width:auto;margin:-40px 10px 0}
-  .dock{display:none}
-  .how{padding-top:120px}.h2{font-size:30px;line-height:38px;letter-spacing:-.6px}
-  .two{grid-template-columns:1fr;gap:20px;margin-top:28px}
-  .card{min-height:0;padding:24px;border-radius:26px}.card h3{font-size:24px;line-height:32px}.card p{font-size:16px;line-height:24px}
-  .vis,.dark{margin-top:24px}
-  .feat{padding-top:120px}.sub{font-size:16px;line-height:24px}
-  .frame{height:360px;border-radius:20px}.frame img{top:40px;width:88%}
-  .three{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 8px;scrollbar-width:none}.three::-webkit-scrollbar{display:none}.three .tc{flex:0 0 100%;scroll-snap-align:center}.tc .box{height:320px}
-  .tc p{font-size:16px;line-height:24px}
-  .compat ul{justify-content:flex-start;gap:14px 28px;max-width:320px;margin-inline:auto}
-  .stats{padding-top:120px}.split{grid-template-columns:1fr}.stats .h2{font-size:30px;line-height:38px}
-  .sp{order:2;height:auto;padding:40px 0}
-  .row{grid-template-columns:1fr;gap:6px}.row .n{padding-top:0}
-  .faq{padding-top:120px}.faq h2{font-size:28px;line-height:36px}
-  .faq summary{min-height:83px}
-  .tail{margin-top:100px;padding-top:100px}
-  .band{grid-template-columns:1fr;min-height:0}.band h3{font-size:20px;line-height:25px;letter-spacing:-.8px}
-  .keys{display:none}
-  .ft-g{grid-template-columns:1fr 1fr}.ft-g>div:first-child{grid-column:1/-1}
-  .fm{padding:24px}.fm .two2{grid-template-columns:1fr}
+  :root{--gut:20px;--hd:60px}
+  body{font-size:16px}
+  .logo{font-size:17px;gap:6px}
+  .hd .btn{margin-left:auto;min-height:44px;padding:8px 14px;font-size:15px}
+  .burger{display:grid}
+  .nav{display:none;position:absolute;top:var(--hd);left:0;right:0;margin:0;flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gut) 16px;background:var(--sky0);box-shadow:0 20px 30px -20px rgba(0,0,0,.5)}
+  .nav.open{display:flex}
+  .nav a{min-height:48px;font-size:17px;padding:0 8px}
+  .nav .navbook{display:inline-flex}
+  .sec,.book{padding-block:64px}
+  .h2{font-size:30px;line-height:36px;letter-spacing:-.6px}
+  .lead{font-size:17px;line-height:26px}
+  .hero-g{grid-template-columns:1fr;gap:36px;padding-block:44px 110px}
+  .hero h1{font-size:42px;line-height:44px}
+  .hero .hsub{font-size:18px;line-height:27px;margin-top:16px}
+  .hero .btn{width:100%;margin-top:26px}
+  .hero svg.mtn{height:90px}
+  .hero .sun{width:180px;height:180px;right:-40px}
+  .phone img{width:260px}
+  .calc-g,.offer-g,.why-b{grid-template-columns:1fr;gap:28px}
+  .res-card,.pcard,.who,.tl{padding:24px}
+  .res-big{font-size:44px;line-height:50px}
+  .steps{grid-template-columns:1fr;gap:24px;margin-top:32px}
+  .why,.checks,.proof{grid-template-columns:1fr;gap:16px;margin-top:32px}
+  .why li{display:grid;grid-template-columns:44px 1fr;gap:0 16px}.why .ic{grid-row:span 2;margin:0}
+  .facts{flex-direction:column;margin-top:32px}
+  .price b{font-size:56px;line-height:56px}
+  .faq summary{min-height:64px;font-size:17px}
+  .faq details p{padding-right:0}
+  .bk{padding:22px;border-radius:20px}.bk form{grid-template-columns:1fr}
+  .ft{padding-bottom:calc(112px + env(safe-area-inset-bottom))}
+  .sbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.97);box-shadow:0 -10px 30px -12px rgba(10,30,80,.35);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility .25s}
+  .sbar.on{transform:none;visibility:visible}
+  .sbar .btn{width:100%}
+  .sbar p{margin-top:6px;text-align:center;font:500 14px/18px var(--sans);color:var(--ink2)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-.rv-th{display:flex;gap:8px;margin-top:12px}.rv-th img{width:31%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
-.rv-alert{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:13px;color:#9EA3AF}.rv-alert b{color:#EDEFF3;font-weight:500}
-.rv-q{margin-top:8px;font-size:13px;color:#D8DBE2}
-.rv-pill{font:500 11px/1 var(--sans);background:#EEF2FF;color:#1C38EA;border-radius:999px;padding:5px 9px}.rv-pill.warn{background:#FFF4E0;color:#A15C00}
-.rv-big{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}.rv-big img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
-.rv-mail{margin-top:12px;display:grid;gap:5px;font-size:12.5px;line-height:17px;color:#5E616E}.rv-mail b{color:#16181D;font-weight:500;font-size:13.5px}
-.rv-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}.rv-cols div{background:#F1F3F8;border-radius:10px;padding:10px 6px;text-align:center}
-.rv-cols em{display:block;font-style:normal;font-size:11px;color:#5E616E}.rv-cols b{display:block;font:500 22px/1.2 var(--sans)}
-.rv-late{margin-top:12px;font-size:12px;color:#A15C00;background:#FFF4E0;border-radius:8px;padding:8px 10px}
+/* services (company-level, v6 card identity: one blue card, pale cards) */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.svc{border-radius:28px;padding:32px;background:#fff;box-shadow:inset 0 0 0 1px var(--lav2),0 20px 40px -32px rgba(20,40,110,.4)}
+.svc.blue{color:#fff;background:radial-gradient(120.74% 124.92% at 7.26% 100%,#2F62D6 0%,#4A76E0 100%);box-shadow:none}
+.svc .num{display:block;margin-bottom:18px}
+.svc.blue .num{color:#D6E2FF}
+.svc h3{font:600 21px/28px var(--sans);letter-spacing:-.3px;color:var(--ink)}
+.svc p{margin-top:8px;font:400 16px/25px var(--sans);color:var(--mute2)}
+.svc.blue h3,.svc.blue p{color:#fff}
+/* case studies (real entries only) */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.case{padding:28px;border-radius:24px;background:var(--lav);box-shadow:inset 0 0 0 1px var(--lav2)}
+.case h3{font:600 21px/28px var(--sans);color:var(--ink)}
+.case dl{margin:14px 0 0}.case dt{margin-top:10px;font:600 14px/20px var(--sans);letter-spacing:.3px;text-transform:uppercase;color:var(--blue)}
+.case dd{margin:4px 0 0;font:400 16px/25px var(--sans);color:var(--ink2)}
+@media (max-width:900px){.svcs,.cases{grid-template-columns:1fr;gap:16px;margin-top:32px}.svc,.case{padding:24px}}
 
-/* v5: guarantee, timeline, stats, about, booking */
-.hero .gline{position:relative;margin-top:16px;font:600 15px/20px var(--sans);color:#17306B}
-.sec{padding-top:180px}
-.sec .sub{margin-top:12px}
-.gt{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
-.gt>div{border-radius:20px;padding:24px;background:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35)}
-.gt b{display:flex;align-items:center;gap:10px;font:500 20px/26px var(--sans);letter-spacing:-.3px;color:#263043}
-.gt b::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:#1C38EA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-4.8' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/22px no-repeat}
-.gt p{font:400 16px/24px var(--sans);color:var(--mute2);margin-top:10px}
-.tl{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:left}
-.tl>div{position:relative;border-radius:20px;padding:22px;background:#fff;box-shadow:0 12px 32px -20px rgba(40,50,90,.45),inset 0 0 0 1px #E6EAF2}
-.tl em{display:inline-block;font-style:normal;font:600 12px/16px var(--sans);letter-spacing:1px;text-transform:uppercase;color:#1C38EA;background:#EEF2FF;border-radius:999px;padding:4px 10px}
-.tl b{display:block;font:500 19px/25px var(--sans);letter-spacing:-.3px;margin-top:14px}
-.tl p{font:400 15px/22px var(--sans);color:var(--mute2);margin-top:8px}
-.st{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
-.st>div{border-radius:20px;padding:26px 24px;background:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%)}
-.st strong{display:block;font:400 48px/52px var(--sans);letter-spacing:-1px}
-.st p{font:400 16px/23px var(--sans);color:var(--ink2);margin-top:10px}
-.st a{display:inline-flex;align-items:center;min-height:40px;margin-top:6px;font:400 13px/18px var(--sans);color:var(--mute2);text-decoration:underline;text-underline-offset:2px}
-.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:40px;align-items:stretch}
-.ab .who{border-radius:24px;padding:32px;color:#fff;background:radial-gradient(120.74% 124.92% at 7.26% 100%,#497EE9 0%,#749CFF 100%)}
-.ab .who p{font:400 19px/29px var(--sans)}
-.ab .who b{display:block;margin-top:18px;font:500 16px/22px var(--sans);opacity:.9}
-.ab .ct{border-radius:24px;padding:32px;background:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35);font:400 16px/25px var(--sans);color:var(--ink2)}
-.ab .ct h3{font:500 20px/26px var(--sans);margin-bottom:10px;color:#263043}
-.ab .ct a{display:inline-flex;align-items:center;min-height:40px;color:#1C38EA;text-decoration:underline;text-underline-offset:2px}
-.bk{margin-top:40px;border-radius:28px;padding:40px;background:#fff;box-shadow:0 30px 80px -40px rgba(40,70,140,.45),inset 0 0 0 1px #E6EAF2;text-align:left;position:relative}
-.bk form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
-.bk label{display:grid;gap:6px;font:500 14px/20px var(--sans);color:var(--ink2)}
-.bk .full{grid-column:1/-1}
-.bk input,.bk select,.bk textarea{font:400 16px/24px var(--sans);border:1px solid #DCE0E8;border-radius:10px;padding:10px 12px;width:100%;background:#FAFBFD;color:#000;min-height:46px}
-.bk input:focus,.bk select:focus,.bk textarea:focus{outline:2px solid #1C38EA;outline-offset:0;border-color:#1C38EA}
-.bk .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--mute2)}
-.bk .chk input{width:20px;height:20px;min-height:0;margin-top:2px;flex:none}
-.bk .btn-blue{justify-content:center;width:100%;height:50px}
-.bk .tz{font:400 13px/18px var(--sans);color:var(--mute)}
-.bk .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.bk .gnote{margin-top:14px;font:500 14px/20px var(--sans);color:#1F7A3D}
-#bookMsg{grid-column:1/-1;font:500 15px/22px var(--sans)}
-#bookMsg.ok{color:#1F7A3D;font-size:18px;line-height:27px}#bookMsg.err{color:#B3261E}
-@media (max-width:900px){
-  .sec{padding-top:110px}
-  .gt,.tl,.st{grid-template-columns:1fr;gap:14px;margin-top:28px}
-  .ab{grid-template-columns:1fr;gap:16px}.ab .who,.ab .ct{padding:24px}.ab .who p{font-size:17px;line-height:26px}
-  .bk{padding:22px;border-radius:22px}.bk form{grid-template-columns:1fr}
-  .st strong{font-size:40px;line-height:44px}
-}
+.from{font:600 14px/20px var(--sans);letter-spacing:.5px;text-transform:uppercase;color:var(--mute2);margin-bottom:6px}
+/* client logo strip (real entries only) */
+.clients{padding:28px 0;border-bottom:1px solid var(--rule)}
+.clients .c{display:flex;align-items:center;gap:16px 40px;flex-wrap:wrap}
+.cl-lab{font:600 14px/20px var(--sans);letter-spacing:.5px;text-transform:uppercase;color:var(--mute2)}
+.clients ul{display:flex;align-items:center;flex-wrap:wrap;gap:12px 40px}
+.clients a{display:inline-flex;align-items:center;min-height:44px}
+.clients img{height:32px;width:auto;filter:grayscale(1);opacity:.75;transition:filter .2s ease,opacity .2s ease}
+.clients a:hover img,.clients a:focus-visible img{filter:none;opacity:1}
+.clients.sm{padding:24px 0 0;border:0}.clients.sm .c{justify-content:center;padding:0}.clients.sm .cl-lab{color:#B9CCFF}
+.clients.sm img{height:28px;filter:grayscale(1) brightness(0) invert(1);opacity:.85}.clients.sm a:hover img{filter:none;opacity:1}
+@media (max-width:900px){.clients .c{flex-direction:column;align-items:flex-start;gap:8px}.clients.sm .c{align-items:center}}
 
-/* v6: text-thread mockups */
-.sms{display:flex;flex-direction:column;gap:8px;text-align:left}
-.sms .in{align-self:flex-start;max-width:88%;background:#E9EBF0;color:#16181D;border-radius:16px 16px 16px 5px;padding:9px 12px;font:400 14px/19px var(--sans)}
-.sms .out{align-self:flex-end;max-width:88%;background:#1C38EA;color:#fff;border-radius:16px 16px 5px 16px;padding:9px 12px;font:400 14px/19px var(--sans)}
-.sms .sys{align-self:center;font:500 12px/16px var(--sans);color:#C0392B}
-.sms .tm{font:400 11px/14px var(--sans);color:#8C929D}
-.card.blue .sms .sys{color:#fff;opacity:.9}.card.blue .sms .tm{color:rgba(255,255,255,.8)}
-.rep{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:28px}
-.rep div{background:#fff;border-radius:14px;padding:18px;box-shadow:0 8px 24px -14px rgba(40,50,90,.35);text-align:left}
-.rep b{display:block;font:400 44px/48px var(--sans);letter-spacing:-1px}.rep span{display:block;font:400 14px/19px var(--sans);color:var(--mute2);margin-top:6px}
-.rep h4{grid-column:1/-1;margin:0;font:500 17px/22px var(--sans);text-align:left;color:#263043}
-.rep p{grid-column:1/-1;margin:0;font:400 12.5px/17px var(--sans);color:var(--mute2);text-align:left}
-.tc .bin{align-self:flex-start;max-width:90%;background:#E9EBF0;color:#16181D;border-radius:14px 14px 14px 5px;padding:9px 12px;font:400 14px/19px var(--sans)}
-.tc .bout{align-self:flex-end;max-width:90%;background:#1C38EA;color:#fff;border-radius:14px 14px 5px 14px;padding:9px 12px;font:400 14px/19px var(--sans);margin-top:8px}
-.tc .in.sms{display:flex;flex-direction:column}
-.big-n{font:400 56px/60px var(--sans);letter-spacing:-1.5px;color:#16181D}
-@media (max-width:900px){.rep{grid-template-columns:1fr;padding:16px}}
+.term{margin-top:6px;font:500 16px/22px var(--sans);color:var(--ink2)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html:not(.js) .calc,html:not(.js) #calcOut,html:not(.js) .sbar{display:none}
+@media (max-width:900px){body.bar-on .hd .btn{visibility:hidden}}
 </style>
 </head>
 <body>
 
-<header class="hd">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hd dk">
   <div class="c">
     <a class="logo" href="#top" aria-label="Sami Enterprises home"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sami Enterprises</a>
-    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-    <nav class="nav" id="mainnav" aria-label="Main"><a href="#how">How it works</a><a href="#price">Pricing</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></nav>
+    <nav class="nav" id="mainnav" aria-label="Main"><a href="#process">How it works</a><a href="#price">Price</a><a href="#faq">FAQ</a><a class="navbook" href="#book">Book my call</a></nav>
+    <a class="btn sm w" href="#book">Book my call</a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" data-open="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mainnav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
+<main id="main">
+  <section class="hero dk" id="top" aria-labelledby="hero-h">
     <div class="sun" aria-hidden="true"></div>
-    <svg class="mtn" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
-      <defs><linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D5FC8"/><stop offset="1" stop-color="#9CC6F2"/></linearGradient>
-      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9F2FC"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".9"/></linearGradient></defs>
-      <path d="M0 170 L120 120 L190 140 L300 60 L360 95 L420 40 L500 110 L560 90 L640 150 L760 120 L860 150 L980 100 L1060 130 L1180 80 L1260 120 L1340 95 L1440 130 L1440 220 L0 220Z" fill="url(#m1)" opacity=".85"/>
-      <path d="M0 190 C200 160 380 175 560 165 C760 155 900 180 1100 168 C1260 160 1360 172 1440 166 L1440 220 L0 220Z" fill="url(#m2)"/>
+    <svg class="mtn" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E9BE6"/><stop offset="1" stop-color="#BFDBF7"/></linearGradient></defs>
+      <path d="M0 110 L120 70 L190 88 L300 30 L360 58 L420 18 L500 72 L560 58 L640 100 L760 76 L860 98 L980 62 L1060 84 L1180 46 L1260 76 L1340 58 L1440 84 L1440 150 L0 150Z" fill="url(#m1)" opacity=".75"/>
+      <path d="M0 128 C200 104 380 116 560 108 C760 100 900 120 1100 112 C1260 106 1360 114 1440 110 L1440 150 L0 150Z" fill="#fff"/>
     </svg>
-    <div class="c">
-      <h1>Missed calls become<br>texts to your cell</h1>
-      <p class="lede">When you can&#x27;t pick up, the caller gets a text from your business within seconds instead of voicemail. Their reply goes straight to your cell.</p>
-      <a class="btn-blue" href="#book"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H2z M5 14h6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>Book my 15-minute call</a>
-      <p class="gline">You pay nothing until it&#x27;s live.</p>
-    </div>
-    <div class="panel" role="img" aria-label="Example: a missed call becomes a text conversation with the homeowner (made-up company).">
-      <div class="menubar"></div>
-      <div class="win"><div class="chrome"><i></i><i></i><i></i><span>Missed call → text back</span></div><img src="missed-call-card.png" width="760" height="443" alt="Example: a missed call to a roofer gets an automatic text back and the homeowner replies (made-up company and conversation)."></div>
-      
-    </div>
-    <p class="panel-cap">Example text-back message. Made-up company.</p>
-  </section>
-
-  <section class="sec c center" id="guarantee">
-    <h2 class="h2 grad">You take no risk on the setup</h2>
-    <p class="sub">You pay nothing until it&#x27;s live. If it isn&#x27;t live within 7 days, your first month is free.</p>
-    <div class="gt">
-      <div><b>Pay after it works</b><p>Nothing is billed until the text-back is live and you have made a test call.</p></div>
-      <div><b>Live in 7 days</b><p>If it isn&#x27;t live within 7 days, we do not bill your first month.</p></div>
-      <div><b>Done for you</b><p>Your line stays as it is. We do the setup, and you keep your number and phone. Your one contact is Caleb.</p></div>
-    </div>
-  </section>
-
-  <section class="how c" id="how">
-    <h2 class="h2 grad">How it works</h2>
-    <div class="two">
-      <div class="card blue">
-        <h3>The caller <span class="pill">gets</span> a text</h3>
-        <p>You can&#x27;t pick up, so your line forwards to a number we set up. The caller hears a short message and gets a text from your business within seconds: &quot;Sorry we missed your call. What&#x27;s going on with your roof?&quot;</p>
-        <div class="vis sms" aria-hidden="true"><span class="sys">Call to Ridgeline Roofing · no answer · 2:13 PM</span><div class="in">Hi, this is Ridgeline Roofing. Sorry we missed your call. What's going on with your roof? Reply STOP to opt out.</div><span class="tm">2:13 PM · 4 seconds later</span><div class="out">Shingles came off in last night's storm and there's a leak upstairs.</div></div>
-      </div>
-      <div class="card pale">
-        <h3>You <span class="pill">get</span> the reply on your cell</h3>
-        <p>The homeowner&#x27;s reply goes straight to your phone. You answer by replying to that text, and it goes out from your business number.</p>
-        <div class="dark" aria-hidden="true"><div class="row"><span>On your cell · from your business line</span><span class="tag">New</span></div><div class="rv-q">Missed call from (813) 555-0142 · Tampa, FL. We texted them back.</div><div class="rv-q">Roof lead (813) 555-0142: Shingles came off in last night's storm and there's a leak upstairs.</div><div class="rv-q" style="color:#9EC1FF">You: We can come by today at 4. Does that work?</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="feat c center">
-    <h2 class="h2 grad">Your monthly report</h2>
-    <p class="sub">You get an alert for every missed call, and once a month a count of the calls that would have gone to voicemail.</p>
-    <div class="frame" style="height:auto"><div class="rep" aria-label="Example monthly report with made-up numbers"><h4>Ridgeline Roofing (example) · October</h4><div><b>41</b><span>calls that would have gone to voicemail</span></div><div><b>33</b><span>callers texted back within seconds</span></div><div><b>19</b><span>homeowners who texted back</span></div><p>Example with made-up numbers. Your report shows your own counts.</p></div></div>
-  </section>
-
-  <section class="feat c center">
-    <h2 class="h2 grad">What the system does</h2>
-    <p class="sub">Three things that keep a missed call from becoming a lost job.</p>
-    <div class="three">
-      <div class="tc"><div class="box"><div class="in sms" aria-hidden="true"><div class="m-head"><span>To the caller</span><span class="rv-pill">4 sec after</span></div><div class="bin" style="margin-top:10px">Sorry we missed your call. What's going on with your roof?</div></div></div><p><b>A text within seconds.</b> Each caller is texted once, so there&#x27;s no spam. Anonymous callers are ignored.</p></div>
-      <div class="tc"><div class="box"><div class="in sms" aria-hidden="true"><div class="m-head"><span>On your cell</span><span class="rv-pill">reply to answer</span></div><div class="bin" style="margin-top:10px">Roof lead (813) 555-0142: leak upstairs after the storm</div><div class="bout">Can we come by at 4?</div></div></div><p><b>Replies go to your cell.</b> You answer from your own phone by replying to the text. You keep your number and there is nothing to install.</p></div>
-      <div class="tc"><div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>This month</span><span class="rv-pill">example</span></div><div class="big-n" style="margin-top:14px">41</div><div style="font:400 14px/19px var(--sans);color:#5E616E;margin-top:6px">calls that would have gone to voicemail</div></div></div><p><b>A monthly count of calls caught.</b> You see how many calls would have gone to voicemail, plus an alert for every missed call.</p></div>
-    </div>
-  </section>
-
-  <section class="sec c center" id="timeline">
-    <h2 class="h2 grad">Live in 7 days</h2>
-    <p class="sub">Here is what happens from the first call to your first text-back.</p>
-    <div class="tl">
-      <div><em>Day 0</em><b>15-minute call</b><p>Caleb shows it working and answers your questions.</p></div>
-      <div><em>Day 1</em><b>We set up your number</b><p>We set up the number your line will forward to. Your 7 days start.</p></div>
-      <div><em>Days 2-6</em><b>Carrier approval and your test call</b><p>You call your own line and see the text arrive once the carriers approve the texting.</p></div>
-      <div><em>Day 7</em><b>Live</b><p>Your missed calls now text back within seconds. Billing starts then.</p></div>
-    </div>
-  </section>
-
-
-  <section class="stats c" id="price">
-    <div class="split">
-      <div class="sp"><img src="est-form-mobile-roof.jpg" width="260" height="567" alt="Demo roof estimate request form on a phone; made-up company, test data."></div>
+    <div class="c hero-g">
       <div>
-        <h2 class="h2 grad">One price, no setup fee</h2>
-        <div class="row"><div class="n">$249<small>/mo</small></div><div><h3>Missed-Call Text-Back</h3><p>Your setup, texts and upkeep are handled for you. The estimate request form on your website is included. No setup fee.</p></div></div>
-        <div class="row"><div class="n">$0<small>until live</small></div><div><h3>You pay after it works</h3><p>You pay nothing until it&#x27;s live. If it isn&#x27;t live within 7 days, your first month is free.</p></div></div>
-        <div class="row"><div class="n">12<small>months</small></div><div><h3>$2,988 over 12 months</h3><p>That is before this week&#x27;s discount on months 1-3, which applies if you book by Friday. Cancel anytime after 12 months.</p></div></div>
+        <p class="eyebrow">Consulting for roofers</p>
+        <h1 id="hero-h">Put the money you&#x27;re losing back in your pocket.</h1>
+        <p class="hsub">We find where your business leaks money. Then we fix it. Missed calls, slow follow-up, weak estimate requests, your website.</p>
+        <a class="btn w" href="#book">Book my 15-minute call <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <p class="risk">You pay nothing until the fix is live.</p>
+        <p class="founder">Run by Caleb Cruz, Portland, OR. One person looks at your whole business.</p>
+      </div>
+      <figure class="phone" style="margin:0">
+        <picture><source srcset="phone-thread.webp" type="image/webp"><img src="phone-thread.png" width="287" height="594" fetchpriority="high" alt="Example text thread on a phone. A roofer misses a call, the caller gets a text in seconds and replies about a storm leak. Made-up company."></picture>
+        <figcaption class="tag">Example. Made-up company.</figcaption>
+      </figure>
+    </div>
+  </section>
+  
+
+  <section class="sec" id="calc" aria-labelledby="calc-h">
+    <div class="c">
+      <p class="eyebrow">Your numbers</p>
+      <h2 class="h2" id="calc-h">What missed leads could cost you</h2>
+      <p class="lead">Put in your own numbers. See what a month of lost leads could be worth.</p>
+      <div class="calc-g">
+        <form class="calc" id="calcForm" onsubmit="return false" novalidate>
+          <div class="fld">
+            <div class="top"><label for="c-missed" id="l-missed">Leads you miss or lose per week</label><input id="c-missed" type="number" inputmode="numeric" min="0" max="50" step="1" value="5"></div>
+            <input type="range" id="r-missed" min="0" max="50" step="1" value="5" aria-labelledby="l-missed" data-for="c-missed">
+          </div>
+          <div class="fld">
+            <div class="top"><label for="c-hire" id="l-hire">Share of those leads who would hire you (%). 10% is 1 in 10.</label><input id="c-hire" type="number" inputmode="numeric" min="0" max="100" step="1" value="10" aria-describedby="h-hire"></div>
+            <p class="help" id="h-hire">Be honest. Lower is safer.</p>
+            <input type="range" id="r-hire" min="0" max="100" step="1" value="10" aria-labelledby="l-hire" aria-describedby="h-hire" data-for="c-hire">
+          </div>
+          <div class="fld">
+            <div class="top"><label for="c-job" id="l-job">Average job ($)</label><input id="c-job" type="number" inputmode="numeric" min="500" max="40000" step="100" value="9000"></div>
+            <input type="range" id="r-job" min="500" max="40000" step="500" value="9000" aria-labelledby="l-job" data-for="c-job">
+          </div>
+        </form>
+        <div class="res-card">
+          <p class="sr" id="calcLive" aria-live="polite" aria-atomic="true"></p>
+          <div id="calcOut" data-suf="a month in jobs that could slip away" data-pre="About" data-cap="Over" data-jobs="jobs a month">
+            <p class="res-big"><span class="pre" id="r-pre">About</span><span id="r-amt">$19,500</span></p>
+            <p class="res-suf">a month in jobs that could slip away</p>
+            <p class="res-jobs" id="r-jobs">About 2.2 jobs a month</p>
+            <p class="res-price">Plans start at $249 a month. <span id="r-cover">One job covers it for months.</span></p>
+          </div>
+          <p class="disclaim">Estimate only. Based on the numbers you entered, not on any customer results. We can&#x27;t promise jobs or revenue.</p>
+          <noscript><p class="nojs">For example, 5 lost leads a week with 1 in 10 hiring you on a $9,000 job comes to about $19,500 a month.</p></noscript>
+          <a class="btn" href="#book">Book my 15-minute call</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="sec c" id="about">
-    <h2 class="h2 grad">Who runs this</h2>
-    <div class="ab">
-      <div class="who"><p>I&#x27;m Caleb Cruz. Sami Enterprises LLC is a new company and you would be one of my first roofing clients. I built this because a call that goes to voicemail is often a job that goes to the next roofer. You deal with me directly, from the first call to go-live.</p><b>Caleb Cruz, Sami Enterprises LLC</b></div>
-      <div class="ct"><h3>Reach me directly</h3><p>cruzsystemsco@gmail.com | Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="margin-top:12px"><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">Try the working example form</a></p></div>
+  <section class="sec lav" id="how" aria-labelledby="how-h">
+    <div class="c">
+      <p class="eyebrow">What we fix</p>
+      <h2 class="h2" id="how-h">The fix depends on where the money leaks</h2>
+      <ul class="svcs"><li class="svc blue"><span class="num" aria-hidden="true">01</span><h3>Missed-call text-back</h3><p>Every missed call gets a text from your business in seconds. The reply goes to your cell.</p></li><li class="svc"><span class="num" aria-hidden="true">02</span><h3>Estimate request system</h3><p>Your estimate requests arrive with photos and a budget. You get a tracker and reminders so none go cold.</p></li><li class="svc"><span class="num" aria-hidden="true">03</span><h3>Websites and follow-up that could bring in jobs</h3><p>Your site and follow-up can help turn visitors and old leads into booked jobs. We build and run them for you.</p></li></ul>
     </div>
   </section>
 
-  <section class="faq c" id="faq">
-    <h2>Your questions</h2>
-    <details><summary>Do I have to change my phone number?</summary><p>No. You keep your current number and phone. Your line forwards calls you can&#x27;t pick up to a number we set up. There is nothing to install.</p></details>
-        <details><summary>How do you set it up?</summary><p>We do the setup after a 15-minute call, plus a few steps in your carrier&#x27;s forwarding settings that we walk you through. You then make a test call from your own phone before it goes live.</p></details>
-        <details><summary>What if I already have an answering service?</summary><p>It works alongside it. The text-back covers calls your service or receptionist doesn&#x27;t catch, like after hours and storm days. Callers still reach a person when someone is available.</p></details>
-        <details><summary>Is texting callers allowed?</summary><p>They called you first. The first text includes Reply STOP, and we honor it instantly. Each caller is texted once, and anonymous callers are ignored.</p></details>
-        <details><summary>What does it cost to run?</summary><p>The texting costs are included in the $249 a month. There are no per-message charges to you.</p></details>
-        <details><summary>Also included: the estimate form</summary><p>The estimate request form with photo upload on your website is part of the plan at no extra cost.</p></details>
-        <details><summary>Who is this not a fit for?</summary><p>If you rarely miss calls, this won&#x27;t help much. It answers the calls you already miss; it doesn&#x27;t create new ones. We&#x27;ll tell you on the call if that&#x27;s you.</p></details>
-        <details><summary>Will this guarantee more jobs?</summary><p>No. We make sure a caller you missed hears back within seconds. We can&#x27;t guarantee leads, jobs, or revenue. That depends on your market, your pricing, and how people find you.</p></details>
-        <details><summary>What if I cancel or need to end my service?</summary><p>The plan runs 12 months from your first payment, and ending early means owing the remainder. After 12 months you can cancel anytime.</p></details>
-        <details><summary>How does payment work?</summary><p>You pay nothing until it&#x27;s live. Then $249 a month, billed on the same day each month by card or bank transfer.</p></details>
+  <section class="sec" id="process" aria-labelledby="process-h">
+    <div class="c">
+      <p class="eyebrow">Our process</p>
+      <h2 class="h2" id="process-h">How we do it</h2>
+      <ol class="steps"><li><span class="num" aria-hidden="true">01</span><div><h3>We talk and look at your business</h3><p>You book a 15-minute call. Then we look at how calls, follow-up, estimates and your website work today.</p></div></li><li><span class="num" aria-hidden="true">02</span><div><h3>We find the biggest money leak</h3><p>We pick the one weak spot that could cost you most. We show you what we found and why.</p></div></li><li><span class="num" aria-hidden="true">03</span><div><h3>We fix it and keep it running</h3><p>We set up the fix for you and watch it. You pay nothing until it&#x27;s live.</p></div></li></ol>
+      <div class="facts"><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You keep your number and your tools. We do the work. You make one test.</p><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Each caller we text is texted once. Reply STOP and it stops at once.</p></div>
+    </div>
   </section>
 
-  <section class="sec c center" id="book">
-    <h2 class="h2 grad">Book your 15-minute call</h2>
-    <p class="sub">Caleb shows it working on an example. You leave knowing if it fits.</p>
-    <div class="bk">
-      <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Caleb will email you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and Caleb will book you in."
-        data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
-        data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and Caleb will confirm a time.">
-        <p class="hp"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
-        <label>Your name<input name="name" autocomplete="name" required></label>
-        <label>Company<input name="company" autocomplete="organization" required></label>
-        <label>Email<input name="email" type="email" autocomplete="email" required></label>
-        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
-        <label class="full">Your website<input name="website" inputmode="url" placeholder="yourroofingcompany.com"></label>
-        <label>Best day<select name="pref_day"><option value="">Any day</option></select></label>
-        <label>Best time<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
-        <p class="tz full" id="bookTz"></p>
-        <label class="full">Biggest headache right now<select name="headache"><option value="">Choose one</option><option>Missed calls go to voicemail</option><option>Can&#x27;t answer on the roof</option><option>Slow to reply after storms</option><option>Something else</option></select></label>
-        <label class="full">Anything else<textarea name="notes" rows="2"></textarea></label>
-        <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
-        <button class="btn-blue full" type="submit">Book my call</button>
+  <section class="sec lav" id="price" aria-labelledby="price-h">
+    <div class="c">
+      <p class="eyebrow">Price</p>
+      <h2 class="h2" id="price-h">Plans start at $249 a month. You pay nothing until it&#x27;s live.</h2>
+      <div class="offer-g">
+        <div class="pcard">
+          <p class="from">Plans start at</p>
+          <p class="price"><b>$249</b><span>/month</span></p>
+          <p class="term">Monthly plans run 12 months.</p>
+          <p class="disc" data-end="2026-10-04T23:59:59-04:00">This week: 50% off your first 3 months if you book by Sunday, Oct 4.</p>
+          <ul class="pts"><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You pay nothing until it&#x27;s live</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No setup fee on monthly plans</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Missed-call and estimate plans go live within 7 days of access, or your first month is free</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly plans run 12 months. $2,988 before the discount</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Larger fixes are priced per job. Caleb quotes you on the call</span></li></ul>
+          <a class="btn" href="#book">Book my 15-minute call</a>
+          <p class="pnote">The call takes 15 minutes. Caleb tells you where your business leaks money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="why" aria-labelledby="why-h">
+    <div class="c">
+      <p class="eyebrow">Why us</p>
+      <h2 class="h2" id="why-h">Why roofers can trust this</h2>
+      <ul class="why"><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4.5 20a7.5 7.5 0 0115 0" /></svg></span><h3>One person, your whole business</h3><p>You get one person who looks at all of it. Caleb is not a software vendor with one tool to sell.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r=".5" /></svg></span><h3>We fix what costs you most</h3><p>Your money leaks in one spot first. We fix that one and skip the rest.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span><h3>Done for you</h3><p>You do not build anything. Caleb sets it up and runs it. You make one test.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3zM12 10v4M12 17v.5" /></svg></span><h3>An honest limit</h3><p>If nothing is leaking, we&#x27;ll tell you. You owe us nothing for that call.</p></li></ul>
+      <div class="why-b">
+        <div class="who"><p>I&#x27;m Caleb Cruz. I run Sami Enterprises LLC in Portland, OR. I&#x27;m new, so you&#x27;d be one of my first clients in roofing. I do the work myself and answer your emails.</p><b>Caleb Cruz, Sami Enterprises LLC</b></div>
+        <div class="tl"><h3>A typical first 7 days</h3><ol><li><span class="day">Day 0</span><span class="tt">15-minute call</span></li><li><span class="day">Day 1</span><span class="tt">We find the leak</span></li><li><span class="day">Days 2-6</span><span class="tt">Fix set up, your test</span></li><li><span class="day">Day 7</span><span class="tt">Live</span></li></ol></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec lav" id="faq" aria-labelledby="faq-h">
+    <div class="c">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" id="faq-h">Your questions</h2>
+      <div class="faq">
+        <details><summary>What do you actually do?</summary><p>We find where your roofing business loses money. Then we fix that spot. It may be missed calls, slow follow-up, weak estimate requests or your website.</p></details>
+        <details><summary>How do you price it?</summary><p>Plans start at $249 a month. That covers the missed-call and estimate system. Bigger fixes are priced per job, and Caleb quotes you on the call.</p></details>
+        <details><summary>Do I have to change my phone number or my website?</summary><p>No. You keep your number and your site. Calls you can&#x27;t pick up forward to a number Caleb sets up. Site changes are only made with your OK.</p></details>
+        <details><summary>Is texting callers allowed?</summary><p>They called you first. The text says Reply STOP, and it stops at once. Each caller is texted once. Anonymous callers are skipped.</p></details>
+        <details><summary>What if I cancel?</summary><p>Monthly plans run 12 months from your first payment. If you end early, you owe the rest. After 12 months, you can cancel any time.</p></details>
+        <details><summary>Who is this not for?</summary><p>If you rarely miss calls and your leads get a fast reply, this won&#x27;t help much. Caleb will say so on the call.</p></details>
+        <details><summary>Will this guarantee more jobs?</summary><p>No. We fix weak spots so fewer leads slip away. Jobs depend on your market, your price, and how people find you.</p></details>
+        <details><summary>How do you get started?</summary><p>After a 15-minute call, Caleb finds the biggest leak. He sets up the fix and walks you through any steps. You make a test, then it goes live.</p></details>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="sec" id="check" aria-labelledby="check-h"><div class="c"><p class="eyebrow">Proof</p><h2 class="h2" id="check-h">What you can check today</h2><ul class="checks"><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The example text</h3><p>You can see what your caller sees in the text thread above. It is made up.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The price</h3><p>Your plan starts at $249 a month. No setup fee on monthly plans. It runs 12 months.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The guarantee</h3><p>You pay nothing until it&#x27;s live. Missed-call and estimate plans go live within 7 days of access, or your first month is free.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The address</h3><p>You can find us at Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254.</p></div></li></ul></div></section>
+
+  <section class="book dk" id="book" aria-labelledby="book-h">
+    <div class="c">
+      <div class="head">
+        <p class="eyebrow">Book a call</p>
+        <h2 class="h2" id="book-h">Put the money you&#x27;re losing back in your pocket</h2>
+        <p class="lead">Book a 15-minute call. Caleb looks at your business, and you leave knowing where it leaks money.</p>
+      </div>
+      <div class="bk">
+        <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Caleb will send you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and Caleb will book you in."
+          data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so Caleb can email your confirmation."
+          data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and Caleb will confirm a time.">
+          <p class="hp" aria-hidden="true"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Company<input name="company" autocomplete="organization" required></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+          <label class="full">Your website (optional)<input name="website" inputmode="url" autocomplete="url"></label>
+          <label>Best day (optional)<select name="pref_day"><option value="">Any day</option></select></label>
+          <label>Best time (optional)<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
+          <p class="tz full" id="bookTz"></p>
+          <label class="full">Anything else (optional)<textarea name="notes" rows="2"></textarea></label>
+          <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
+          <button class="btn full" type="submit">Book my 15-minute call</button>
+        </form>
         <div id="bookMsg" role="status" aria-live="polite"></div>
-      </form>
-      <p class="gnote">You pay nothing until it&#x27;s live.</p>
+      </div>
+      
+      <p class="bproof"><b>You pay nothing until the fix is live.</b>Caleb replies within 1 business day. Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254.</p>
     </div>
   </section>
 </main>
 
-<div class="tail">
+<footer class="ft dk">
   <div class="c">
-    <div class="band">
-      <div><h3>Atlantic hurricane season runs through November 30.<span>Book by Friday and this week&#x27;s discount applies to months 1-3.</span></h3><a class="btn-dark" href="#book">Book my 15-minute call</a></div>
-      <div class="keys" aria-hidden="true">
-        <div class="key a"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="#A4B0CA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="key b"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="none" stroke="#A4B0CA" stroke-width="1.6"/></svg></div>
-      </div>
+    <div class="ft-g">
+      <div><a class="logo" href="#top">Sami Enterprises</a><p style="margin-top:8px;max-width:520px">Sami Enterprises LLC, Portland, OR. Run by Caleb Cruz. cruzsystemsco@gmail.com</p><p>2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="max-width:520px">Each caller we text is texted once. Reply STOP to any text and it stops at once. We can&#x27;t promise jobs or revenue.</p></div>
+      <nav aria-label="Footer"><a href="#process">How it works</a><a href="#price">Price</a><a href="#faq">FAQ</a><a href="#book">Book my call</a></nav>
     </div>
-    <footer class="ft">
-      <div class="ft-g">
-        <div><a class="logo" href="#top" style="color:#000;width:auto">Sami Enterprises</a><p style="color:#5E616E;margin-top:8px;max-width:340px">Sami Enterprises LLC, Portland, OR. Built and supported by Caleb Cruz.</p></div>
-        <div><h4>Service</h4><a href="#how">How it works</a><a href="#price">Pricing</a><a href="#book">Book a call</a><a href="https://claude.ai/artifact/Ukd1Ph4xSytvEkoYJxVUwW">See the demo</a></div>
-        <div><h4>Help</h4><a href="#faq">FAQ</a></div>
-      </div>
-      <div class="copy"><span>© 2026 Sami Enterprises</span><span>No ranking or lead-number guarantees. Prices in US dollars.</span></div>
-    </footer>
+    <p class="cp">© 2026 Sami Enterprises LLC</p>
   </div>
+</footer>
+
+<div class="sbar" id="sbar" inert>
+  <a class="btn" href="#book">Book my 15-minute call</a>
+  <p>You pay nothing until the fix is live.</p>
 </div>
 
 <script>
 (function(){
+  "use strict";
+  // mobile menu
   var bg=document.getElementById('burger'), nv=document.getElementById('mainnav');
-  bg.addEventListener('click',function(){ var o=nv.classList.toggle('open'); bg.setAttribute('aria-expanded',o); bg.setAttribute('aria-label',o?'Close menu':'Open menu'); });
-  nv.addEventListener('click',function(e){ if(e.target.tagName==='A'){ nv.classList.remove('open'); bg.setAttribute('aria-expanded','false'); } });
+  function setMenu(o){ nv.classList.toggle('open',o); bg.setAttribute('aria-expanded',String(o)); bg.setAttribute('aria-label',o?bg.dataset.close:bg.dataset.open); }
+  bg.addEventListener('click',function(){ setMenu(!nv.classList.contains('open')); });
+  nv.addEventListener('click',function(e){ if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && nv.classList.contains('open')){ setMenu(false); bg.focus(); } });
+
+  // sticky bottom CTA: shown after the hero scrolls out, hidden while the booking form is on screen
+  var bar=document.getElementById('sbar'), hero=document.getElementById('top'), book=document.getElementById('book');
+  if('IntersectionObserver' in window){
+    var heroOut=false, bookIn=false;
+    function upd(){ var on=heroOut&&!bookIn; bar.classList.toggle('on',on); document.body.classList.toggle('bar-on',on); if(on) bar.removeAttribute('inert'); else bar.setAttribute('inert',''); }
+    new IntersectionObserver(function(es){ heroOut=!es[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(es){ bookIn=es[0].isIntersecting; upd(); }).observe(book);
+  }
+
+  // calculator (LANDING-PLAYBOOK §7): monthly = missed/week x 4.33 x hire% x avg job
+  var out=document.getElementById('calcOut'), amt=document.getElementById('r-amt'), pre=document.getElementById('r-pre'),
+      jobs=document.getElementById('r-jobs'), cover=document.getElementById('r-cover'), used=false;
+  var F={missed:[0,50],hire:[0,100],job:[500,40000]};
+  function num(id){ var raw=document.getElementById('c-'+id).value, v=parseFloat(raw); if(raw===''||!isFinite(v)||v<0) return 0; return Math.min(Math.max(v,F[id][0]),F[id][1]); }
+  var live=document.getElementById('calcLive'), lt;
+  function fill(r){ var p=(r.value-r.min)/(r.max-r.min)*100; r.style.setProperty('--p',p+'%'); }
+  function calc(){
+    var m=num('missed'), h=num('hire'), j=num('job');
+    var monthly=m*4.33*(h/100)*j, perMonth=m*4.33*(h/100);
+    if(monthly>1000000){ pre.textContent=out.dataset.cap; amt.textContent='$1,000,000'; }
+    else { pre.textContent=out.dataset.pre; amt.textContent='$'+(Math.round(monthly/100)*100).toLocaleString('en-US'); }
+    jobs.hidden=perMonth<0.1;
+    jobs.textContent=out.dataset.pre+' '+(Math.round(perMonth*10)/10).toLocaleString('en-US',{maximumFractionDigits:1})+' '+out.dataset.jobs;
+    cover.hidden=monthly<249;
+    clearTimeout(lt); lt=setTimeout(function(){ live.textContent=pre.textContent+' '+amt.textContent+' '+out.dataset.suf+'.'; },700);
+  }
+  function first(){ if(!used){ used=true; window.samiTrack&&samiTrack('calc_used'); } }
+  [].forEach.call(document.querySelectorAll('#calcForm input[type=range]'),function(r){
+    var box=document.getElementById(r.dataset.for), id=r.dataset.for.slice(2);
+    fill(r);
+    r.addEventListener('input',function(){ box.value=r.value; fill(r); calc(); first(); });
+    box.addEventListener('input',function(){ var v=num(id); r.value=Math.max(F[id][0],v); fill(r); calc(); first(); });
+    box.addEventListener('change',function(){ if(box.value==='') return; var v=parseFloat(box.value);
+      if(!isFinite(v)){ box.value=''; } else if(v<F[id][0]){ box.value=F[id][0]; } else if(v>F[id][1]){ box.value=F[id][1]; }
+      r.value=box.value===''?F[id][0]:box.value; fill(r); calc(); });
+  });
+  calc(); live.textContent='';
+
+  // live offer line: hidden by the browser once its offers.json deadline passes, even if the site is not rebuilt
+  var disc=document.querySelector('.disc[data-end]');
+  if(disc && Date.now()>Date.parse(disc.dataset.end)) disc.hidden=true;
 })();
 </script>
 <script src="sami-book.js" defer></script>

@@ -10,7 +10,7 @@
   var ENDPOINT = CFG.url ? CFG.url.replace(/\/$/, "") + "/rest/v1/site_events" : null;
   var ALLOWED = ["page_view", "scroll_25", "scroll_50", "scroll_75", "scroll_90", "section_view", "engaged_15s", "engaged_60s",
     "faq_open", "nav_click", "menu_open", "cta_click", "demo_click", "outbound_click", "rage_click", "dead_click",
-    "js_error", "quick_back", "page_exit"];
+    "js_error", "quick_back", "page_exit", "calc_used"];
 
   function rnd() { return (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2)).slice(0, 36); }
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }

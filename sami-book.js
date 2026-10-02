@@ -25,6 +25,10 @@
 
   function store(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function say(cls, t) { msg.className = cls; msg.textContent = t; }
+  function bad(el, t) {                                                       // tie the message to the field for screen readers
+    el.setAttribute("aria-invalid", "true"); el.setAttribute("aria-describedby", "bookMsg"); el.focus(); say("err", t);
+  }
+  f.addEventListener("input", function (e) { if (e.target.removeAttribute) { e.target.removeAttribute("aria-invalid"); e.target.removeAttribute("aria-describedby"); } });
   function track(e, p) { if (window.samiTrack) window.samiTrack(e, p); }
 
   f.addEventListener("submit", function (e) {
@@ -34,17 +38,17 @@
     var need = ["name", "company", "email"];
     for (var i = 0; i < need.length; i++) {
       var el = f.elements[need[i]];
-      if (!el.value.trim()) { el.focus(); say("err", f.dataset.missing + " " + el.labels[0].firstChild.textContent.trim().toLowerCase() + "."); return; }
+      if (!el.value.trim()) { bad(el, f.dataset.missing + " " + el.labels[0].firstChild.textContent.trim().toLowerCase().replace(/^your\s+/, "").replace(/\s*\(optional\)$/, "") + "."); return; }
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.elements.email.value.trim())) { f.elements.email.focus(); say("err", f.dataset.bademail); return; }
-    if (!f.elements.consent.checked) { say("err", f.dataset.consent); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.elements.email.value.trim())) { bad(f.elements.email, f.dataset.bademail); return; }
+    if (!f.elements.consent.checked) { bad(f.elements.consent, f.dataset.consent); return; }
     var q = new URLSearchParams(location.search);
     var row = {
       name: f.elements.name.value.trim().slice(0, 100), company: f.elements.company.value.trim().slice(0, 120),
       website: f.elements.website.value.trim().slice(0, 200) || null, email: f.elements.email.value.trim().slice(0, 160),
       phone: f.elements.phone.value.trim().slice(0, 40) || null, pref_day: f.elements.pref_day.value || null,
       pref_time: f.elements.pref_time.value || null, timezone: tz.slice(0, 60) || null,
-      headache: f.elements.headache.value || null, notes: f.elements.notes.value.trim().slice(0, 1000) || null, consent: true,
+      headache: (f.elements.headache && f.elements.headache.value) || null, notes: f.elements.notes.value.trim().slice(0, 1000) || null, consent: true,
       vid: store("sami_vid"), sid: store("sami_sid"), rid: (q.get("r") || store("sami_rid") || "").slice(0, 32) || null,
       utm_source: (q.get("utm_source") || "").slice(0, 80) || null
     };
