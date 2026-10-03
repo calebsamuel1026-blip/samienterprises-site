@@ -13,8 +13,8 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@400;500;600&display=swap"></noscript>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%231C38EA'/%3E%3Cpath d='M6 10.3l2.6 2.6L14.2 7.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="missed-call-card.webp" type="image/webp">
-<!-- v8 visual system + composition: design/REFERENCE-MAP-cluely.md (primary reference cluely.com, owner-supplied), same look as v6.
-     Content order: v7 (design/LANDING-PLAYBOOK.md). Own code, copy (design/copy-v8-site.json) and imagery. -->
+<!-- v9: v8 visual system (design/REFERENCE-MAP-cluely.md) cut to Cluely's section count, order and lengths (design/LENGTH-CUT-v9.md).
+     Own code, copy (design/copy-v9-site.json) and imagery. Order: hero, two cards, centered feature, three cards + logo row, split stats, FAQ, CTA band (booking), footer. -->
 <style>
 :root{
   --ink:#000; --ink2:#2E3038; --mute:#8C929D; --mute2:#5E616E; --rule:#E4E4E7; --lav:#DDE2EE; --lav2:#BBC5DD; --blue:#1C38EA;
@@ -303,6 +303,50 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
   .sbar p{margin-top:6px;text-align:center;font:500 14px/18px var(--sans);color:var(--ink2)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---- v9 (Cluely lengths, design/LENGTH-CUT-v9.md) ---- */
+.clients{padding-top:64px}
+.three .tc p{max-width:340px}
+/* results: Cluely split stats */
+.split .h2{margin-bottom:8px}
+.srows li{display:grid;grid-template-columns:150px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--rule)}
+.srows .n{font:400 48px/48px var(--sans);letter-spacing:-1px;white-space:nowrap}
+.srows h3{font:300 32px/38px var(--sans);letter-spacing:-.8px;color:#000}
+.srows p:not(.n){margin-top:8px;font:400 16px/24px var(--sans);color:var(--mute2)}
+.srows p b{font-weight:500;color:var(--ink2)}
+.srows a{display:inline-flex;align-items:center;min-height:40px;margin-left:4px;color:var(--blue);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.sp figure{margin:0;display:grid;justify-items:center;gap:14px}
+.sp figcaption{padding:4px 12px;border-radius:999px;background:#EEF1F8;font:500 14px/20px var(--sans);color:var(--ink2)}
+/* booking: Cluely CTA band (lavender fade) with the form on the right */
+.bookband{margin-top:200px;padding:140px 0 72px;background:linear-gradient(#fff 0,#EEF1F7 18%,#DDE2EE 70%)}
+.bookband{display:block;min-height:0}
+.book-g{display:grid;grid-template-columns:minmax(0,1fr) 600px;gap:64px;align-items:start}
+.book-l .h2{font-size:44px;line-height:54px;letter-spacing:-1.2px}
+.bline{margin-top:14px;font:500 24px/32px var(--sans);letter-spacing:-.6px}
+.bline span{background:linear-gradient(to right,#2F4E8E,#4A5E88);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bline span[hidden]{display:none}
+.book-l .sub{margin-top:16px}
+.book-l .bproof{margin:20px 0 0;max-width:460px;text-align:left;color:var(--ink2)}
+.bookband .bk{max-width:none;margin:0;padding:32px}
+.ft-w{background:#DDE2EE}
+.ft-w .ft{margin-top:0}
+@media (max-width:1100px){.book-g{grid-template-columns:1fr}.srows li{grid-template-columns:120px 1fr;gap:20px}}
+@media (max-width:900px){
+  .sec{padding-top:96px}
+  .three{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin-inline:-16px;padding:0 16px 10px;scrollbar-width:none}
+  .three::-webkit-scrollbar{display:none}
+  .three .tc{flex:0 0 85%;scroll-snap-align:center}
+  .tc .in{min-height:0;height:220px}
+  .srows li{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .srows .n{font-size:40px;line-height:44px}.srows h3{font-size:24px;line-height:30px}
+  .sp{padding:24px 0}.sp img{width:190px}
+  .bookband{margin-top:96px;padding:72px 0 40px}
+  .book-g{gap:28px}
+  .book-l .h2{font-size:32px;line-height:40px}
+  .bline{font-size:20px;line-height:28px}
+  .bookband .bk{padding:20px}
+  .bk form{gap:12px}
+}
 </style>
 </head>
 <body>
@@ -312,7 +356,7 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
   <div class="c">
     <a class="logo" href="#top" aria-label="Sami Enterprises home"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sami Enterprises</a>
     <button class="burger" id="burger" type="button" aria-label="Open menu" data-open="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mainnav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-    <nav class="nav" id="mainnav" aria-label="Main"><a href="#process">How it works</a><a href="#price">Price</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav>
+    <nav class="nav" id="mainnav" aria-label="Main"><a href="#process">How it works</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav>
   </div>
 </header>
 
@@ -327,10 +371,9 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
     </svg>
     <div class="c">
       <h1 id="hero-h">Put the money you&#x27;re losing back in your pocket.</h1>
-      <p class="lede">We audit your business and find where it leaks money. Then we close the gap. Missed calls, slow follow-up, weak estimate requests, your website.</p>
+      <p class="lede">We find the gaps in your business where money slips away. Then we close them.</p>
       <a class="btn-blue" href="#book"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>Book my 15-minute call</a>
       <p class="risk">You pay nothing until the fix is live. Month to month.</p>
-      <p class="founder">A growth audit for roofers. We find the gap, then we close it.</p>
     </div>
     <figure class="panel" style="margin-bottom:0">
       <div class="menubar" aria-hidden="true"></div>
@@ -343,20 +386,31 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
       <div class="dock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     </figure>
   </section>
-  <div class="clients"><div class="c"><p class="cl-lab">Businesses we work with</p><ul><li><a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank"><img src="christian-academy-for-autism.png" alt="Christian Academy for Autism" height="96" loading="lazy"></a></li><li><span><img src="mr-box.jpg" alt="MR BOX LLC" height="96" loading="lazy"></span></li></ul></div></div>
+
+  <section class="sec c" id="process" aria-labelledby="process-h">
+    <h2 class="h2 grad" id="process-h">How we do it</h2>
+    <div class="two">
+      <div class="card blue"><ol class="steps"><li><span class="num" aria-hidden="true">01</span><div><h3>We look at your business</h3><p>You get a 15-minute call. Then we check your calls, follow-up, estimates and website.</p></div></li><li><span class="num" aria-hidden="true">02</span><div><h3>We find the biggest leak</h3><p>We show you the one gap that could cost you most, and why.</p></div></li><li><span class="num" aria-hidden="true">03</span><div><h3>We close it and keep it running</h3><p>You get the fix set up by our team. You pay nothing until it&#x27;s live.</p></div></li></ol></div>
+      <div class="card pale">
+        <h3 class="ct">Your first 7 days</h3>
+        <div class="dark"><ol class="tl"><li><span class="day">Day 0</span><span class="tt">15-minute call</span></li><li><span class="day">Day 1</span><span class="tt">We find the leak</span></li><li><span class="day">Days 2-6</span><span class="tt">Fix set up, your test</span></li><li><span class="day">Day 7</span><span class="tt">Live</span></li></ol></div>
+        <div class="facts"><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You keep your number and your tools.</p><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Each caller we text is texted once. Reply STOP and it stops at once.</p></div>
+      </div>
+    </div>
+  </section>
 
   <section class="sec c center" id="calc" aria-labelledby="calc-h">
     <h2 class="h2 grad" id="calc-h">What missed leads could cost you</h2>
-    <p class="sub">Put in your own numbers. See what a month of lost leads could be worth.</p>
+    <p class="sub">Put in your own numbers.</p>
     <div class="calc-box">
       <form class="calc" id="calcForm" onsubmit="return false" novalidate>
         <div class="fld">
-          <div class="top"><label for="c-missed" id="l-missed">Leads you miss or lose per week</label><input id="c-missed" type="number" inputmode="numeric" min="0" max="50" step="1" value="5"></div>
+          <div class="top"><label for="c-missed" id="l-missed">Leads you miss each week</label><input id="c-missed" type="number" inputmode="numeric" min="0" max="50" step="1" value="5"></div>
           <input type="range" id="r-missed" min="0" max="50" step="1" value="5" aria-labelledby="l-missed" data-for="c-missed">
         </div>
         <div class="fld">
-          <div class="top"><label for="c-hire" id="l-hire">Share of those leads who would hire you (%). 10% is 1 in 10.</label><input id="c-hire" type="number" inputmode="numeric" min="0" max="100" step="1" value="10" aria-describedby="h-hire"></div>
-          <p class="help" id="h-hire">Be honest. Lower is safer.</p>
+          <div class="top"><label for="c-hire" id="l-hire">Share who would hire you (%)</label><input id="c-hire" type="number" inputmode="numeric" min="0" max="100" step="1" value="10" aria-describedby="h-hire"></div>
+          <p class="help" id="h-hire">10% is 1 in 10. Lower is safer.</p>
           <input type="range" id="r-hire" min="0" max="100" step="1" value="10" aria-labelledby="l-hire" aria-describedby="h-hire" data-for="c-hire">
         </div>
         <div class="fld">
@@ -372,7 +426,7 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
           <p class="res-jobs" id="r-jobs">About 2.2 jobs a month</p>
           <p class="res-price">Plans start at $249 a month. <span id="r-cover">One job could cover it for months.</span></p>
         </div>
-        <p class="disclaim">Estimate only. Based on the numbers you entered, not on any customer results. We can&#x27;t promise jobs or revenue.</p>
+        <p class="disclaim">Estimate only, from your numbers. We can&#x27;t promise jobs or revenue.</p>
         <noscript><p class="nojs">For example, 5 lost leads a week with 1 in 10 hiring you on a $9,000 job comes to about $19,500 a month.</p></noscript>
         <a class="btn-blue" href="#book">Book my 15-minute call</a>
       </div>
@@ -380,111 +434,81 @@ html:not(.js) .calc-box{grid-template-columns:1fr}
   </section>
 
   <section class="sec c center" id="how" aria-labelledby="how-h">
-    <h2 class="h2 grad" id="how-h">The fix depends on where the money leaks</h2>
-    <div class="three">
+    <h2 class="h2 grad" id="how-h">We close the gap that costs you most</h2>
+    <div class="three" tabindex="0" role="region" aria-label="We close the gap that costs you most">
       <div class="tc">
         <div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Example. Made-up company.</span><span class="m-pill">2:13 PM</span></div><span class="m-sys">Missed call · no answer</span><div class="bin">Sorry we missed your call. What's going on with your roof? Reply STOP to opt out.</div><div class="bout">Storm took some shingles. Leak upstairs.</div></div></div>
-        <h3>Missed-call text-back</h3><p>Every missed call gets a text from your business in seconds. The reply goes to your cell.</p>
+        <h3>Missed-call text-back</h3><p>Each missed call gets a text from your business in seconds.</p>
       </div>
       <div class="tc">
         <div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Estimate request</span><span class="m-pill">New</span></div><div class="m-fld">Roof leak, 2-story home</div><div class="m-ph"><i></i><i></i><i></i></div><div class="m-row"><span>Budget</span><b>$8k to $12k</b></div><div class="m-row"><span>Reminder</span><b>Follow up today</b></div></div></div>
-        <h3>Estimate request system</h3><p>Your estimate requests arrive with photos and a budget. You get a tracker and reminders so none go cold.</p>
+        <h3>Estimate requests</h3><p>Your requests come in with photos and a budget. None go cold.</p>
       </div>
       <div class="tc">
         <div class="box"><div class="in" aria-hidden="true"><div class="m-url">yourroofingcompany.com</div><div class="m-hero"></div><span class="m-btn">Get my estimate</span><div class="m-row"><span>Old lead, 30 days</span><b>Text sent</b></div></div></div>
-        <h3>Websites and follow-up that could bring in jobs</h3><p>Your site and follow-up can help turn visitors and old leads into booked jobs. We build and run them for you.</p>
+        <h3>Website and follow-up</h3><p>Your site and follow-up could turn more visitors into jobs.</p>
       </div>
     </div>
+    <div class="clients"><div class="c"><p class="cl-lab">Businesses we work with</p><ul><li><a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank"><img src="christian-academy-for-autism.png" alt="Christian Academy for Autism" height="96" loading="lazy"></a></li><li><span><img src="mr-box.jpg" alt="MR BOX LLC" height="96" loading="lazy"></span></li></ul></div></div>
   </section>
 
-  <section class="sec c" id="process" aria-labelledby="process-h">
-    <h2 class="h2 grad" id="process-h">How we do it</h2>
-    <div class="two">
-      <div class="card blue"><ol class="steps"><li><span class="num" aria-hidden="true">01</span><div><h3>We talk and look at your business</h3><p>You book a 15-minute call. Then we look at how calls, follow-up, estimates and your website work today.</p></div></li><li><span class="num" aria-hidden="true">02</span><div><h3>We find the biggest money leak</h3><p>We pick the one weak spot that could cost you most. We show you what we found and why.</p></div></li><li><span class="num" aria-hidden="true">03</span><div><h3>We fix it and keep it running</h3><p>We set up the fix for you and watch it. You pay nothing until it&#x27;s live.</p></div></li></ol></div>
-      <div class="card pale">
-        <h3 class="ct">A typical first 7 days</h3>
-        <div class="dark"><ol class="tl"><li><span class="day">Day 0</span><span class="tt">15-minute call</span></li><li><span class="day">Day 1</span><span class="tt">We find the leak</span></li><li><span class="day">Days 2-6</span><span class="tt">Fix set up, your test</span></li><li><span class="day">Day 7</span><span class="tt">Live</span></li></ol></div>
-        <div class="facts"><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You keep your number and your tools. We do the work. You make one test.</p><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Each caller we text is texted once. Reply STOP and it stops at once.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec c" id="price" aria-labelledby="price-h">
+  <section class="sec c" id="results" aria-labelledby="results-h">
     <div class="split">
-      <div class="sp"><picture><source srcset="phone-thread.webp" type="image/webp"><img src="phone-thread.png" width="287" height="594" alt="Example text thread on a phone. A roofer misses a call, the caller gets a text in seconds and replies about a storm leak. Made-up company."></picture></div>
+      <div class="sp"><figure><picture><source srcset="phone-thread.webp" type="image/webp"><img src="phone-thread.png" width="287" height="594" loading="lazy" alt="Example text thread on a phone. A roofer misses a call, the caller gets a text in seconds and replies about a storm leak. Made-up company."></picture><figcaption>Example. Made-up company.</figcaption></figure></div>
       <div>
-        <h2 class="h2 grad" id="price-h">Plans start at $249 a month, month to month. You pay nothing until it&#x27;s live.</h2>
-        <div class="prow">
-          <div><p class="from">Plans start at</p><p class="n">$249<small>/month</small></p><p class="term">Month to month. Cancel any time.</p></div>
-          <div class="pdisc"><p class="disc" data-end="2026-10-04T23:59:59-04:00">This week: 50% off your first 3 months ($124.50 a month) if you book by Sunday, Oct 4.</p></div>
-        </div>
-        <ul class="pts"><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You pay nothing until it&#x27;s live</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No setup fee on monthly plans</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Missed-call and estimate plans go live within 7 days of access, or your first month is free</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Month to month. Cancel any time and your plan ends with the month you&#x27;ve paid for</span></li><li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Larger fixes are priced per job. Our team quotes you after the audit call</span></li></ul>
-        <div class="pcta"><a class="btn-blue" href="#book">Book my 15-minute call</a><p class="pnote">The call takes 15 minutes. Our team shows you where your business leaks money.</p></div>
+        <h2 class="h2 grad" id="results-h">What closing the gaps did for our clients</h2>
+        <ul class="srows"><li class="srow"><p class="n">$3M</p><div><h3>Annual incoming revenue</h3><p><b>Christian Academy for Autism.</b> We audited the business, found the gaps where money was slipping and fixed them. <a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank">See it live<span class="sr"> (Christian Academy for Autism)</span></a></p></div></li><li class="srow"><p class="n">$120K</p><div><h3>Additional revenue per year</h3><p><b>MR BOX LLC.</b> We audited the business, found the gaps where money was slipping and fixed them.</p></div></li><li class="srow"><p class="n">$0</p><div><h3>Until your fix is live</h3><p>Then $249 a month, month to month. Live within 7 days of access, or your first month is free.</p></div></li></ul>
       </div>
     </div>
-  </section>
-
-  <section class="sec c center" id="why" aria-labelledby="why-h">
-    <h2 class="h2 grad" id="why-h">Why roofers can trust this</h2>
-    <p class="sub">Sami Enterprises is a growth agency for home-service businesses, roofers first. We audit the whole business, find the gap where money leaks, and close it.</p>
-    <ul class="why"><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4.5 20a7.5 7.5 0 0115 0" /></svg></span><h3>We audit the whole business</h3><p>We look at calls, follow-up, estimates and your website together. We do not sell one tool and call it done.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r=".5" /></svg></span><h3>We fix what costs you most</h3><p>Your money leaks in one spot first. We close that gap before anything else.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span><h3>Done for you, end to end</h3><p>You do not build anything. Our team sets it up and runs it. You make one test.</p></li><li><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3zM12 10v4M12 17v.5" /></svg></span><h3>We tell you straight</h3><p>You hear it from us if there is no gap. You owe nothing for that call.</p></li></ul>
   </section>
 
   <section class="sec c faq" id="faq" aria-labelledby="faq-h">
     <h2 id="faq-h">Your questions</h2>
-    <details><summary>What do you actually do?</summary><p>We audit your roofing business and find where it loses money. Then we close that gap. It may be missed calls, slow follow-up, weak estimate requests or your website.</p></details>
-        <details><summary>How do you price it?</summary><p>Plans start at $249 a month. That covers the missed-call and estimate system. Bigger fixes are priced per job, and our team quotes you after the audit call.</p></details>
-        <details><summary>Do I have to change my phone number or my website?</summary><p>No. You keep your number and your site. Calls you can&#x27;t pick up forward to a number we set up. Site changes are only made with your OK.</p></details>
-        <details><summary>Is texting callers allowed?</summary><p>They called you first. The text says Reply STOP, and it stops at once. Each caller is texted once. Anonymous callers are skipped.</p></details>
-        <details><summary>What if I cancel?</summary><p>No contract. Plans are month to month. You can cancel any time, and it takes effect at the end of the month you&#x27;ve already paid for.</p></details>
+    <details><summary>What do you actually do?</summary><p>We audit your business and find where it loses money. Then we close that gap. It may be missed calls, slow follow-up, weak estimate requests or your website.</p></details>
+        <details><summary>Do I have to change my phone number or website?</summary><p>No. You keep your number, your site and any answering service you use. Site changes are made only with your OK.</p></details>
+        <details><summary>Is texting callers allowed?</summary><p>They called you first. Each caller is texted once. The text says Reply STOP, and it stops at once.</p></details>
+        <details><summary>What does it cost, and can I cancel?</summary><p>Plans start at $249 a month, month to month. You pay nothing until it&#x27;s live. Cancel any time, and it ends with the month you&#x27;ve paid for. Bigger fixes are quoted after the call.</p></details>
         <details><summary>Who is this not for?</summary><p>If you rarely miss calls and your leads get a fast reply, this won&#x27;t help much. We will tell you so on the call.</p></details>
-        <details><summary>Will this guarantee more jobs?</summary><p>No. No agency can promise that. We close the gaps that let leads slip away, so more of the leads you already pay for can turn into jobs. Results depend on your market, your price, and how people find you.</p></details>
-        <details><summary>How do you get started?</summary><p>After a 15-minute call, we audit your business and find the biggest leak. We set up the fix and walk you through any steps. You make a test, then it goes live.</p></details>
+        <details><summary>Will this guarantee more jobs?</summary><p>No. No agency can promise that. We close the gaps that let leads slip away. Results depend on your market and your price.</p></details>
   </section>
 
-  <section class="sec" id="work" aria-labelledby="work-h"><div class="c"><h2 class="h2 grad" id="work-h">A real job, start to finish</h2><ul class="cases"><li class="case"><h3>Christian Academy for Autism</h3><dl><dt>What we did</dt><dd>We audited the business, found the gaps where money was slipping and fixed them.</dd><dt>Result</dt><dd>$3M in annual incoming revenue</dd></dl><p class="pq-who">1-year engagement · <a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank">See it live</a></p></li><li class="case"><h3>MR BOX LLC</h3><dl><dt>What we did</dt><dd>We audited the business, found the gaps where money was slipping and fixed them.</dd><dt>Result</dt><dd>$120K in additional revenue per year</dd></dl><p class="pq-who">Client engagement</p></li></ul></div></section>
-
-  <section class="sec" id="check" aria-labelledby="check-h"><div class="c"><h2 class="h2 grad" id="check-h">What you can check today</h2><ul class="checks"><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The example text</h3><p>You can see what your caller sees in the text thread above. It is made up.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The price</h3><p>Your plan starts at $249 a month. No setup fee on monthly plans. It is month to month.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The guarantee</h3><p>You pay nothing until it&#x27;s live. Missed-call and estimate plans go live within 7 days of access, or your first month is free.</p></div></li><li class="ck"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>The address</h3><p>You can find us at Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254.</p></div></li></ul></div></section>
-
-  <section class="sec c center" id="book" aria-labelledby="book-h">
-    <h2 class="h2 grad" id="book-h">Put the money you&#x27;re losing back in your pocket</h2>
-    <p class="sub">Book a 15-minute call. Our team looks at your business, and you leave knowing where it leaks money.</p>
-    <div class="bk">
-      <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Our team will send you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and our team will book you in."
-        data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
-        data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and our team will confirm a time.">
-        <p class="hp" aria-hidden="true"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
-        <label>Your name<input name="name" autocomplete="name" required></label>
-        <label>Company<input name="company" autocomplete="organization" required></label>
-        <label>Your email<input name="email" type="email" autocomplete="email" required></label>
-        <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
-        <label class="full">Your website (optional)<input name="website" inputmode="url" autocomplete="url"></label>
-        <label>Best day (optional)<select name="pref_day"><option value="">Any day</option></select></label>
-        <label>Best time (optional)<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
-        <p class="tz full" id="bookTz"></p>
-        <label class="full">Anything else (optional)<textarea name="notes" rows="2"></textarea></label>
-        <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
-        <button class="btn-blue full" type="submit">Book my 15-minute call</button>
-      </form>
-      <div id="bookMsg" role="status" aria-live="polite"></div>
+  <section class="bookband band" id="book" aria-labelledby="book-h">
+    <div class="c book-g">
+      <div class="book-l">
+        <h2 class="h2 grad" id="book-h">Plans start at $249 a month, month to month.</h2>
+        <p class="bline"><span class="bl" data-end="2026-10-04T23:59:59-04:00">This week: 50% off your first 3 months ($124.50 a month) if you book by Sunday, Oct 4.</span><span class="bl-fb" hidden>You pay nothing until the fix is live. Month to month.</span></p>
+        <p class="sub">Book a 15-minute call. Our team shows you where your business leaks money.</p>
+        <p class="bproof"><b>You pay nothing until the fix is live. Month to month.</b>Our team replies within 1 business day.</p>
+      </div>
+      <div class="bk">
+        <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Our team will send you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and our team will book you in."
+          data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
+          data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and our team will confirm a time.">
+          <p class="hp" aria-hidden="true"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Company<input name="company" autocomplete="organization" required></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+          <label class="full">Your website (optional)<input name="website" inputmode="url" autocomplete="url"></label>
+          <label>Best day (optional)<select name="pref_day"><option value="">Any day</option></select></label>
+          <label>Best time (optional)<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
+          <p class="tz full" id="bookTz"></p>
+          <label class="full">Anything else (optional)<textarea name="notes" rows="2"></textarea></label>
+          <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
+          <button class="btn-blue full" type="submit">Book my 15-minute call</button>
+        </form>
+        <div id="bookMsg" role="status" aria-live="polite"></div>
+      </div>
     </div>
-    <p class="bproof"><b>You pay nothing until the fix is live. Month to month.</b>Our team replies within 1 business day. Sami Enterprises LLC, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254.</p>
   </section>
 </main>
 
-<div class="tail">
+<div class="ft-w">
   <div class="c">
-    <div class="band">
-      <div><h3>A growth audit for roofers. We find the gap, then we close it.<span class="bl" data-end="2026-10-04T23:59:59-04:00">This week: 50% off your first 3 months ($124.50 a month) if you book by Sunday, Oct 4.</span><span class="bl-fb" hidden>You pay nothing until the fix is live. Month to month.</span></h3><a class="btn-dark" href="#book">Book my 15-minute call</a></div>
-      <div class="keys" aria-hidden="true">
-        <div class="key a"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="#A4B0CA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="key b"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="none" stroke="#A4B0CA" stroke-width="1.6"/></svg></div>
-      </div>
-    </div>
     <footer class="ft">
       <div class="ft-g">
         <div><a class="logo" href="#top">Sami Enterprises</a><p style="margin-top:8px;max-width:400px">2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="max-width:400px">Each caller we text is texted once. Reply STOP to any text and it stops at once. We can&#x27;t promise jobs or revenue.</p></div>
-        <div><p class="fh">On this page</p><nav aria-label="Footer"><a href="#process">How it works</a><a href="#price">Price</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav></div>
+        <div><p class="fh">On this page</p><nav aria-label="Footer"><a href="#process">How it works</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav></div>
         <div><p class="fh">Contact</p><a class="ln" href="mailto:cruzsystemsco@gmail.com">cruzsystemsco@gmail.com</a></div>
       </div>
       <div class="copy"><span>© 2026 Sami Enterprises LLC</span><span>Month to month. Cancel any time.</span></div>
