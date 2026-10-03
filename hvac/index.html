@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="../sami-events.js" defer></script>
+<title>Sami Enterprises | We find the gap where your HVAC business loses money</title>
+<meta name="description" content="A growth agency for HVAC companies. We audit your business, find where it leaks money and close the gap. Plans start at $249 a month, month to month. You pay nothing until it&#x27;s live.">
+<meta name="theme-color" content="#1560D0">
+<script>document.documentElement.className+=" js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Geist:wght@400;500;600&display=swap"></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%231C38EA'/%3E%3Cpath d='M6 10.3l2.6 2.6L14.2 7.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="../missed-call-card.webp" type="image/webp">
+<!-- v9: v8 visual system (design/REFERENCE-MAP-cluely.md) cut to Cluely's section count, order and lengths (design/LENGTH-CUT-v9.md).
+     Own code, copy (design/copy-v9-site.json) and imagery. Order: hero, two cards, centered feature, three cards + logo row, split stats, FAQ, CTA band (booking), footer. -->
+<style>
+:root{
+  --ink:#000; --ink2:#2E3038; --mute:#8C929D; --mute2:#5E616E; --rule:#E4E4E7; --lav:#DDE2EE; --lav2:#BBC5DD; --blue:#1C38EA;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+  --box:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%);
+  --pale:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font:16px/24px var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.hero :focus-visible,.hd :focus-visible{outline-color:#fff}
+.c{max-width:1248px;margin-inline:auto;padding-inline:16px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:#fff;color:#000;font-weight:600}
+.skip:focus{left:8px}
+section[id]{scroll-margin-top:24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grad{display:inline-block;background:linear-gradient(to right,#19191D 0,#4E4E5E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font:500 56px/70px var(--sans);letter-spacing:-1.28px}
+.sub{font:400 18px/29.25px var(--sans);color:var(--mute2);max-width:720px}
+.center{text-align:center}.center .sub{margin:12px auto 0}
+.sec{padding-top:200px}
+
+/* buttons (Cluely glossy blue + dark) */
+.btn-blue{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:12px;border:0;cursor:pointer;color:#fff;font:500 16px/24px var(--sans);letter-spacing:-.13px;text-align:center;
+  background:radial-gradient(101.79% 101.79% at 65.61% 81.79%,rgba(255,255,255,.32) 0,rgba(255,255,255,0) 100%),radial-gradient(114.65% 114.65% at 9.73% 17.27%,#1E6FE0 0,#1C38EA 100%);
+  box-shadow:20px 20px 24px 0 rgba(148,172,243,.4),inset -3px -3px 4px 0 rgba(191,229,251,.4),inset 4px 4px 4px 0 rgba(19,26,228,.1);transition:transform .15s ease,filter .15s ease}
+.btn-blue:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 22px;border-radius:6px;border:0;cursor:pointer;color:#fff;font:600 16px/16px var(--sans);background:linear-gradient(#3A3B40,#16171A);
+  box-shadow:inset -1px -1px 4px 0 rgba(0,0,0,.65),5px 7px 7px 0 rgba(119,133,164,.43),inset -.5px -.5px 1px 0 rgba(255,255,255,.35),1px 1px 3px 0 rgba(0,0,0,.2);transition:transform .15s ease}
+.btn-dark:hover{transform:translateY(-1px)}
+
+/* header: absolute over the hero */
+.hd{position:absolute;inset:0 0 auto 0;height:54px;z-index:20;color:#fff}
+.hd .c{height:100%;display:flex;align-items:center}
+.logo{display:inline-flex;align-items:center;gap:6px;min-height:44px;font:600 20px/1 var(--sans);letter-spacing:-.6px;width:184px}
+.nav{display:flex;gap:4px}
+.nav a{display:inline-flex;align-items:center;min-height:40px;padding:0 12px;border-radius:8px;font:500 14px/20px var(--sans)}
+.nav a:hover{background:rgba(255,255,255,.14)}
+.burger{display:none;margin-left:auto;width:44px;height:44px;place-items:center;background:none;border:0;border-radius:10px;cursor:pointer;color:#fff}
+
+/* hero: blue sky, sun, mountains, serif headline, panel */
+.hero{position:relative;overflow:hidden;padding-top:128px;text-align:center;color:#fff;
+  background:linear-gradient(180deg,#1F7FE6 0,#1E78E4 200px,#1B73E0 300px,#1B73E0 540px,#63ADF1 640px,#9DCDF5 720px,#CCE4F8 820px,#F3F8FE 980px,#fff 1150px)}
+.hero .sun{position:absolute;left:73%;top:330px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#fff 0 38%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 72%);pointer-events:none}
+.hero svg.mtn{position:absolute;left:0;right:0;top:450px;width:100%;height:220px;pointer-events:none}
+.hero h1{position:relative;font:500 80px/76.8px var(--serif);letter-spacing:-1px;max-width:820px;margin:0 auto;text-wrap:balance}
+.hero .lede{position:relative;font:500 19px/26.6px var(--sans);letter-spacing:-.38px;max-width:580px;margin:32px auto 0}
+.hero .btn-blue{position:relative;margin-top:30px;box-shadow:0 14px 28px -12px rgba(5,20,90,.6),inset -3px -3px 4px 0 rgba(191,229,251,.4)}
+.risk{position:relative;margin-top:16px;font:600 16px/22px var(--sans)}
+.founder{position:relative;margin-top:4px;font:400 15px/22px var(--sans);color:#EEF4FF}
+.panel{position:relative;width:1152px;max-width:calc(100% - 32px);height:678px;margin:96px auto 0;border-radius:13px;overflow:hidden;
+  background:radial-gradient(120% 90% at 50% 110%,#FFD7A8 0%,rgba(255,215,168,0) 60%),linear-gradient(160deg,#FFB36B 0%,#FF8E5E 35%,#F6A57A 60%,#8FB6F0 100%);
+  box-shadow:0 30px 80px -30px rgba(40,70,140,.45)}
+.panel .menubar{height:24px;background:rgba(255,255,255,.28)}
+.win{position:absolute;left:50%;top:62px;transform:translateX(-50%);width:820px;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 24px 60px -20px rgba(0,0,0,.45)}
+.win .chrome{height:38px;background:#F1F2F4;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #E3E5E8}
+.win .chrome i{width:11px;height:11px;border-radius:50%;background:#FF5F57}.win .chrome i+i{background:#FEBC2E}.win .chrome i+i+i{background:#28C840}
+.win .chrome span{margin-left:14px;flex:1;height:24px;border-radius:6px;background:#fff;font:400 12px/24px var(--sans);color:var(--mute2);text-align:center}
+.win picture,.win img{display:block;width:100%}
+.dock{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:10px;padding:8px 12px;border-radius:18px;background:rgba(255,255,255,.3)}
+.dock i{width:34px;height:34px;border-radius:9px;background:linear-gradient(#fff,#E9ECF2)}.dock i:nth-child(2){background:linear-gradient(#5AA2FF,#2E6BF0)}.dock i:nth-child(3){background:linear-gradient(#FFD36B,#F0A92A)}
+.panel-cap{display:inline-block;margin-top:16px;padding:4px 12px;border-radius:999px;background:#EEF1F8;font:500 14px/20px var(--sans);color:var(--ink2)}
+
+/* client logo strip (real entries only; Cluely "compatible with" row) */
+.clients{padding-top:72px;text-align:center}
+.cl-lab{font:600 12px/16px var(--sans);letter-spacing:1.8px;text-transform:uppercase;color:var(--mute2)}
+.clients ul{margin-top:24px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:20px 64px}
+.clients a,.clients span{display:inline-flex;align-items:center;min-height:44px}
+.clients img{height:96px;width:auto;border-radius:12px}
+
+/* calculator: lavender card, result in a white inner card */
+.calc-box{max-width:1056px;margin:44px auto 0;border-radius:32px;padding:40px;background:var(--box);display:grid;grid-template-columns:1fr 1fr;gap:40px;text-align:left;align-items:center}
+.fld+.fld{margin-top:26px}
+.fld .top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.fld label{font:500 16px/22px var(--sans);color:var(--ink2)}
+.fld input[type=number]{width:120px;flex:none;min-height:44px;padding:8px 10px;border:1px solid var(--lav2);border-radius:10px;background:#fff;font:600 17px/24px var(--sans);color:#000;text-align:right}
+.fld .help{margin-top:2px;font:400 14px/20px var(--sans);color:var(--mute2)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:4px 0 0;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--blue) var(--p,10%),#fff var(--p,10%))}
+input[type=range]::-moz-range-track{height:8px;border-radius:999px;background:#fff}
+input[type=range]::-moz-range-progress{height:8px;border-radius:999px;background:var(--blue)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--blue);box-shadow:0 2px 6px rgba(20,30,80,.25)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.res-card{border-radius:20px;padding:32px;background:linear-gradient(rgba(255,255,255,.82),#fff);box-shadow:0 8px 24px -12px rgba(40,50,90,.3)}
+.res-big{font:400 56px/60px var(--sans);letter-spacing:-1.5px;color:#000;font-variant-numeric:tabular-nums}
+.res-big .pre{display:block;font:500 16px/22px var(--sans);letter-spacing:0;color:var(--ink2)}
+.res-suf{margin-top:6px;font:500 18px/26px var(--sans);color:var(--ink2)}
+.res-jobs{margin-top:6px;font:400 16px/24px var(--sans);color:var(--mute2)}
+.res-price{margin-top:18px;padding-top:18px;border-top:1px solid var(--rule);font:500 16px/24px var(--sans);color:#000}
+.disclaim{margin-top:12px;font:400 14px/21px var(--sans);color:var(--mute2)}
+.res-card .btn-blue{margin-top:22px;width:100%}
+.nojs{margin-top:12px;font:400 15px/22px var(--sans);color:var(--ink2)}
+html:not(.js) .calc,html:not(.js) #calcOut,html:not(.js) .sbar{display:none}
+html:not(.js) .calc-box{grid-template-columns:1fr}
+
+/* services: Cluely three cards with caption below */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:44px;text-align:left}
+.tc .box{height:366px;border-radius:24px;padding:22px;background:var(--box)}
+.tc .in{height:248px;border-radius:14px;background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.95));box-shadow:0 8px 24px -12px rgba(40,50,90,.3);padding:18px;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.tc h3{margin-top:18px;font:500 20px/27.5px var(--sans);color:var(--ink2)}
+.tc p{font:400 18px/27px var(--sans);color:var(--mute2);margin-top:4px;max-width:380px}
+.m-head{display:flex;justify-content:space-between;align-items:center;font:600 15px/1 var(--sans);color:#16181D;padding-bottom:12px;border-bottom:1px solid #ECEEF2}
+.m-pill{font:500 12px/1 var(--sans);background:#EEF2FF;color:#1530C0;border-radius:999px;padding:6px 9px}
+.m-sys{font:500 12px/16px var(--sans);color:#B3261E}
+.bin{align-self:flex-start;max-width:90%;background:#E9EBF0;color:#16181D;border-radius:14px 14px 14px 5px;padding:9px 12px;font:400 14px/19px var(--sans)}
+.bout{align-self:flex-end;max-width:90%;background:var(--blue);color:#fff;border-radius:14px 14px 5px 14px;padding:9px 12px;font:400 14px/19px var(--sans)}
+.m-fld{height:32px;border-radius:7px;border:1px solid #DCE0E8;background:#fff;font:400 13px/30px var(--sans);color:var(--mute2);padding-left:10px}
+.m-ph{display:flex;gap:6px}.m-ph i{flex:1;height:44px;border-radius:8px;background:linear-gradient(135deg,#C9D3E8,#9FB0D3)}
+.m-row{display:flex;justify-content:space-between;align-items:center;font:400 13px/18px var(--sans);color:#2E3038;background:#fff;border-radius:8px;padding:8px 10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.m-row b{font-weight:600;color:#1530C0}
+.m-url{display:flex;align-items:center;gap:8px;height:30px;border-radius:999px;background:#F1F2F4;padding:0 12px;font:400 13px/1 var(--sans);color:#2E3038}
+.m-hero{height:70px;border-radius:10px;background:linear-gradient(160deg,#2E6BF0,#8FB6F0)}
+.m-btn{align-self:flex-start;background:var(--blue);color:#fff;border-radius:7px;padding:8px 12px;font:600 13px/1 var(--sans)}
+
+/* how we do it: Cluely blue + pale two cards */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;align-items:stretch}
+.card{border-radius:32px;padding:40px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card.blue{color:#fff;background:radial-gradient(167.08% 140.48% at 79.5% 0%,rgba(255,255,255,.06) 0%,rgba(255,255,255,0) 100%),radial-gradient(120.74% 124.92% at 7.26% 100%,#2F62D6 0%,#4A76E0 100%);
+  box-shadow:inset 1.9px 1.77px 8.17px 0 rgba(255,255,255,.13),inset 1px .94px 4.09px 0 rgba(255,255,255,.13)}
+.card.pale{background:var(--pale);box-shadow:inset 0 0 0 1px rgba(187,197,221,.35)}
+.steps{display:grid;gap:26px}
+.steps li{display:flex;gap:18px}
+.num{flex:none;display:inline-grid;place-items:center;height:34px;min-width:46px;padding:0 10px;border-radius:999px;font:500 15px/1 var(--sans);background:rgba(255,255,255,.2);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.steps h3{font:500 24px/31px var(--sans);letter-spacing:-.5px}
+.steps p{margin-top:6px;font:400 17px/26px var(--sans);color:#F2F5FF}
+.card.pale h3.ct{font:500 28px/35px var(--sans);letter-spacing:-.5px;color:#263043}
+.dark{margin-top:24px;background:linear-gradient(rgba(24,23,28,.88),rgba(24,23,28,.96));border-radius:16px;color:#fff;padding:20px 22px;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
+.tl li{display:flex;gap:16px;align-items:center;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}
+.tl li:first-child{border-top:0}
+.day{flex:none;min-width:86px;text-align:center;border-radius:999px;padding:4px 10px;background:var(--blue);font:500 13px/18px var(--sans)}
+.tt{font:400 16px/22px var(--sans);color:#E4E7EE}
+.facts{margin-top:auto;padding-top:28px;display:grid;gap:12px}
+.facts p{display:flex;gap:10px;align-items:flex-start;font:400 16px/24px var(--sans);color:var(--ink2)}
+.facts svg{flex:none;margin-top:2px}
+
+/* price: Cluely split stats */
+.split{display:grid;grid-template-columns:464px 1fr;gap:72px;padding-inline:32px;align-items:start}
+.sp{min-height:594px;border-radius:24px;background:var(--box);display:grid;place-items:center;overflow:hidden;padding:40px 0;position:sticky;top:24px}
+.sp img{width:260px}
+.split .h2{font-size:48px;line-height:60px;letter-spacing:-1.2px}
+.prow{display:grid;grid-template-columns:auto 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--rule)}
+.prow .n{font:400 48px/48px var(--sans);white-space:nowrap}
+.prow .n small{font-size:16px;margin-left:4px;color:var(--mute2)}
+.prow .term{margin-top:10px;font:600 16px/22px var(--sans);color:var(--ink2)}
+.pdisc{align-self:end}
+.pdisc .disc{margin-top:0}
+.prow .from{font:600 12px/16px var(--sans);letter-spacing:1.4px;text-transform:uppercase;color:var(--mute2);margin-bottom:8px}
+.disc[hidden]{display:none}
+.disc{margin-top:12px;display:inline-block;padding:8px 14px;border-radius:12px;background:#EAF0FF;color:#1530C0;font:600 16px/23px var(--sans)}
+.pts li{display:flex;gap:12px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule);font:400 17px/26px var(--sans);color:var(--ink2)}
+.pts svg{flex:none;margin-top:3px}
+.pcta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.pnote{font:400 15px/22px var(--sans);color:var(--mute2);max-width:360px}
+
+/* why us */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:44px;text-align:left}
+.why li{border-radius:24px;padding:24px;background:var(--box)}
+.ic{display:grid;place-items:center;width:44px;height:44px;margin-bottom:18px;border-radius:12px;background:#fff;color:var(--blue);box-shadow:0 4px 12px -6px rgba(40,50,90,.3)}
+.why h3,.checks h3{font:500 20px/26px var(--sans);letter-spacing:-.3px;color:#263043}
+.why p,.checks p{margin-top:8px;font:400 16px/24px var(--sans);color:var(--ink2)}
+
+/* faq */
+.faq h2{font:500 40px/50px var(--sans);letter-spacing:-1.6px;margin-bottom:28px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:69px;padding:12px 0;cursor:pointer;font:400 16px/24px var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:9px;height:9px;border-right:1.5px solid #5E616E;border-bottom:1.5px solid #5E616E;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details p{padding:0 40px 22px 0;color:var(--mute2);max-width:760px}
+
+/* proof slot: check strip / real proof / case studies */
+.checks,.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.checks{grid-template-columns:1fr 1fr;gap:0 72px}
+.checks li{display:flex;gap:16px;align-items:flex-start;padding:28px 0;border-top:1px solid var(--rule)}
+.checks li svg{flex:none;width:22px;height:22px;margin-top:3px}
+.checks p{color:var(--mute2)}
+.proof .pq{padding:24px;border-radius:20px;background:var(--box)}
+.pq blockquote{margin:0;font:400 17px/26px var(--sans)}
+.pq-n{font:400 40px/44px var(--sans)}
+.pq-who{margin-top:12px;font:400 14px/21px var(--sans);color:var(--mute2)}
+.pq-who a{display:inline-flex;align-items:center;min-height:44px;color:var(--blue)}
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:40px}
+.case{padding:32px;border-radius:24px;background:var(--box)}
+.case h3{font:500 24px/31px var(--sans);color:#263043}
+.case dl{margin:12px 0 0}.case dt{margin-top:12px;font:600 12px/16px var(--sans);letter-spacing:1.4px;text-transform:uppercase;color:var(--mute2)}
+.case dd{margin:4px 0 0;font:400 16px/25px var(--sans);color:var(--ink2)}
+
+/* book */
+.bk{max-width:880px;margin:44px auto 0;border-radius:28px;padding:40px;background:#fff;box-shadow:0 30px 80px -40px rgba(40,70,140,.45),inset 0 0 0 1px #E6EAF2;text-align:left;position:relative}
+.bk form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.bk form[hidden]{display:none}
+.bk label{display:grid;gap:6px;font:500 14px/20px var(--sans);color:var(--ink2)}
+.bk .full{grid-column:1/-1}
+.bk input,.bk select,.bk textarea{font:400 16px/24px var(--sans);border:1px solid #C9D0DE;border-radius:10px;padding:10px 12px;width:100%;background:#FAFBFD;color:#000;min-height:46px}
+.bk input:focus-visible,.bk select:focus-visible,.bk textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.bk [aria-invalid=true]{border-color:#B3261E;background:#FFF6F5}
+.bk .chk{display:flex;gap:6px;align-items:center;font-weight:400;color:var(--ink2)}
+.bk .chk input{-webkit-appearance:none;appearance:none;flex:none;width:44px;height:44px;min-height:0;margin:-8px 0 -8px -10px;padding:0;border:0;border-radius:10px;cursor:pointer;
+  background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='1' y='1' width='22' height='22' rx='5' fill='white' stroke='%235E616E' stroke-width='2'/%3E%3C/svg%3E") center/24px no-repeat}
+.bk .chk input:checked{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='0' y='0' width='24' height='24' rx='6' fill='%231C38EA'/%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-7.5' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.bk .chk input[aria-invalid=true]{background-color:#FFE9E7}
+.bk .btn-blue{width:100%;min-height:50px}
+.bk .tz{font:400 13px/18px var(--sans);color:var(--mute2)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#bookMsg{margin-top:16px;font:500 16px/24px var(--sans)}
+#bookForm[hidden]+#bookMsg{margin-top:0}
+#bookMsg:empty{display:none}
+#bookMsg.ok{color:#1F7A3D;font-size:18px;line-height:27px}#bookMsg.err{color:#B3261E}
+.bproof{max-width:760px;margin:24px auto 0;font:400 15px/23px var(--sans);color:var(--mute2)}
+.bproof b{display:block;font:600 16px/24px var(--sans);color:#000;margin-bottom:4px}
+
+/* tail band + footer */
+.tail{margin-top:180px;background:linear-gradient(#fff 0,#E9EDF5 22%,#DDE2EE 60%,#DDE2EE 100%);padding-top:160px}
+.band{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:300px}
+.band h3{font:500 28px/35px var(--sans);letter-spacing:-1.12px;max-width:520px}
+.band h3 span{display:block;margin-top:2px;background:linear-gradient(to right,#3E5E9E,#5B6E95);-webkit-background-clip:text;background-clip:text;color:transparent}
+.band h3 span[hidden]{display:none}
+.band .btn-dark{margin-top:24px}
+.keys{position:relative;height:300px}
+.key{position:absolute;width:118px;height:118px;border-radius:26px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#FFFFFF,#E3E8F2);box-shadow:18px 22px 40px -10px rgba(119,133,164,.55),-8px -8px 20px rgba(255,255,255,.9),inset 2px 2px 3px #fff,inset -3px -3px 6px rgba(160,172,200,.35)}
+.key.a{right:90px;top:40px;transform:rotate(12deg)}.key.b{right:320px;top:160px;transform:rotate(-10deg);width:106px;height:106px}
+.ft{padding:44px 0 36px;margin-top:40px;border-top:1px solid rgba(0,0,0,.06)}
+.ft-g{display:grid;grid-template-columns:481px 1fr 1fr;gap:24px}
+.ft .fh{font:500 16px/24px var(--sans);letter-spacing:-.4px;margin:0 0 8px}
+.ft .logo{width:auto;color:#000}
+.ft-g p{font:400 15px/23px var(--sans);color:var(--ink2)}
+.ft-g p+p{margin-top:8px}
+.ft nav a,.ft .ln{display:flex;align-items:center;min-height:40px;font:400 16px/22px var(--sans);letter-spacing:-.4px;color:var(--ink2)}
+.ft nav a:hover,.ft .ln:hover{color:var(--blue)}
+.ft .copy{font:400 12px/16px var(--sans);color:var(--mute2);margin-top:40px;padding-top:20px;border-top:1px solid rgba(0,0,0,.06);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* mobile sticky CTA bar */
+.sbar{display:none}
+
+@media (max-width:1100px){.split{grid-template-columns:1fr 1fr;gap:40px;padding-inline:0}.why,.checks,.proof{grid-template-columns:1fr 1fr}.win{width:calc(100% - 80px)}}
+@media (max-width:900px){
+  .hd{height:52px}.logo{font-size:18px;width:auto}.burger{display:grid}
+  .nav{display:none}.nav.open{display:flex;flex-direction:column;position:absolute;top:52px;left:12px;right:12px;padding:8px;border-radius:14px;background:rgba(14,50,140,.96)}
+  .nav.open a{min-height:48px;padding:0 12px;font-size:16px}
+  .hero{padding-top:92px;background:linear-gradient(180deg,#1F7FE6 0,#1B73E0 220px,#1B73E0 560px,#63ADF1 660px,#9DCDF5 740px,#DCEBFA 860px,#fff 1000px)}
+  .hero h1{font-size:48px;line-height:48px;max-width:380px}
+  .hero .lede{font-size:17px;line-height:25px;margin-top:20px;max-width:380px}
+  .hero .sun,.hero svg.mtn{display:none}
+  .panel{height:auto;margin-top:40px;padding:34px 12px 30px}
+  .win{position:relative;left:auto;top:auto;transform:none;width:100%}
+  .dock{display:none}
+  .sec{padding-top:110px}
+  .h2,.split .h2{font-size:32px;line-height:40px;letter-spacing:-.6px}
+  .sub{font-size:17px;line-height:26px}
+  .clients{padding-top:48px}.clients img{height:76px}.clients ul{gap:16px 40px}
+  .calc-box{grid-template-columns:1fr;gap:28px;padding:22px;border-radius:26px;margin-top:28px}
+  .res-card{padding:24px}.res-big{font-size:44px;line-height:50px}
+  .three{grid-template-columns:1fr;gap:28px;margin-top:28px}
+  .tc .box{height:auto}.tc .in{height:auto;min-height:200px}
+  .tc p{font-size:16px;line-height:24px}
+  .two{grid-template-columns:1fr;gap:20px;margin-top:28px}
+  .card{padding:24px;border-radius:26px}
+  .steps h3{font-size:20px;line-height:27px}.steps p{font-size:16px;line-height:24px}
+  .card.pale h3.ct{font-size:24px;line-height:32px}
+  .split{grid-template-columns:1fr;gap:32px}
+  .sp{order:2;min-height:0;position:static;padding:32px 0}
+  .pcta .btn-blue{width:100%}
+  .panel .menubar{margin:-34px -12px 10px}
+  .prow{grid-template-columns:1fr;gap:6px}
+  .why,.checks,.proof,.cases{grid-template-columns:1fr;gap:16px;margin-top:28px}
+  .faq h2{font-size:28px;line-height:36px}
+  .faq summary{min-height:72px}
+  .faq details p{padding-right:0}
+  .bk{padding:22px;border-radius:22px;margin-top:28px}.bk form{grid-template-columns:1fr}
+  .tail{margin-top:100px;padding-top:90px}
+  .band{grid-template-columns:1fr;min-height:0}.band h3{font-size:22px;line-height:28px;letter-spacing:-.8px}
+  .keys{display:none}
+  .ft-g{grid-template-columns:1fr 1fr}.ft-g>div:first-child{grid-column:1/-1}
+  .ft{padding-bottom:calc(112px + env(safe-area-inset-bottom))}
+  .sbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.97);box-shadow:0 -10px 30px -12px rgba(10,30,80,.35);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility .25s}
+  .sbar.on{transform:none;visibility:visible}
+  .sbar .btn-blue{width:100%;min-height:48px}
+  .sbar p{margin-top:6px;text-align:center;font:500 14px/18px var(--sans);color:var(--ink2)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---- v9 (Cluely lengths, design/LENGTH-CUT-v9.md) ---- */
+.clients{padding-top:64px}
+.three .tc p{max-width:340px}
+/* results: Cluely split stats */
+.split .h2{margin-bottom:8px}
+.srows li{display:grid;grid-template-columns:150px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--rule)}
+.srows .n{font:400 48px/48px var(--sans);letter-spacing:-1px;white-space:nowrap}
+.srows h3{font:300 32px/38px var(--sans);letter-spacing:-.8px;color:#000}
+.srows p:not(.n){margin-top:8px;font:400 16px/24px var(--sans);color:var(--mute2)}
+.srows p b{font-weight:500;color:var(--ink2)}
+.srows a{display:inline-flex;align-items:center;min-height:40px;margin-left:4px;color:var(--blue);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.sp figure{margin:0;display:grid;justify-items:center;gap:14px}
+.sp figcaption{padding:4px 12px;border-radius:999px;background:#EEF1F8;font:500 14px/20px var(--sans);color:var(--ink2)}
+/* booking: Cluely CTA band (lavender fade) with the form on the right */
+.bookband{margin-top:200px;padding:140px 0 72px;background:linear-gradient(#fff 0,#EEF1F7 18%,#DDE2EE 70%)}
+.bookband{display:block;min-height:0}
+.book-g{display:grid;grid-template-columns:minmax(0,1fr) 600px;gap:64px;align-items:start}
+.book-l .h2{font-size:44px;line-height:54px;letter-spacing:-1.2px}
+.bline{margin-top:14px;font:500 24px/32px var(--sans);letter-spacing:-.6px}
+.bline span{background:linear-gradient(to right,#2F4E8E,#4A5E88);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bline span[hidden]{display:none}
+.book-l .sub{margin-top:16px}
+.book-l .bproof{margin:20px 0 0;max-width:460px;text-align:left;color:var(--ink2)}
+.bookband .bk{max-width:none;margin:0;padding:32px}
+.ft-w{background:#DDE2EE}
+.ft-w .ft{margin-top:0}
+@media (max-width:1100px){.book-g{grid-template-columns:1fr}.srows li{grid-template-columns:120px 1fr;gap:20px}}
+@media (max-width:900px){
+  .sec{padding-top:96px}
+  .three{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin-inline:-16px;padding:0 16px 10px;scrollbar-width:none}
+  .three::-webkit-scrollbar{display:none}
+  .three .tc{flex:0 0 85%;scroll-snap-align:center}
+  .tc .in{min-height:0;height:220px}
+  .srows li{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .srows .n{font-size:40px;line-height:44px}.srows h3{font-size:24px;line-height:30px}
+  .sp{padding:24px 0}.sp img{width:190px}
+  .bookband{margin-top:96px;padding:72px 0 40px}
+  .book-g{gap:28px}
+  .book-l .h2{font-size:32px;line-height:40px}
+  .bline{font-size:20px;line-height:28px}
+  .bookband .bk{padding:20px}
+  .bk form{gap:12px}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="hd">
+  <div class="c">
+    <a class="logo" href="#top" aria-label="Sami Enterprises home"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sami Enterprises</a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" data-open="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mainnav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    <nav class="nav" id="mainnav" aria-label="Main"><a href="#process">How it works</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="sun" aria-hidden="true"></div>
+    <svg class="mtn" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F6FD4"/><stop offset=".4" stop-color="#3C7BDA"/><stop offset="1" stop-color="#A9CFF4"/></linearGradient>
+      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9F2FC"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".9"/></linearGradient></defs>
+      <path d="M0 170 L120 120 L190 140 L300 60 L360 95 L420 40 L500 110 L560 90 L640 150 L760 120 L860 150 L980 100 L1060 130 L1180 80 L1260 120 L1340 95 L1440 130 L1440 220 L0 220Z" fill="url(#m1)" opacity=".85"/>
+      <path d="M0 190 C200 160 380 175 560 165 C760 155 900 180 1100 168 C1260 160 1360 172 1440 166 L1440 220 L0 220Z" fill="url(#m2)"/>
+    </svg>
+    <div class="c">
+      <h1 id="hero-h">Put the money you&#x27;re losing back in your pocket.</h1>
+      <p class="lede">We find the gaps in your business where money slips away. Then we close them.</p>
+      <a class="btn-blue" href="#book"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>Book my 15-minute call</a>
+      <p class="risk">You pay nothing until the fix is live. Month to month.</p>
+    </div>
+    <figure class="panel" style="margin-bottom:0">
+      <div class="menubar" aria-hidden="true"></div>
+      <div class="win"><div class="chrome"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><span>Example. Made-up company.</span></div>
+        <div class="body"><picture>
+          <source srcset="../missed-call-card.webp" type="image/webp" width="1152" height="672">
+          <img src="../missed-call-card.png" width="1152" height="672" fetchpriority="high" alt="Example: a business misses a call, the caller gets a text from the business in seconds and replies. Made-up company and conversation.">
+        </picture></div>
+      </div>
+      <div class="dock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </figure>
+  </section>
+
+  <section class="sec c" id="process" aria-labelledby="process-h">
+    <h2 class="h2 grad" id="process-h">How we do it</h2>
+    <div class="two">
+      <div class="card blue"><ol class="steps"><li><span class="num" aria-hidden="true">01</span><div><h3>We look at your business</h3><p>You get a 15-minute call. Then we check your calls, follow-up, estimates and website.</p></div></li><li><span class="num" aria-hidden="true">02</span><div><h3>We find the biggest leak</h3><p>We show you the one gap that could cost you most, and why.</p></div></li><li><span class="num" aria-hidden="true">03</span><div><h3>We close it and keep it running</h3><p>You get the fix set up by our team. You pay nothing until it&#x27;s live.</p></div></li></ol></div>
+      <div class="card pale">
+        <h3 class="ct">Your first 7 days</h3>
+        <div class="dark"><ol class="tl"><li><span class="day">Day 0</span><span class="tt">15-minute call</span></li><li><span class="day">Day 1</span><span class="tt">We find the leak</span></li><li><span class="day">Days 2-6</span><span class="tt">Fix set up, your test</span></li><li><span class="day">Day 7</span><span class="tt">Live</span></li></ol></div>
+        <div class="facts"><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>You keep your number and your tools.</p><p><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1C38EA"/><path d="M5.8 10.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Each caller we text is texted once. Reply STOP and it stops at once.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec c center" id="calc" aria-labelledby="calc-h">
+    <h2 class="h2 grad" id="calc-h">What missed leads could cost you</h2>
+    <p class="sub">Put in your own numbers.</p>
+    <div class="calc-box">
+      <form class="calc" id="calcForm" onsubmit="return false" novalidate>
+        <div class="fld">
+          <div class="top"><label for="c-missed" id="l-missed">Leads you miss each week</label><input id="c-missed" type="number" inputmode="numeric" min="0" max="50" step="1" value="5"></div>
+          <input type="range" id="r-missed" min="0" max="50" step="1" value="5" aria-labelledby="l-missed" data-for="c-missed">
+        </div>
+        <div class="fld">
+          <div class="top"><label for="c-hire" id="l-hire">Share who would hire you (%)</label><input id="c-hire" type="number" inputmode="numeric" min="0" max="100" step="1" value="10" aria-describedby="h-hire"></div>
+          <p class="help" id="h-hire">10% is 1 in 10. Lower is safer.</p>
+          <input type="range" id="r-hire" min="0" max="100" step="1" value="10" aria-labelledby="l-hire" aria-describedby="h-hire" data-for="c-hire">
+        </div>
+        <div class="fld">
+          <div class="top"><label for="c-job" id="l-job">Average job ($)</label><input id="c-job" type="number" inputmode="numeric" min="500" max="40000" step="100" value="7000"></div>
+          <input type="range" id="r-job" min="500" max="40000" step="500" value="7000" aria-labelledby="l-job" data-for="c-job">
+        </div>
+      </form>
+      <div class="res-card">
+        <p class="sr" id="calcLive" aria-live="polite" aria-atomic="true"></p>
+        <div id="calcOut" data-suf="a month in jobs that could slip away" data-pre="About" data-cap="Over" data-jobs="jobs a month">
+          <p class="res-big"><span class="pre" id="r-pre">About</span><span id="r-amt">$19,500</span></p>
+          <p class="res-suf">a month in jobs that could slip away</p>
+          <p class="res-jobs" id="r-jobs">About 2.2 jobs a month</p>
+          <p class="res-price">Plans start at $249 a month. <span id="r-cover">One job could cover it for months.</span></p>
+        </div>
+        <p class="disclaim">Estimate only, from your numbers. We can&#x27;t promise jobs or revenue.</p>
+        <noscript><p class="nojs">For example, 5 lost leads a week with 1 in 10 hiring you on a $7,000 job comes to about $15,200 a month.</p></noscript>
+        <a class="btn-blue" href="#book">Book my 15-minute call</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec c center" id="how" aria-labelledby="how-h">
+    <h2 class="h2 grad" id="how-h">We close the gap that costs you most</h2>
+    <div class="three" tabindex="0" role="region" aria-label="We close the gap that costs you most">
+      <div class="tc">
+        <div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Example. Made-up company.</span><span class="m-pill">2:13 PM</span></div><span class="m-sys">Missed call · no answer</span><div class="bin">Sorry we missed your call. What&#x27;s going on with your AC? Reply STOP to opt out.</div><div class="bout">AC quit overnight. House is 84 degrees.</div></div></div>
+        <h3>Missed-call text-back</h3><p>Each missed call gets a text from your business in seconds.</p>
+      </div>
+      <div class="tc">
+        <div class="box"><div class="in" aria-hidden="true"><div class="m-head"><span>Estimate request</span><span class="m-pill">New</span></div><div class="m-fld">AC not cooling, 2-story home</div><div class="m-ph"><i></i><i></i><i></i></div><div class="m-row"><span>Budget</span><b>$6k to $10k</b></div><div class="m-row"><span>Reminder</span><b>Follow up today</b></div></div></div>
+        <h3>Estimate requests</h3><p>Your requests come in with photos and a budget. None go cold.</p>
+      </div>
+      <div class="tc">
+        <div class="box"><div class="in" aria-hidden="true"><div class="m-url">yourhvaccompany.com</div><div class="m-hero"></div><span class="m-btn">Get my estimate</span><div class="m-row"><span>Old lead, 30 days</span><b>Text sent</b></div></div></div>
+        <h3>Website and follow-up</h3><p>Your site and follow-up could turn more visitors into jobs.</p>
+      </div>
+    </div>
+    <div class="clients"><div class="c"><p class="cl-lab">Businesses we work with</p><ul><li><a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank"><img src="../christian-academy-for-autism.png" alt="Christian Academy for Autism" height="96" loading="lazy"></a></li><li><span><img src="../mr-box.jpg" alt="MR BOX LLC" height="96" loading="lazy"></span></li></ul></div></div>
+  </section>
+
+  <section class="sec c" id="results" aria-labelledby="results-h">
+    <div class="split">
+      <div class="sp"><figure><picture><source srcset="../phone-thread.webp" type="image/webp"><img src="../phone-thread.png" width="287" height="594" loading="lazy" alt="Example text thread on a phone. A business misses a call, the caller gets a text in seconds and replies. Made-up company and conversation."></picture><figcaption>Example. Made-up company.</figcaption></figure></div>
+      <div>
+        <h2 class="h2 grad" id="results-h">What closing the gaps did for our clients</h2>
+        <ul class="srows"><li class="srow"><p class="n">$3M</p><div><h3>Annual incoming revenue</h3><p><b>Christian Academy for Autism.</b> We audited the business, found the gaps where money was slipping and fixed them. <a href="https://www.christianautismacademy.com/" rel="noopener" target="_blank">See it live<span class="sr"> (Christian Academy for Autism)</span></a></p></div></li><li class="srow"><p class="n">$120K</p><div><h3>Additional revenue per year</h3><p><b>MR BOX LLC.</b> We audited the business, found the gaps where money was slipping and fixed them.</p></div></li><li class="srow"><p class="n">$0</p><div><h3>Until your fix is live</h3><p>Then $249 a month, month to month. Live within 7 days of access, or your first month is free.</p></div></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec c faq" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Your questions</h2>
+    <details><summary>What do you actually do?</summary><p>We audit your business and find where it loses money. Then we close that gap. It may be missed calls, slow follow-up, weak estimate requests or your website.</p></details>
+        <details><summary>Do I have to change my phone number or website?</summary><p>No. You keep your number, your site and any answering service you use. Site changes are made only with your OK.</p></details>
+        <details><summary>Is texting callers allowed?</summary><p>They called you first. Each caller is texted once. The text says Reply STOP, and it stops at once.</p></details>
+        <details><summary>What does it cost, and can I cancel?</summary><p>Plans start at $249 a month, month to month. You pay nothing until it&#x27;s live. Cancel any time, and it ends with the month you&#x27;ve paid for. Bigger fixes are quoted after the call.</p></details>
+        <details><summary>Who is this not for?</summary><p>If you rarely miss calls and your leads get a fast reply, this won&#x27;t help much. We will tell you so on the call.</p></details>
+        <details><summary>Will this guarantee more jobs?</summary><p>No. No agency can promise that. We close the gaps that let leads slip away. Results depend on your market and your price.</p></details>
+  </section>
+
+  <section class="bookband band" id="book" aria-labelledby="book-h">
+    <div class="c book-g">
+      <div class="book-l">
+        <h2 class="h2 grad" id="book-h">Plans start at $249 a month, month to month.</h2>
+        <p class="bline"><span class="bl" data-end="2026-10-04T23:59:59-04:00">This week: 50% off your first 3 months ($124.50 a month) if you book by Sunday, Oct 4.</span><span class="bl-fb" hidden>You pay nothing until the fix is live. Month to month.</span></p>
+        <p class="sub">Book a 15-minute call. Our team shows you where your business leaks money.</p>
+        <p class="bproof"><b>You pay nothing until the fix is live. Month to month.</b>Our team replies within 1 business day.</p>
+      </div>
+      <div class="bk">
+        <form id="bookForm" novalidate data-fallback="cruzsystemsco@gmail.com" data-success="Got it. Our team will send you a calendar confirmation within 1 business day." data-error="That didn&#x27;t send. Email cruzsystemsco@gmail.com and our team will book you in."
+          data-sending="Booking..." data-missing="Please add your" data-bademail="That email address looks incomplete." data-consent="Please tick the box so we can email your confirmation."
+          data-slow="Please take a second to check your details, then send again." data-fallbackmsg="Your email app should open with the details filled in. Press send and our team will confirm a time.">
+          <p class="hp" aria-hidden="true"><label>Leave this empty <input name="website_hp" tabindex="-1" autocomplete="off"></label></p>
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Company<input name="company" autocomplete="organization" required></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+          <label class="full">Your website (optional)<input name="website" inputmode="url" autocomplete="url"></label>
+          <label>Best day (optional)<select name="pref_day"><option value="">Any day</option></select></label>
+          <label>Best time (optional)<select name="pref_time"><option value="">Any time</option><option>Morning (9-12)</option><option>Midday (12-3)</option><option>Afternoon (3-6)</option></select></label>
+          <p class="tz full" id="bookTz"></p>
+          <label class="full">Anything else (optional)<textarea name="notes" rows="2"></textarea></label>
+          <label class="chk full"><input name="consent" type="checkbox" value="yes" required><span>Email me a calendar confirmation for this call.</span></label>
+          <button class="btn-blue full" type="submit">Book my 15-minute call</button>
+        </form>
+        <div id="bookMsg" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="ft-w">
+  <div class="c">
+    <footer class="ft">
+      <div class="ft-g">
+        <div><a class="logo" href="#top">Sami Enterprises</a><p style="margin-top:8px;max-width:400px">2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254</p><p style="max-width:400px">Each caller we text is texted once. Reply STOP to any text and it stops at once. We can&#x27;t promise jobs or revenue.</p></div>
+        <div><p class="fh">On this page</p><nav aria-label="Footer"><a href="#process">How it works</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#book">Book my 15-minute call</a></nav></div>
+        <div><p class="fh">Contact</p><a class="ln" href="mailto:cruzsystemsco@gmail.com">cruzsystemsco@gmail.com</a></div>
+      </div>
+      <div class="copy"><span>© 2026 Sami Enterprises LLC</span><span>Month to month. Cancel any time.</span></div>
+    </footer>
+  </div>
+</div>
+
+<div class="sbar" id="sbar" inert>
+  <a class="btn-blue" href="#book">Book my 15-minute call</a>
+  <p>You pay nothing until the fix is live. Month to month.</p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // mobile menu
+  var bg=document.getElementById('burger'), nv=document.getElementById('mainnav');
+  function setMenu(o){ nv.classList.toggle('open',o); bg.setAttribute('aria-expanded',String(o)); bg.setAttribute('aria-label',o?bg.dataset.close:bg.dataset.open); }
+  bg.addEventListener('click',function(){ setMenu(!nv.classList.contains('open')); });
+  nv.addEventListener('click',function(e){ if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && nv.classList.contains('open')){ setMenu(false); bg.focus(); } });
+
+  // sticky bottom CTA: shown after the hero scrolls out, hidden while the booking form is on screen
+  var bar=document.getElementById('sbar'), hero=document.getElementById('top'), book=document.getElementById('book');
+  if('IntersectionObserver' in window){
+    var heroOut=false, bookIn=false;
+    function upd(){ var on=heroOut&&!bookIn; bar.classList.toggle('on',on); if(on) bar.removeAttribute('inert'); else bar.setAttribute('inert',''); }
+    new IntersectionObserver(function(es){ heroOut=!es[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(es){ bookIn=es[0].isIntersecting; upd(); }).observe(book);
+  }
+
+  // calculator (LANDING-PLAYBOOK §7): monthly = missed/week x 4.33 x hire% x avg job
+  var out=document.getElementById('calcOut'), amt=document.getElementById('r-amt'), pre=document.getElementById('r-pre'),
+      jobs=document.getElementById('r-jobs'), cover=document.getElementById('r-cover'), used=false;
+  var F={missed:[0,50],hire:[0,100],job:[500,40000]};
+  function num(id){ var raw=document.getElementById('c-'+id).value, v=parseFloat(raw); if(raw===''||!isFinite(v)||v<0) return 0; return Math.min(Math.max(v,F[id][0]),F[id][1]); }
+  var live=document.getElementById('calcLive'), lt;
+  function fill(r){ var p=(r.value-r.min)/(r.max-r.min)*100; r.style.setProperty('--p',p+'%'); }
+  function calc(){
+    var m=num('missed'), h=num('hire'), j=num('job');
+    var monthly=m*4.33*(h/100)*j, perMonth=m*4.33*(h/100);
+    if(monthly>1000000){ pre.textContent=out.dataset.cap; amt.textContent='$1,000,000'; }
+    else { pre.textContent=out.dataset.pre; amt.textContent='$'+(Math.round(monthly/100)*100).toLocaleString('en-US'); }
+    jobs.hidden=perMonth<0.1;
+    jobs.textContent=out.dataset.pre+' '+(Math.round(perMonth*10)/10).toLocaleString('en-US',{maximumFractionDigits:1})+' '+out.dataset.jobs;
+    cover.hidden=monthly<249;
+    clearTimeout(lt); lt=setTimeout(function(){ live.textContent=pre.textContent+' '+amt.textContent+' '+out.dataset.suf+'.'; },700);
+  }
+  function first(){ if(!used){ used=true; window.samiTrack&&samiTrack('calc_used'); } }
+  [].forEach.call(document.querySelectorAll('#calcForm input[type=range]'),function(r){
+    var box=document.getElementById(r.dataset.for), id=r.dataset.for.slice(2);
+    fill(r);
+    r.addEventListener('input',function(){ box.value=r.value; fill(r); calc(); first(); });
+    box.addEventListener('input',function(){ var v=num(id); r.value=Math.max(F[id][0],v); fill(r); calc(); first(); });
+    box.addEventListener('change',function(){ if(box.value==='') return; var v=parseFloat(box.value);
+      if(!isFinite(v)){ box.value=''; } else if(v<F[id][0]){ box.value=F[id][0]; } else if(v>F[id][1]){ box.value=F[id][1]; }
+      r.value=box.value===''?F[id][0]:box.value; fill(r); calc(); });
+  });
+  calc(); live.textContent='';
+
+  // live offer line: hidden by the browser once its offers.json deadline passes, even if the site is not rebuilt
+  var disc=document.querySelector('.disc[data-end]');
+  if(disc && Date.now()>Date.parse(disc.dataset.end)) disc.hidden=true;
+  var bl=document.querySelector('.bl[data-end]');
+  if(bl && Date.now()>Date.parse(bl.dataset.end)){ bl.hidden=true; bl.nextElementSibling.hidden=false; }
+})();
+</script>
+<script src="../sami-book.js" defer></script>
+
+</body>
+</html>
