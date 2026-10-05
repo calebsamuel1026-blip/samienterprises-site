@@ -104,7 +104,7 @@
     if (a) {
       var href = a.getAttribute("href") || "";
       if (a.tagName === "SUMMARY") { var d = a.parentElement; if (d && !d.open) track("faq_open", { q: label(a) }); }
-      else if (/^mailto:/i.test(href) || /book|call/i.test(label(a))) track("cta_click", { place: sel(a), text: label(a), kind: /^mailto:/i.test(href) ? "mailto" : "link" });
+      else if (/^mailto:/i.test(href) || /book|call|leak/i.test(label(a))) track("cta_click", { place: sel(a), text: label(a), kind: /^mailto:/i.test(href) ? "mailto" : "link" });
       else if (/artifact|demo/i.test(href)) track("demo_click", { place: sel(a) });
       else if (href.charAt(0) === "#") track("nav_click", { to: href.slice(0, 20) });
       else if (/^https?:/i.test(href) && a.hostname !== location.hostname) track("outbound_click", { host: a.hostname });
