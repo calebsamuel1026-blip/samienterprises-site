@@ -636,23 +636,23 @@ main{position:relative;isolation:isolate}
 main>section,main>div:not(.bgfx){position:relative;z-index:1}
 .bgfx{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;contain:strict}
 .orb{position:absolute;will-change:transform}
-.orb i{display:block;width:100%;height:100%;border-radius:50%;animation:drift 26s ease-in-out infinite alternate}
+.orb i{display:block;width:100%;height:100%;border-radius:50%;animation:drift 16s ease-in-out infinite alternate}
 .orb.lg{width:560px;height:560px}.orb.md{width:380px;height:380px}
-.orb.a i{background:radial-gradient(closest-side,rgba(110,140,255,.16),rgba(110,140,255,0))}
-.orb.b i{background:radial-gradient(closest-side,rgba(150,185,245,.18),rgba(150,185,245,0));animation-duration:32s;animation-delay:-8s}
-.orb.c i{background:radial-gradient(closest-side,rgba(187,197,221,.30),rgba(187,197,221,0));animation-duration:38s;animation-delay:-14s}
-@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(40px,-30px,0) scale(1.06)}100%{transform:translate3d(-30px,24px,0) scale(.96)}}
-.fl{position:absolute;width:38vw;max-width:560px;height:1px;overflow:hidden}
+.orb.a i{background:radial-gradient(closest-side,rgba(110,140,255,.42),rgba(110,140,255,0))}
+.orb.b i{background:radial-gradient(closest-side,rgba(150,185,245,.42),rgba(150,185,245,0));animation-duration:32s;animation-delay:-8s}
+.orb.c i{background:radial-gradient(closest-side,rgba(160,175,225,.48),rgba(187,197,221,0));animation-duration:38s;animation-delay:-14s}
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(110px,-80px,0) scale(1.15)}100%{transform:translate3d(-90px,70px,0) scale(.9)}}
+.fl{position:absolute;width:44vw;max-width:680px;height:2px;overflow:hidden}
 .fl.l{left:0}.fl.r{right:0}
-.fl::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.28) 60%,rgba(28,56,234,0));transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.fl::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.55) 60%,rgba(28,56,234,0));transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .fl.r::before{transform-origin:right}
 .fl.in::before{transform:scaleX(1)}
-.fl i{position:absolute;top:-1px;left:0;width:60px;height:3px;border-radius:3px;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.55),rgba(28,56,234,0));opacity:0;transform:translateX(-60px)}
+.fl i{position:absolute;top:-1px;left:0;width:60px;height:3px;border-radius:3px;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.9),rgba(28,56,234,0));opacity:0;transform:translateX(-60px)}
 .fl.in i{animation:flow 7s cubic-bezier(.4,0,.2,1) 1.6s infinite}
 @keyframes flow{0%{opacity:0;transform:translateX(-60px)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translateX(38vw)}}
-.fx .rv{opacity:0;transform:translate3d(0,22px,0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.fx .rv{opacity:0;transform:translate3d(0,48px,0) scale(.98);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 .fx .rv.in{opacity:1;transform:none}
-@media (max-width:900px){.orb.lg{width:340px;height:340px}.orb.md{width:240px;height:240px}.fl{width:60vw}@keyframes flow{100%{opacity:0;transform:translateX(60vw)}}}
+@media (max-width:900px){.orb.lg{width:420px;height:420px}.orb.md{width:300px;height:300px}.fl{width:60vw}@keyframes flow{100%{opacity:0;transform:translateX(60vw)}}}
 @media (prefers-reduced-motion:reduce){.orb i,.fl i{animation:none!important}.fl::before{transform:scaleX(1);transition:none}.fx .rv{opacity:1;transform:none;transition:none}}
 .fl{display:none}.fx .fl.on{display:block}
 
@@ -669,7 +669,7 @@ main>section,main>div:not(.bgfx){position:relative;z-index:1}
 </header>
 
 <main id="main">
-  <div class="bgfx" aria-hidden="true"><div class="orb lg a" data-s="-0.06" style="top:14%;left:-160px"><i></i></div><div class="orb md b" data-s="0.05" style="top:24%;right:-120px"><i></i></div><div class="orb md b" data-s="-0.04" style="top:37%;left:-100px"><i></i></div><div class="orb lg a" data-s="0.07" style="top:50%;right:-180px"><i></i></div><div class="orb lg c" data-s="-0.05" style="top:63%;left:-140px"><i></i></div><div class="orb md b" data-s="0.04" style="top:76%;right:-110px"><i></i></div><div class="orb md a" data-s="-0.03" style="top:88%;left:-120px"><i></i></div><div class="fl r" style="top:20%"><i></i></div><div class="fl l" style="top:45%"><i></i></div><div class="fl r" style="top:70%"><i></i></div></div>
+  <div class="bgfx" aria-hidden="true"><div class="orb lg a" data-s="-0.18" style="top:12%;left:-40px"><i></i></div><div class="orb md b" data-s="0.15" style="top:22%;right:-20px"><i></i></div><div class="orb md c" data-s="-0.12" style="top:35%;left:10px"><i></i></div><div class="orb lg a" data-s="0.2" style="top:48%;right:-60px"><i></i></div><div class="orb lg c" data-s="-0.15" style="top:61%;left:-50px"><i></i></div><div class="orb md b" data-s="0.12" style="top:74%;right:0px"><i></i></div><div class="orb md a" data-s="-0.1" style="top:87%;left:-20px"><i></i></div><div class="fl r" style="top:20%"><i></i></div><div class="fl l" style="top:45%"><i></i></div><div class="fl r" style="top:70%"><i></i></div></div>
     <section class="hero" id="top" aria-labelledby="hero-h">
     <div class="sun" aria-hidden="true"></div>
     <svg class="mtn" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
