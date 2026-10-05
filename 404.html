@@ -643,6 +643,73 @@ main>section,main>div:not(.bgfx){position:relative;z-index:1}
 @media (prefers-reduced-motion:reduce){.orb i,.fl i{animation:none!important}.fl::before{transform:scaleX(1);transition:none}.fx .rv{opacity:1;transform:none;transition:none}}
 .fl{display:none}.fx .fl.on{display:block}
 
+/* v10d: simpler numbers band (Caleb 2026-10-05: one idea, 3 numbers) */
+#numbers .nsub{margin-top:12px;font:400 17px/26px var(--sans);color:var(--mute2)}
+.nums.n3{grid-template-columns:repeat(3,1fr);margin-top:36px}
+.n3 .bn{font-size:72px;line-height:76px;letter-spacing:-2px}
+.n3 .bl2{font-size:18px;line-height:26px}
+#numbers .nmore{margin-top:24px}
+#numbers .nmore a{display:inline-flex;align-items:center;min-height:40px;font:500 16px/22px var(--sans);color:var(--blue);text-decoration:none}
+#numbers .nmore a:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.nums.n3{grid-template-columns:1fr}.n3 li,.n3 li+li,.n3 li:nth-child(2n){padding:18px 0;border-left:0;border-bottom:1px solid var(--rule)}.n3 .bn{font-size:52px;line-height:56px}}
+
+/* v10f: leak pipe v2 (Caleb 2026-10-05: leaks = lost money, shown as a leaking pipe) */
+.pipewrap{position:relative;margin-top:44px;padding-top:30px}
+.pend{position:absolute;top:0;font:600 12px/16px var(--sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--mute2)}
+.pend.l{left:0}.pend.r{right:0}
+.pipe{display:block;width:100%;height:auto;overflow:visible}
+.tube{filter:drop-shadow(0 10px 14px rgba(22,28,60,.18))}
+.flange{fill:#3A4363}
+.fc{fill:#FFD66B}.ft{font:800 13px var(--sans);fill:#5B4300;text-anchor:middle}
+.gash{fill:#0B1033}
+.spray{fill:none;stroke:#1C38EA;stroke-width:2;stroke-linecap:round;stroke-dasharray:3 6;opacity:.55}
+.stream{stroke:#1C38EA;stroke-width:3;stroke-linecap:round;opacity:.16}
+.coin circle{fill:#FFD66B;stroke:#C99A1E;stroke-width:1.5}
+.coin text{font:800 14px var(--sans);fill:#5B4300;text-anchor:middle}
+.drip{transform:translate(var(--x),150px)}
+.fx .drip{opacity:0}
+.fx .on .flow{animation:pflow 1.6s linear infinite}
+.fx .on .drip{animation:pdrip 1.9s cubic-bezier(.5,0,1,.7) var(--d) infinite}
+.fx .on .spray{animation:pspray 1.9s ease-out var(--d) infinite}
+@keyframes pflow{from{transform:translateX(0)}to{transform:translateX(60px)}}
+@keyframes pdrip{0%{transform:translate(var(--x),96px) scale(.3);opacity:0}10%{transform:translate(var(--x),104px) scale(1);opacity:1}82%{opacity:1}100%{transform:translate(var(--x),196px) scale(.85) rotate(30deg);opacity:0}}
+@keyframes pspray{0%,100%{opacity:0}15%{opacity:.7}50%{opacity:0}}
+.leaks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:0}
+.leaks li{padding:0 28px;text-align:center}
+.leaks .mini{display:none}
+.lk{font:600 12px/16px var(--sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--mute2)}
+.lp{margin-top:6px}
+.lm{font:500 48px/54px var(--sans);letter-spacing:-1.4px;color:#B4232A;font-variant-numeric:tabular-nums}
+.ly{font:400 17px/24px var(--sans);color:var(--mute2)}
+.leaks h3{margin-top:8px;font:600 19px/27px var(--sans)}
+.leaks li>p:nth-of-type(3){margin-top:6px;font:400 16px/24px var(--sans);color:var(--ink2)}
+.lpc{margin-top:12px;font:400 14px/20px var(--sans);color:var(--mute2)}
+.lpc b{color:var(--ink);font-weight:600}
+.ltotal{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:56px;padding:36px 40px;border-radius:24px;background:radial-gradient(120% 140% at 0% 0%,#1A2470 0%,#0B1033 55%);color:#fff}
+.ltk{font:600 12px/16px var(--sans);letter-spacing:1.2px;text-transform:uppercase;color:#FF9A9F}
+.ltotal .lt{margin-top:4px;font-size:88px;line-height:92px;letter-spacing:-2.8px;color:#fff;white-space:nowrap}
+.ltl{font:500 22px/30px var(--sans);color:#fff}
+.ltotal .small{margin-top:8px;color:#AEB6D3}
+.ltc{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:14px;padding:0 20px;border-radius:999px;background:#fff;color:#0B1033;font:600 15px/20px var(--sans)}
+.ltc:hover{background:#DDE2EE}
+@keyframes mdrip{0%{transform:translate(var(--x),46px) scale(.3);opacity:0}12%{opacity:1;transform:translate(var(--x),54px) scale(.9)}100%{transform:translate(var(--x),96px) scale(.8);opacity:0}}
+@keyframes mflow{from{transform:translateX(0)}to{transform:translateX(50px)}}
+@media (max-width:900px){
+  .pipewrap{display:none}
+  .leaks{grid-template-columns:1fr;margin-top:28px}
+  .leaks li{padding:4px 0 24px;text-align:left;border-bottom:1px solid var(--rule)}
+  .leaks li+li{padding-top:20px}
+  .leaks .mini{display:block;width:100%;height:auto;overflow:visible;margin-bottom:4px}
+  .leaks .mini .drip{transform:translate(var(--x),70px) scale(.8)}
+  .fx .on .mini .drip{animation:mdrip 1.7s ease-in var(--d) infinite}
+  .fx .on .mflow{animation:mflow 1.5s linear infinite}
+  .lm{font-size:40px;line-height:46px}
+  .ltotal{grid-template-columns:1fr;gap:12px;padding:26px 22px;margin-top:36px}
+  .ltotal .lt{font-size:60px;line-height:64px}
+  .ltl{font-size:18px;line-height:26px}
+}
+@media (prefers-reduced-motion:reduce){.flow,.drip,.spray{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -713,17 +780,17 @@ main>section,main>div:not(.bgfx){position:relative;z-index:1}
     // reveal: sections below the hero fade/slide in once
     var rv=[].slice.call(document.querySelectorAll('main > section:not(.hero):not(.phero):not(.lhero) > *'));
     rv.forEach(function(el){ if(el.getBoundingClientRect().top>innerHeight) el.classList.add('rv'); });
-    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); if(e.target.matches('.nums')) count(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); if(e.target.matches('.nums,.ltotal')) count(e.target); if(e.target.matches('.pipewrap,.leaks')) e.target.classList.add('on'); } }); },{rootMargin:'0px 0px -8% 0px'});
     rv.forEach(function(el){ io.observe(el); });
     lio.forEach(function(l){ io.observe(l); });
-    [].forEach.call(document.querySelectorAll('.nums'),function(n){ if(n.getBoundingClientRect().top<=innerHeight) return; io.observe(n); });
+    [].forEach.call(document.querySelectorAll('.nums,.ltotal,.pipewrap,.leaks'),function(n){ if(n.getBoundingClientRect().top<=innerHeight) return; io.observe(n); });
     // count-up for stat tiles (final text is in the HTML; animation only rewrites it)
     function count(list){
       [].forEach.call(list.querySelectorAll('.bn'),function(el){
         var m=el.textContent.match(/^(\D*)([\d.,]+)(.*)$/); if(!m) return;
         var end=parseFloat(m[2].replace(/,/g,'')), dec=(m[2].split('.')[1]||'').length, t0=null, D=1100;
         function step(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/D), e=1-Math.pow(1-k,3);
-          el.textContent=m[1]+(end*e).toFixed(dec)+m[3]; if(k<1) requestAnimationFrame(step); }
+          var t=(end*e).toFixed(dec); if(/,/.test(m[2])) t=Math.round(end*e).toLocaleString('en-US'); el.textContent=m[1]+t+m[3]; if(k<1) requestAnimationFrame(step); }
         el.textContent=m[1]+(0).toFixed(dec)+m[3]; requestAnimationFrame(step);
       });
     }
