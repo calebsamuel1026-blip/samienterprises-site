@@ -22,9 +22,12 @@
 <link rel="preload" as="image" href="../missed-call-card.webp" type="image/webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "ProfessionalService"], "@id": "https://samienterprises.co/#org", "name": "Sami Enterprises", "legalName": "Sami Enterprises LLC", "url": "https://samienterprises.co/", "logo": "https://samienterprises.co/logo-512.png", "image": "https://samienterprises.co/og/default.png", "email": "cruzsystemsco@gmail.com", "description": "Sami Enterprises LLC is a revenue consulting agency for owner-led home-service businesses in the United States, including roofing, HVAC, plumbing and electrical companies. We audit where a business loses money, from missed calls and slow follow-up to pricing and late invoices, then set up and run the fixes. Engagements are month to month, and nothing is billed until the work is live.", "address": {"@type": "PostalAddress", "streetAddress": "2709 N Hayden Island Dr STE 436020", "addressLocality": "Portland", "addressRegion": "OR", "postalCode": "97217-8254", "addressCountry": "US"}, "areaServed": {"@type": "Country", "name": "United States"}, "knowsAbout": ["revenue leakage", "speed-to-lead", "lead conversion", "estimate follow-up", "customer retention", "pricing and margin", "accounts receivable", "home-service businesses", "roofing", "HVAC", "plumbing"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "cruzsystemsco@gmail.com", "areaServed": "US", "availableLanguage": "English"}}, {"@type": "WebSite", "@id": "https://samienterprises.co/#website", "url": "https://samienterprises.co/", "name": "Sami Enterprises", "publisher": {"@id": "https://samienterprises.co/#org"}, "inLanguage": "en-US"}, {"@type": "WebPage", "@id": "https://samienterprises.co/roofing/#webpage", "url": "https://samienterprises.co/roofing/", "name": "Roofing Business Consultant | Sami Enterprises", "description": "Revenue consulting for roofing companies. We audit where your business loses money, then fix it. Month to month, nothing billed until it's live.", "isPartOf": {"@id": "https://samienterprises.co/#website"}, "about": {"@id": "https://samienterprises.co/#org"}, "inLanguage": "en-US", "primaryImageOfPage": "https://samienterprises.co/og/default.png", "breadcrumb": {"@id": "https://samienterprises.co/roofing/#breadcrumb"}}, {"@type": "BreadcrumbList", "@id": "https://samienterprises.co/roofing/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://samienterprises.co/"}, {"@type": "ListItem", "position": 2, "name": "Roofing", "item": "https://samienterprises.co/roofing/"}]}, {"@type": "FAQPage", "@id": "https://samienterprises.co/roofing/#faq", "mainEntity": [{"@type": "Question", "name": "What do you actually do?", "acceptedAnswer": {"@type": "Answer", "text": "We audit your business and find where it loses money. Then we close that gap. It may be missed calls, slow follow-up, weak estimate requests or your website."}}, {"@type": "Question", "name": "Do I have to change my phone number or website?", "acceptedAnswer": {"@type": "Answer", "text": "No. You keep your number, your site and any answering service you use. Site changes are made only with your OK."}}, {"@type": "Question", "name": "What does it cost, and can I cancel?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what we find and what you need. You get a written quote after the call. You pay nothing until it's live, and you can cancel any time."}}, {"@type": "Question", "name": "Who is this not for?", "acceptedAnswer": {"@type": "Answer", "text": "If you rarely miss calls and your leads get a fast reply, this won't help much. We will tell you so on the call."}}, {"@type": "Question", "name": "Will this guarantee more jobs?", "acceptedAnswer": {"@type": "Answer", "text": "No. No agency can promise that. We close the gaps that let leads slip away. Results depend on your market and your price."}}]}]}</script>
 <style>
+/* metric-matched fallbacks: widths measured against the web fonts (2026-10-04) so the font swap barely reflows (CLS) */
+@font-face{font-family:"Garamond Fallback";src:local("Georgia");size-adjust:89%;ascent-override:100%;descent-override:30%}
+@font-face{font-family:"Geist Fallback";src:local("Arial");size-adjust:104%}
 :root{
   --ink:#000; --ink2:#2E3038; --mute:#8C929D; --mute2:#5E616E; --rule:#E4E4E7; --lav:#DDE2EE; --lav2:#BBC5DD; --blue:#1C38EA;
-  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Geist","Geist Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"EB Garamond","Garamond Fallback",Georgia,"Times New Roman",serif;
   --box:radial-gradient(92.09% 126.39% at 50% 100%,#DDE2EE 58.91%,#BBC5DD 100%);
   --pale:radial-gradient(92.09% 124.47% at 50% 99.24%,rgba(221,226,238,.4) 58.91%,rgba(187,197,221,.4) 100%);
   color-scheme:light;
@@ -620,6 +623,39 @@ html:not(.js) .leak{grid-template-columns:1fr}
 .links404 a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px #D9DEE8;font:500 15px/20px var(--sans)}
 @media (max-width:900px){.qas{grid-template-columns:1fr}.entity{padding-top:40px}.entity p{font-size:15px;line-height:23px;padding:16px}}
 
+/* v10e: static leak card (Caleb 2026-10-04) */
+.leak.one{display:block;max-width:640px;padding:24px;text-align:center}
+.leak.one .res-card{padding:28px 32px}
+.leak.one .leak-out{font-size:30px;line-height:39px}
+.leak.one .basis{margin-top:8px;font:400 14px/20px var(--sans);color:var(--mute2)}
+.leak.one .res-price{text-align:center}
+@media (max-width:900px){.leak.one{padding:14px}.leak.one .res-card{padding:22px 18px}.leak.one .leak-out{font-size:23px;line-height:31px}}
+
+/* v10e: scroll motion (decorative, aria-hidden, behind content; transform/opacity only) */
+main{position:relative;isolation:isolate}
+main>section,main>div:not(.bgfx){position:relative;z-index:1}
+.bgfx{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;contain:strict}
+.orb{position:absolute;will-change:transform}
+.orb i{display:block;width:100%;height:100%;border-radius:50%;animation:drift 26s ease-in-out infinite alternate}
+.orb.lg{width:560px;height:560px}.orb.md{width:380px;height:380px}
+.orb.a i{background:radial-gradient(closest-side,rgba(110,140,255,.16),rgba(110,140,255,0))}
+.orb.b i{background:radial-gradient(closest-side,rgba(150,185,245,.18),rgba(150,185,245,0));animation-duration:32s;animation-delay:-8s}
+.orb.c i{background:radial-gradient(closest-side,rgba(187,197,221,.30),rgba(187,197,221,0));animation-duration:38s;animation-delay:-14s}
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(40px,-30px,0) scale(1.06)}100%{transform:translate3d(-30px,24px,0) scale(.96)}}
+.fl{position:absolute;width:38vw;max-width:560px;height:1px;overflow:hidden}
+.fl.l{left:0}.fl.r{right:0}
+.fl::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.28) 60%,rgba(28,56,234,0));transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.fl.r::before{transform-origin:right}
+.fl.in::before{transform:scaleX(1)}
+.fl i{position:absolute;top:-1px;left:0;width:60px;height:3px;border-radius:3px;background:linear-gradient(90deg,rgba(28,56,234,0),rgba(28,56,234,.55),rgba(28,56,234,0));opacity:0;transform:translateX(-60px)}
+.fl.in i{animation:flow 7s cubic-bezier(.4,0,.2,1) 1.6s infinite}
+@keyframes flow{0%{opacity:0;transform:translateX(-60px)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translateX(38vw)}}
+.fx .rv{opacity:0;transform:translate3d(0,22px,0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.fx .rv.in{opacity:1;transform:none}
+@media (max-width:900px){.orb.lg{width:340px;height:340px}.orb.md{width:240px;height:240px}.fl{width:60vw}@keyframes flow{100%{opacity:0;transform:translateX(60vw)}}}
+@media (prefers-reduced-motion:reduce){.orb i,.fl i{animation:none!important}.fl::before{transform:scaleX(1);transition:none}.fx .rv{opacity:1;transform:none;transition:none}}
+.fl{display:none}.fx .fl.on{display:block}
+
 </style>
 </head>
 <body>
@@ -633,6 +669,7 @@ html:not(.js) .leak{grid-template-columns:1fr}
 </header>
 
 <main id="main">
+  <div class="bgfx" aria-hidden="true"><div class="orb lg a" data-s="-0.06" style="top:14%;left:-160px"><i></i></div><div class="orb md b" data-s="0.05" style="top:24%;right:-120px"><i></i></div><div class="orb md b" data-s="-0.04" style="top:37%;left:-100px"><i></i></div><div class="orb lg a" data-s="0.07" style="top:50%;right:-180px"><i></i></div><div class="orb lg c" data-s="-0.05" style="top:63%;left:-140px"><i></i></div><div class="orb md b" data-s="0.04" style="top:76%;right:-110px"><i></i></div><div class="orb md a" data-s="-0.03" style="top:88%;left:-120px"><i></i></div><div class="fl r" style="top:20%"><i></i></div><div class="fl l" style="top:45%"><i></i></div><div class="fl r" style="top:70%"><i></i></div></div>
     <section class="hero" id="top" aria-labelledby="hero-h">
     <div class="sun" aria-hidden="true"></div>
     <svg class="mtn" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
@@ -687,27 +724,11 @@ html:not(.js) .leak{grid-template-columns:1fr}
 
   <section class="sec c center" id="calc" aria-labelledby="calc-h">
     <h2 class="h2 grad" id="calc-h">A small leak could be costing you a lot</h2>
-    <p class="sub">Enter your yearly revenue to see what a small leak could cost you.</p>
-    <div class="leak">
-      <form class="leak-in" id="leakForm" onsubmit="return false" novalidate>
-        <div class="fld">
-          <label for="leakRev" id="l-rev">Your yearly revenue ($)</label>
-          <div class="money"><span aria-hidden="true">$</span><input id="leakRev" type="text" inputmode="numeric" value="1,000,000" autocomplete="off" aria-describedby="h-rev"></div>
-          <p class="help" id="h-rev">From $100,000 to $10,000,000.</p>
-          <input type="range" id="leakRange" min="100000" max="10000000" step="50000" value="1000000" aria-labelledby="l-rev" aria-valuetext="$1,000,000">
-        </div>
-        <fieldset>
-          <legend>Leak size</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="leak" value="3"><span>3%</span></label>
-            <label class="chip"><input type="radio" name="leak" value="5" checked><span>5%</span></label>
-            <label class="chip"><input type="radio" name="leak" value="10"><span>10%</span></label>
-          </div>
-        </fieldset>
-      </form>
+    <p class="sub">Your business could be losing more than you think. Here is what a small leak could cost.</p>
+    <div class="leak one">
       <div class="res-card">
-        <p class="leak-out" id="leakOut" data-tpl="A small leak of {pct} could be costing you {amt} a year.">A small leak of <b>5%</b> could be costing you <b>$50,000</b> a year.</p>
-        <p class="sr" id="leakLive" aria-live="polite" aria-atomic="true"></p>
+        <p class="leak-out" id="leakOut">A small leak of <b>5%</b> could be costing you <b>$50,000</b> a year.</p>
+        <p class="basis">Example: a business doing $1,000,000 a year.</p>
         <p class="src">Leaks come from missed calls, quotes that go cold, slow invoices and visitors who leave before they call.</p>
         <p class="res-price">You pay nothing until it&#x27;s live.</p>
         <p class="disclaim">Example math. We can&#x27;t promise jobs or revenue.</p>
@@ -835,31 +856,52 @@ html:not(.js) .leak{grid-template-columns:1fr}
     new IntersectionObserver(function(es){ bookIn=es[0].isIntersecting; upd(); }).observe(book);
   }
 
-  // leak calculator (Caleb 2026-10-04): yearly revenue x leak % (3/5/10), live, no submit
-  var rev=document.getElementById('leakRev');
-  if(rev){
-    var rg=document.getElementById('leakRange'), out=document.getElementById('leakOut'), live=document.getElementById('leakLive'),
-        tpl=out.getAttribute('data-tpl'), MIN=100000, MAX=10000000, used=false, lt;
-    var fmt=function(n){ return '$'+Math.round(n).toLocaleString('en-US'); };
-    var val=function(){ var raw=String(rev.value).replace(/[^0-9.]/g,''), v=parseFloat(raw); if(raw===''||!isFinite(v)||v<0) return 0; return Math.min(v,MAX); };
-    var pct=function(){ var c=document.querySelector('input[name=leak]:checked'); return c?+c.value:5; };
-    function fillTrack(){ var p=(rg.value-MIN)/(MAX-MIN)*100; rg.style.setProperty('--p',p+'%'); rg.setAttribute('aria-valuetext',fmt(+rg.value)); }
-    function draw(){
-      var p=pct(), amt=fmt(Math.round(val()*p/100/100)*100), parts=tpl.split(/(\{pct\}|\{amt\})/);
-      out.textContent='';
-      parts.forEach(function(s){ if(s==='{pct}'||s==='{amt}'){ var b=document.createElement('b'); b.textContent=s==='{pct}'?p+'%':amt; out.appendChild(b); } else if(s) out.appendChild(document.createTextNode(s)); });
-      clearTimeout(lt); lt=setTimeout(function(){ live.textContent=out.textContent; },700);
+  // scroll motion (v10e): orbs parallax, line draw-in, section reveal, number count-up. Off for reduced motion.
+  (function(){
+    var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var fx=document.querySelector('.bgfx');
+    if(rm||!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('fx');
+    var lio=[];
+    var fls=fx?[].slice.call(fx.querySelectorAll('.fl')):[];
+    function placeLines(){ // put each line in one of the largest empty gaps between sections; offsetTop ignores reveal transforms
+      var secs=[].slice.call(document.querySelectorAll('main > section')), gaps=[];
+      var y=function(el){ var s=el.parentElement; return s.offsetTop+el.offsetTop; };
+      for(var i=1;i<secs.length;i++){ var ca=secs[i-1].lastElementChild, cb=secs[i].firstElementChild;
+        var top=ca?y(ca)+ca.offsetHeight:secs[i-1].offsetTop+secs[i-1].offsetHeight, bot=cb?y(cb):secs[i].offsetTop;
+        if(bot-top>130) gaps.push({y:(top+bot)/2,h:bot-top}); }
+      gaps.sort(function(x,z){return z.h-x.h;});
+      fls.forEach(function(l,i){ if(!gaps[i]){ l.classList.remove('on'); return; } l.style.top=Math.round(gaps[i].y)+'px'; l.classList.add('on'); });
     }
-    function first(){ if(!used){ used=true; window.samiTrack&&samiTrack('calc_used',{kind:'leak'}); } }
-    var comma=function(n){ return Math.round(n).toLocaleString('en-US'); };
-    rg.addEventListener('input',function(){ rev.value=comma(+rg.value); fillTrack(); draw(); first(); });
-    rev.addEventListener('input',function(){ rg.value=Math.max(MIN,Math.min(MAX,val())); fillTrack(); draw(); first(); });
-    rev.addEventListener('change',function(){ var raw=String(rev.value).replace(/[^0-9.]/g,''); if(raw===''){ rev.value=''; draw(); return; } var v=parseFloat(raw);
-      if(!isFinite(v)){ rev.value=''; draw(); return; } v=Math.min(Math.max(v,MIN),MAX); rev.value=comma(v);
-      rg.value=v; fillTrack(); draw(); });
-    [].forEach.call(document.querySelectorAll('input[name=leak]'),function(r){ r.addEventListener('change',function(){ draw(); first(); }); });
-    fillTrack(); draw(); clearTimeout(lt); live.textContent='';
-  }
+    if(fx){ placeLines(); fls.forEach(function(l){ lio.push(l); });
+      if(document.fonts&&document.fonts.ready) document.fonts.ready.then(placeLines);
+      var rz; addEventListener('resize',function(){ clearTimeout(rz); rz=setTimeout(placeLines,200); });
+      document.addEventListener('toggle',function(){ placeLines(); },true); }
+    // reveal: sections below the hero fade/slide in once
+    var rv=[].slice.call(document.querySelectorAll('main > section:not(.hero):not(.phero):not(.lhero) > *'));
+    rv.forEach(function(el){ if(el.getBoundingClientRect().top>innerHeight) el.classList.add('rv'); });
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); if(e.target.matches('.nums')) count(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){ io.observe(el); });
+    lio.forEach(function(l){ io.observe(l); });
+    [].forEach.call(document.querySelectorAll('.nums'),function(n){ if(n.getBoundingClientRect().top<=innerHeight) return; io.observe(n); });
+    // count-up for stat tiles (final text is in the HTML; animation only rewrites it)
+    function count(list){
+      [].forEach.call(list.querySelectorAll('.bn'),function(el){
+        var m=el.textContent.match(/^(\D*)([\d.,]+)(.*)$/); if(!m) return;
+        var end=parseFloat(m[2].replace(/,/g,'')), dec=(m[2].split('.')[1]||'').length, t0=null, D=1100;
+        function step(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/D), e=1-Math.pow(1-k,3);
+          el.textContent=m[1]+(end*e).toFixed(dec)+m[3]; if(k<1) requestAnimationFrame(step); }
+        el.textContent=m[1]+(0).toFixed(dec)+m[3]; requestAnimationFrame(step);
+      });
+    }
+    // parallax: orbs move at different speeds; transform only, one rAF per frame
+    if(!fx) return;
+    var orbs=[].slice.call(fx.querySelectorAll('.orb')), tick=false;
+    function frame(){ tick=false; var y=scrollY;
+      for(var i=0;i<orbs.length;i++){ var s=+orbs[i].dataset.s||.1; orbs[i].style.transform='translate3d(0,'+(y*s).toFixed(1)+'px,0)'; } }
+    addEventListener('scroll',function(){ if(!tick){ tick=true; requestAnimationFrame(frame); } },{passive:true});
+    frame();
+  })();
 
   // weekly offer (outreach/offers.json): show the one live now, else the fallback line; no rebuild needed when a week rolls over
   var now=Date.now();
