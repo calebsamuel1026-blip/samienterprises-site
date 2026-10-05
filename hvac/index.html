@@ -656,6 +656,16 @@ main>section,main>div:not(.bgfx){position:relative;z-index:1}
 @media (prefers-reduced-motion:reduce){.orb i,.fl i{animation:none!important}.fl::before{transform:scaleX(1);transition:none}.fx .rv{opacity:1;transform:none;transition:none}}
 .fl{display:none}.fx .fl.on{display:block}
 
+/* v10d: simpler numbers band (Caleb 2026-10-05: one idea, 3 numbers) */
+#numbers .nsub{margin-top:12px;font:400 17px/26px var(--sans);color:var(--mute2)}
+.nums.n3{grid-template-columns:repeat(3,1fr);margin-top:36px}
+.n3 .bn{font-size:72px;line-height:76px;letter-spacing:-2px}
+.n3 .bl2{font-size:18px;line-height:26px}
+#numbers .nmore{margin-top:24px}
+#numbers .nmore a{display:inline-flex;align-items:center;min-height:40px;font:500 16px/22px var(--sans);color:var(--blue);text-decoration:none}
+#numbers .nmore a:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.nums.n3{grid-template-columns:1fr}.n3 li,.n3 li+li,.n3 li:nth-child(2n){padding:18px 0;border-left:0;border-bottom:1px solid var(--rule)}.n3 .bn{font-size:52px;line-height:56px}}
+
 </style>
 </head>
 <body>
@@ -700,14 +710,10 @@ main>section,main>div:not(.bgfx){position:relative;z-index:1}
   <section class="c entity" aria-label="About Sami Enterprises"><p>Sami Enterprises LLC is a revenue consulting agency for HVAC companies in the United States. We audit where an HVAC business loses money, from missed calls and slow follow-up to pricing and late invoices, then set up and run the fixes. Engagements are month to month, and nothing is billed until the work is live.</p></section>
 
   <section class="sec c" id="numbers" aria-labelledby="numbers-h">
-    <h2 class="h2 grad" id="numbers-h">By the numbers</h2>
-    <p class="lead2">Your business could have the same gaps we find in most audits. Here is what we found, next to three published benchmarks with their sources.</p>
-    <p class="nlab">Our audit of 290 home-service websites, 2026</p>
-    <ul class="nums"><li><p class="bn">290</p><p class="bl2">home-service websites audited</p></li><li><p class="bn">5.3</p><p class="bl2">revenue leaks found per site, on average</p></li><li><p class="bn">88%</p><p class="bl2">of sites had 3 or more leaks</p></li><li><p class="bn">75%</p><p class="bl2">had no way to text or chat from the site</p></li></ul>
-    <p class="nlab">Industry benchmarks</p>
-    <ul class="nums bench"><li><p class="bn">52%</p><p class="bl2">of callers to home services businesses speak with a person.</p><p class="bsrc">Invoca, Home Services Lead Conversion Benchmarks Report, 2026</p></li><li><p class="bn">97%</p><p class="bl2">of consumers read reviews for local businesses.</p><p class="bsrc">BrightLocal, Local Consumer Review Survey, 2026</p></li><li><p class="bn">89%</p><p class="bl2">trust recommendations from people they know, the most trusted channel.</p><p class="bsrc">Nielsen, Trust in Advertising Study, 2021</p></li></ul>
-    <p class="small">Our audit: 290 websites we chose to review in September and October 2026, mostly roofing, HVAC and plumbing companies in Florida. A leak is counted only when our check was at least 80% sure. Percentages are rounded down.</p>
-    <p class="small"><a href="../research/#benchmarks">See every source and how we measured</a></p>
+    <h2 class="h2 grad" id="numbers-h">Most home-service businesses are leaking money</h2>
+    <p class="nsub">From our audit of 290 home-service websites, 2026.</p>
+    <ul class="nums n3"><li><p class="bn">88%</p><p class="bl2">had 3 or more leaks</p></li><li><p class="bn">75%</p><p class="bl2">had no way to text or chat</p></li><li><p class="bn">5.3</p><p class="bl2">leaks per site, on average</p></li></ul>
+    <p class="nmore"><a href="../research/#benchmarks">How we measured <span aria-hidden="true">&rarr;</span></a></p>
   </section>
 
   <section class="sec c" id="process" aria-labelledby="process-h">
