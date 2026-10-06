@@ -1,10 +1,10 @@
 {
- "name": "Revenue leaks on home-service websites: an audit of 406 sites (2026)",
+ "name": "Revenue leaks on home-service websites: an audit of 290 sites (2026)",
  "publisher": "Sami Enterprises LLC",
  "url": "https://samienterprises.co/research/",
  "published": "2026-10-04",
  "license": "CC BY 4.0",
- "how_to_cite": "Sami Enterprises, \"Revenue leaks on home-service websites: an audit of 406 sites\", 2026, samienterprises.co/research/. Data: samienterprises.co/research/290-site-audit.json.",
+ "how_to_cite": "Sami Enterprises, \"Revenue leaks on home-service websites: an audit of 290 sites\", 2026, samienterprises.co/research/. Data: samienterprises.co/research/290-site-audit.json.",
  "method": [
   "Our 36-point revenue audit loads each site on a phone and a desktop, like a customer would. It never fills in or sends a form.",
   "It checks 30 leak points, from the phone number to the estimate form, and 11 strengths.",
@@ -17,58 +17,58 @@
   "It can also flag a gap that a business covers some other way, like a phone team that answers every call.",
   "A leak on a website is a sign of lost revenue, not a measured dollar loss."
  ],
- "sites_audited": 406,
- "sites_failed_to_load_excluded": 12,
+ "sites_audited": 290,
+ "sites_failed_to_load_excluded": 5,
  "leak_checks": 30,
  "strength_checks": 11,
  "confidence_threshold": 0.8,
- "avg_leaks_per_site": 5.475,
- "pct_sites_3plus_leaks": 89.41,
+ "avg_leaks_per_site": 5.369,
+ "pct_sites_3plus_leaks": 88.28,
  "findings": [
   {
    "leak": "No way to text or chat from the site",
    "id": "no_text_or_chat",
-   "pct": 72.17
+   "pct": 75.52
   },
   {
    "leak": "Estimate form with no photo upload, no timeline or budget question, or too many fields",
    "id": "weak_estimate_form",
-   "pct": 67.49
+   "pct": 68.28
   },
   {
    "leak": "No mention of a referral program",
    "id": "no_referral_program",
-   "pct": 60.34
+   "pct": 57.59
   },
   {
    "leak": "No promise of how fast you'll hear back",
    "id": "no_response_time",
-   "pct": 43.6
+   "pct": 46.9
   },
   {
    "leak": "No way to pay online",
    "id": "no_pay_online",
-   "pct": 31.28
+   "pct": 28.97
   },
   {
    "leak": "Phone number not on the first phone screen",
    "id": "phone_not_above_fold_mobile",
-   "pct": 26.85
+   "pct": 28.97
   },
   {
    "leak": "No financing mentioned",
    "id": "no_financing_mention",
-   "pct": 29.06
+   "pct": 27.24
   },
   {
    "leak": "No reviews shown on the site",
    "id": "no_reviews_shown",
-   "pct": 23.65
+   "pct": 24.14
   },
   {
    "leak": "Ad tracking installed, plus 2 or more gaps that can lose those visitors",
    "id": "ads_but_leaky",
-   "pct": 20.69
+   "pct": 18.62
   }
  ]
 }
