@@ -53,6 +53,27 @@
       utm_source: (q.get("utm_source") || "").slice(0, 80) || null
     };
     track("cta_click", { place: "book_form_submit", kind: CFG.url ? "form" : "mailto_fallback" });
+    var BOOK = window.SAMI_BOOK_URL;                                            // Google Apps Script endpoint (tools/site/booking/Code.gs)
+    if (BOOK) {
+      btn.disabled = true; btn.textContent = f.dataset.sending;
+      row.website_hp = f.elements.website_hp.value || "";
+      fetch(BOOK, { method: "POST", body: JSON.stringify(row), headers: { "Content-Type": "text/plain;charset=utf-8" } })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (!j || !j.ok) throw new Error((j && j.error) || "failed");
+          track("cta_click", { place: "book_form_saved" });
+          f.reset(); f.hidden = true; say("ok", f.dataset.success);
+          document.getElementById("book").scrollIntoView({ block: "start" });
+        })
+        .catch(function () {                                                    // endpoint down: never lose the booking
+          var body = Object.keys(row).filter(function (k) { return row[k] && ["vid", "sid", "consent", "website_hp"].indexOf(k) < 0; })
+            .map(function (k) { return k + ": " + row[k]; }).join(String.fromCharCode(10));
+          location.href = "mailto:" + f.dataset.fallback + "?subject=" + encodeURIComponent("15-minute call: " + row.company) + "&body=" + encodeURIComponent(body);
+          say("ok", f.dataset.fallbackmsg);
+        })
+        .finally(function () { btn.disabled = false; btn.textContent = label; });
+      return;
+    }
     if (!CFG.url) {                                                             // backend not connected yet
       var body = Object.keys(row).filter(function (k) { return row[k] && ["vid", "sid", "consent"].indexOf(k) < 0; })
         .map(function (k) { return k + ": " + row[k]; }).join("\n");
